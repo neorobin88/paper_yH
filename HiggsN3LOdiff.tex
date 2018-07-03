@@ -158,7 +158,7 @@ The function $ \Sigma^{F}(\qt^{2}/M^{2})$ embodies all the logarithmic terms tha
 where $z=M^{2}/s$. According to the transverse momentum resummation formula (Eq. (10) of Ref.~\cite{Bozzi:2005wk}) and using the Fourier transformation between the conjugate variables $q_T$ and $b$ ($b$ is the impact parameter), the perturbative hard function $\mathcal{H}^{F}$ and the counterterm are obtained by the fixed order truncation of the following identity
 \beeq
 \label{reslean}
-&&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\left( \Sigma^{F}_{c\bar{c}\leftarrow a_{1}a_{2}}(\qt^{2}/M^{2}) + \mathcal{H}^{F}_{c\bar{c}\leftarrow a_{1}a_{2}}(\as,M) \right) \otimes d\big[\sigma^{F;(0)}_{c\bar{c}}\big] =\f{M^{2}}{s}
+&&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\left( \Sigma^{F}_{c\bar{c}\leftarrow a_{1}a_{2}}(\qt^{2}/M^{2}) + \mathcal{H}^{F}_{c\bar{c}\leftarrow a_{1}a_{2}}(M^{2}/s;\as) \right) \otimes d\big[\sigma^{F;(0)}_{c\bar{c}}\big] =\f{M^{2}}{s}
 \int_0^\infty db \f{b}{2} J_0(bq_T)\;S_c(M,b)\\
 &&\!\!\!\!\!\!\!\ \times  \int_{x_{1}}^1 \f{dz_1}{z_{1}} \int_{x_{2}}^1  \f{dz_2}{z_{2}} d\big[\sigma^{F;(0)}_{c\bar{c}}\big] \,
  f_{a_{1}/h_1}\left(x_{1}/z_1,b_0^2/b^2\right)f_{a_{2}/h_2}\left(x_{2}/z_2,b_0^2/b^2\right)\otimes\left[ H^{F} C_1 C_2 \right]_{c\bar{c};a_{1}a_{2}}\,, \nn
@@ -201,7 +201,7 @@ The right-hand side of Eq. (\ref{whathlean}) does not depend on the direction of
 C_{g \,a}(z;\as) = \delta_{g \,a} \;\,\delta(1-z) + 
 \sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n C_{g\, a}^{(n)}(z) \;\;.
 \end{equation}
-At variance with Eq. (\ref{cgexp}), the perturbative expansion of the coefficient functions $G_{ga}$, which are specific to gluon-initiated processes, starts at ${\cal O}(\as)$, and we write
+At variance with Eq. (\ref{cgexp}), the perturbative expansion of the coefficient functions $G_{ga}$, which are specific to gluon-initiated processes, starts at ${\cal O}(\as)$, and we write \cite{Catani:2010pd,Catani:2013tia}
 \begin{equation}
 \label{gfexp}
 G_{g \,a}(z;\as) = \f{\as}{\pi} \;G_{g \,a}^{(1)}(z) \,+
@@ -225,6 +225,8 @@ H_c^{F}(\as) & \to & H_c^{F}(\as) \; \left[ \, h(\as) \, \right]^{-1}
 B_c(\as) & \to & B_c(\as) - \beta(\as) \;\frac{d\ln h(\as)}{d\ln \as} 
 \;,\\
 C_{ab}(\as,z) & \to & C_{ab}(\as,z) \;
+\left[ \, h(\as) \, \right]^{1/2} \;,\nn\\
+G_{ab}(\as,z) & \to & G_{ab}(\as,z) \;
 \left[ \, h(\as) \, \right]^{1/2} \;. \nn
 \eeeq
 The invariance can easily be proven by using the following renormalization-group identity:
@@ -254,7 +256,7 @@ $\beta_2$ are
 where $N_f$ is the number of QCD massless flavours and the $SU(N_c)$ colour factors are $C_A=N_c$  and $C_F=(N_c^2-1)/(2N_c)$.
 
 The physical origin of the  resummation scheme invariance of Eq.~(\ref{reslean}) is discussed in  Ref.~\cite{Catani:2000vq}. 
-The invariance implies that the hard-virtual factors $H_c^{F}, S_c$ (more precisely, the function $B_c$)  and $C_{ab}$ are not unambiguously computable order by order in perturbation theory. After choosing a `resummation scheme', these factors can be unambiguously defined. We rely on the \textit{hard resummation scheme} defined in Ref. \cite{Catani:2013tia}, which states all the contributions proportional to $\delta(1-z)$ are considered in the hard-virtual functions $H_c^{F}$. The precedent condition directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$.
+The invariance implies that the hard-virtual factors $H_c^{F}, S_c$ (more precisely, the function $B_c$)  and $C_{ab}$ are not unambiguously computable order by order in perturbation theory. After choosing a `resummation scheme', these factors can be unambiguously defined. We rely on the \textit{hard resummation scheme} defined in Ref. \cite{Catani:2013tia}, which states all the contributions proportional to $\delta(1-z)$ are considered in the hard-virtual functions $H_c^{F}$. The precedent condition directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$. In addition, the resummation coefficients $A_{c}$ and the helicity-flip functions $G_{ab}$ are also independent of the final state process.
 
 The truncation of Eq.~(\ref{reslean}) at a given fixed order requieres the explicit use of several resummation coefficients and hard collinear coefficient functions.
 At NLO, the coefficients $A^{(1)}_{g}$, $B^{(1)}_{g}$, $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(1)}_{g}$ are enough to compute the total cross section and completely differential distributions. Assuming that the Higgs boson couples to a single heavy quark of mass $m_Q$, the first-order coefficient $H_g^{H;(1)}$ in the hard scheme is~\cite{Catani:2013tia}
@@ -785,37 +787,37 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 
 & $43.47$%Exact
 
-& $43.58~\pm 0.11$
+& $43.46~\pm 0.02$
 
-& $43.58~\pm 0.11$
+& $43.46~\pm 0.02$
 
-& $43.58~\pm 0.11$ 
+& $43.46~\pm 0.02$ 
 
-& $43.58~\pm 0.11$  \\
+& $43.46~\pm 0.02$  \\
 
 \multirow{1}{*}{NNLO  {\scriptsize$\big[\mu=M_{H}\big]$} } 
 
 & $39.64$%Exact
 
-& $39.69~\pm 0.04$ 
+& $39.62~\pm 0.02$ 
 
-& $39.69~\pm 0.04$ 
+& $39.62~\pm 0.02$ 
 
-& $39.69~\pm 0.04$ 
+& $39.62~\pm 0.02$ 
 
-& $39.69~\pm 0.04$ \\
+& $39.62~\pm 0.02$ \\
 
 \multirow{1}{*}{~~~NNLO  {\scriptsize$\big[\mu=M_{H}/4\big]$} } 
 
 & $47.33$%Exact
 
-& $47.50~\pm 0.18$  
+& $47.33~\pm 0.02$  
 
-& $47.50~\pm 0.18$
+& $47.33~\pm 0.02$
 
-& $47.50~\pm 0.18$  
+& $47.33~\pm 0.02$  
 
-& $47.50~\pm 0.18$ \\
+& $47.33~\pm 0.02$ \\
 
 \hline
 
@@ -1487,7 +1489,7 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   
 % LHAPDF framework  
 \bibitem{Buckley:2014ana}
-  A.~Buckley, J.~Ferrando, S.~Lloyd, K.~Nordström, B.~Page, M.~Rüfenacht, M.~Schönherr and G.~Watt,
+  A.~Buckley, J.~Ferrando, S.~Lloyd, K.~NordstrÃ¶m, B.~Page, M.~RÃ¼fenacht, M.~SchÃ¶nherr and G.~Watt,
   %``LHAPDF6: parton density access in the LHC precision era,''
   Eur.\ Phys.\ J.\ C {\bf 75} (2015) 132
   doi:10.1140/epjc/s10052-015-3318-8
@@ -1527,7 +1529,7 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   %%CITATION = doi:10.1103/PhysRevLett.108.072001, 10.1103/PhysRevLett.117.089901;%%
 
 \bibitem{Hoeschele:2013gga}
-  M.~Höschele, J.~Hoff, A.~Pak, M.~Steinhauser and T.~Ueda,
+  M.~HÃ¶schele, J.~Hoff, A.~Pak, M.~Steinhauser and T.~Ueda,
   %``MT: A Mathematica package to compute convolutions,''
   Comput.\ Phys.\ Commun.\  {\bf 185} (2014) 528
   doi:10.1016/j.cpc.2013.10.007
@@ -1535,7 +1537,7 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   %%CITATION = doi:10.1016/j.cpc.2013.10.007;%%
   
   \bibitem{Hoschele:2012xc}
-  M.~Höschele, J.~Hoff, A.~Pak, M.~Steinhauser and T.~Ueda,
+  M.~HÃ¶schele, J.~Hoff, A.~Pak, M.~Steinhauser and T.~Ueda,
   %``Higgs boson production at the LHC: NNLO partonic cross sections through order $\epsilon$ and convolutions with splitting functions to N$^3$LO,''
   Phys.\ Lett.\ B {\bf 721} (2013) 244
   doi:10.1016/j.physletb.2013.03.003
@@ -1597,4 +1599,5 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
  
 \end{thebibliography}
 \end{document}
+
 
