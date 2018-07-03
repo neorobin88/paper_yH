@@ -95,7 +95,7 @@ $^{(d)}$ Theoretical Physics Department, CERN, 1211 Geneva 23, Switzerland
 \begin{quote}
 \pretolerance 10000
 
-We consider higher-order QCD corrections to Higgs boson production through gluon--gluon fusion in hadron collisions. We use the transverse-momentum ($q_T$) subtraction method at the next-to-next-to-next-to-leading order (N$^{3}$LO) to numerically compute arbitrary infrared-safe observables for this class of processes. To cancel the infrared divergences, we exploit the universal behaviour of the associated $q_T$ distributions in the small-$q_T$ region. Our calculation is implemented in a parton level Monte Carlo program that allows the user to apply arbitrary kinematical cuts on the associated jet activity, and to compute the corresponding distributions in the form of bin histograms. We present selected numerical results at the LHC.
+We consider higher-order QCD corrections to Higgs boson production through gluon--gluon fusion under heavy top assumption in hadron collisions. We use the transverse-momentum ($q_T$) subtraction method at the next-to-next-to-next-to-leading order (N$^{3}$LO) joint with NNLO Higgs plus jet framework to numerically compute arbitrary infrared-safe observables for this class of processes. To cancel the infrared divergences, we exploit the universal behaviour of the associated $q_T$ distributions in the small-$q_T$ region. Our calculation is implemented in a parton level Monte Carlo program that allows the user to apply arbitrary kinematical cuts on the associated jet activity, and to compute the corresponding distributions in the form of bin histograms. We present selected numerical results at the LHC.
 
 \end{quote}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -121,17 +121,17 @@ We consider the inclusive hard-scattering reaction
 h_1(p_1)+h_2(p_2)\to F(\{q_i\})+X\, ,
 \label{class}
 \end{equation}
-where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the triggered final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons with centre--of--mass energy $\sqrt s$, are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1p_2)$. The observed final state $F$ consist of a generic system of non-QCD partons composed by {\em one} or {\em more} colour singlet particles (such as {\em one} or {\em more} vector bosons $(\gamma^*, W, Z, \dots)$, photons, Higgs particles, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ $(q^2=M^2)$, the transverse momentum $\bf \qt$ with respect to the direction of the colliding hadrons, and the rapidity $y$ $(2y = \ln (p_2q/p_1q))$ in the centre--of--mass system of the collision. 
+where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the triggered final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons with partonic centre--of--mass energy $\sqrt s$, are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1p_2)$. The observed final state $F$ consist of a generic system of non-QCD partons composed by {\em one} or {\em more} colour singlet particles (such as {\em one} or {\em more} vector bosons $(\gamma^*, W, Z, \dots)$, photons, Higgs particles, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ $(q^2=M^2)$, the transverse momentum $\bf \qt$ with respect to the direction of the colliding hadrons, and the rapidity $y$ $(2y = \ln (p_2q/p_1q))$ in the centre--of--mass system of the collision. 
 Since $F$ is colourless, the LO partonic Born cross section can be either initiated by $qq^{\prime}$ annihilation
 %\footnote{Actually the quarks can be of different flavors ($qq^{\prime}$) as for the production of a $W$ vector boson.}
 , as in the case of the Drell--Yan process or by gluon--gluon fusion as in the case of the Higgs boson production.
 
-In order to report the principles of the subtraction formalism we first notice that at LO, the transverse momentum $\bom{q}_{T}=\sum_i \bom{q}_{T\;i}$ of the final state system $F$ is identically zero. Therefore, as long as $\qt \neq 0$, the N$^{n}$LO contributions (with $n=1,2,3$) are given by the N$^{n-1}$LO contributions to the triggered final state $F$+jet(s). Consequently, if $\qt \neq 0$ we have:
+In order to report the structure  of the subtraction formalism we first notice that at LO, the transverse momentum $\bom{q}_{T}=\sum_i \bom{q}_{T\;i}$ of the final state system $F$ is identically zero. Therefore, as long as $\qt \neq 0$, the N$^{n}$LO QCD contributions (with $n=1,2,3$) are given by the N$^{n-1}$LO QCD contributions to the triggered final state $F$+jet(s). Consequently, if $\qt \neq 0$ we have:
 \begin{equation}
 \label{Eq:first}
 d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0) \equiv d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}\;\;\;\;{\rm with}\;\;\; n=1,2,3\;.
 \end{equation}
-The notation N$^{n}$LO stands for: N$^{0}$LO=LO, N$^{1}$LO=NLO, N$^{2}$LO=NNLO and so forth. Equation (\ref{Eq:first})  implies that if $\qt \neq 0$ the infra--red (IR) divergencies that appear in the computation of $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ are those already present in $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$. These IR singularities can be handled and cancelled with the available subtraction methods at the NLO and NNLO. The only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum cross section is well known thorough the resummation program \cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary counterterms (CT) in order to subtract the remaining singularity and promote to N$^{3}$LO Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy}. The precedent strategy is accomplished combining resummed and fixed-order calculations as detailed in \cite{Bozzi:2005wk}.
+The notation N$^{n}$LO stands for: N$^{0}$LO=LO, N$^{1}$LO=NLO, N$^{2}$LO=NNLO and so forth. Equation (\ref{Eq:first})  implies that if $\qt \neq 0$ the infra--red (IR) divergencies that appear in the computation of $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ are those already present in $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$. The $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$ here is used to indicate a collection of the number of real radiations and the number of virtual loops. To be inclusive for the production of the $F(\{q_i\})$ system, no jet algorithm is applied at $\qt \neq 0$. The IR singularities involved in $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ can be handled and cancelled with the available subtraction methods at N$^{n-1}$LO. The only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum cross section is well known thorough the resummation program \cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary counterterms (CT) in order to subtract the remaining singularity and promote $q_T$ subtraction method proposed in Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy} to N$^{3}$LO. The precedent strategy also accomplished the matching of resummed and fixed-order calculations of Higgs $\bf \qt$ distribution at NLO + N$^{2}$LL as detailed in \cite{Bozzi:2005wk}. Recent studies of Higgs $\bf \qt$ distributions at NNLO + N$^{3}$LL is achieved in Refs.~\cite{Chen:2018pzu,Bizon:2018foh}. A separate study joining $q_T$ subtraction formalism with resummation is expected in the future as an extansion of the current N$^3$LO calculation. 
 
 The sketchy form of the $\qt$ subtraction method \cite{Catani:2007vq} for the N$^{n}$LO cross section is
  \begin{equation}
@@ -259,7 +259,7 @@ The physical origin of the  resummation scheme invariance of Eq.~(\ref{reslean})
 The invariance implies that the hard-virtual factors $H_c^{F}, S_c$ (more precisely, the function $B_c$)  and $C_{ab}$ are not unambiguously computable order by order in perturbation theory. After choosing a `resummation scheme', these factors can be unambiguously defined. We rely on the \textit{hard resummation scheme} defined in Ref. \cite{Catani:2013tia}, which states all the contributions proportional to $\delta(1-z)$ are considered in the hard-virtual functions $H_c^{F}$. The precedent condition directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$. In addition, the resummation coefficients $A_{c}$ and the helicity-flip functions $G_{ab}$ are also independent of the final state process.
 
 The truncation of Eq.~(\ref{reslean}) at a given fixed order requieres the explicit use of several resummation coefficients and hard collinear coefficient functions.
-At NLO, the coefficients $A^{(1)}_{g}$, $B^{(1)}_{g}$, $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(1)}_{g}$ are enough to compute the total cross section and completely differential distributions. Assuming that the Higgs boson couples to a single heavy quark of mass $m_Q$, the first-order coefficient $H_g^{H;(1)}$ in the hard scheme is~\cite{Catani:2013tia}
+At NLO, the coefficients $A^{(1)}_{g}$, $B^{(1)}_{g}$, $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(1)}_{g}$ are enough to compute the inclusive total cross section and differential distributions. Assuming that the Higgs boson couples to a single heavy quark of mass $m_Q$, the first-order coefficient $H_g^{H;(1)}$ in the hard scheme is~\cite{Catani:2013tia}
 \begin{equation}
 \label{H1g}
 H_g^{H;(1)}=C_A\pi^2/2+c_H(m_Q)\, .
@@ -273,10 +273,10 @@ Therefore the complete NLO set of necessary coefficients to compute Higgs boson 
 A^{(1)}_{g}=C_{A}\;,\;\;\;\;\;\;\;\;\;&&B^{(1)}_{g}=- \f{1}{6} \left( 11 C_A - 2 N_f \right)\;,\;\;\;\;\;\;\;\;\;H^{H;(1)}_{g}=\f{1}{2}(11+C_{A}\pi^{2})\;,\nn\\
 &&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!C^{(1)}_{ga}(z)=\f{1}{2}C_F\, z\;\;\;\;\;\;\;\;\;\left[a=q,{\bar q}\right]\;,\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;C^{(1)}_{gg}(z)=0\;.
 \eeeq
-The coefficients $A^{(1)}_{g}$ and $B^{(1)}_{g}$ are process independent, but even more, they are resummation scheme independent. In the hard resummation scheme the collinear functions $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) are process independent whereas $H^{H;(1)}_{g}$ depends on final state system $(F=H)$, and both depend on the resummation scheme in such a way to ensure the resummation scheme independence of Eq.~(\ref{reslean}) at NLO. The computation of the hard-virtual coefficients $H^{H(1)}_{c}$ requires a particular prescription which is known from some time~\cite{deFlorian:2001zd}. The explicit calculations and the results of Ref.~\cite{deFlorian:2001zd} show that the NLO hard-virtual coefficient $H^{F;(1)}_{c}$ is explicitly related in a process-independent form to $d{\hat \sigma}^{F}_{\rm LO}$ and to the IR finite part of the NLO virtual correction to the Born cross section. The precedent process-independent relation is based on the definition of universal subtraction operators that cancel the IR divergences of the one-loop (NLO) virtual correction to the Born cross section and fix the first order IR finite constant $\delta_{q_{T}}$ \cite{Catani:2013tia}. The coefficient $\delta_{q_{T}}$, that only depends on the initial state partons, has a \textit{soft} origin and it is defined in Refs. \cite{deFlorian:2001zd} and \cite{Catani:2013tia}.
+The coefficients $A^{(1)}_{g}$ and $B^{(1)}_{g}$ are process as well as resummation scheme independent. In the hard resummation scheme the collinear functions $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) are process independent whereas $H^{H;(1)}_{g}$ depends on final state system $(F=H)$, and both depend on the resummation scheme in such a way to ensure the resummation scheme independence of Eq.~(\ref{reslean}) at NLO. The computation of the hard-virtual coefficients $H^{H(1)}_{c}$ requires a particular prescription which is known from some time~\cite{deFlorian:2001zd}. The explicit calculations and the results of Ref.~\cite{deFlorian:2001zd} show that the NLO hard-virtual coefficient $H^{F;(1)}_{c}$ is explicitly related in a process-independent form to $d{\hat \sigma}^{F}_{\rm LO}$ and to the IR finite part of the NLO virtual correction to the Born cross section. The precedent process-independent relation is based on the definition of universal subtraction operators that cancel the IR divergences of the one-loop (NLO) virtual correction to the Born cross section and fix the first order IR finite constant $\delta_{q_{T}}$ \cite{Catani:2013tia}. The coefficient $\delta_{q_{T}}$, that only depends on the initial state partons, has a \textit{soft} origin and it is defined in Refs. \cite{deFlorian:2001zd} and \cite{Catani:2013tia}.
 
 
-At NNLO, the coefficients $A^{(2)}_{g}$ and $B^{(2)}_{g}$ are needed,
+At NNLO, the coefficients $A^{(2)}_{g}$ and $B^{(2)}_{g}$ are needed~\cite{Bozzi:2005wk,Catani:2013tia},
 \beeq
 \label{A2andB2}
 A^{(2)}_{g}= \frac{1}{2}\; C_A \left[ \left( \f{67}{18} - \f{\pi^2}{6}
@@ -291,7 +291,7 @@ where $\gamma_{g(1)}$ is the coefficient of the $\delta(1-z)$ term in the NLO gl
 \end{equation}
 and $\zeta_n$ is the Riemann zeta-function ($\zeta_2=\pi^2/6, \zeta_3=1.202\dots, \zeta_4=\pi^4/90$). The coefficient $A^{(2)}_{g}$ does not depend on the resummation scheme whereas $B^{(2)}_{g}$  in Eq. (\ref{A2andB2}) is expressed in the hard resummation scheme and both coefficients are process independent. The collinear functions $C^{(2)}_{ga}$ ($a=q,{\bar q},g$) in the hard resummation scheme can be extracted from Refs.~\cite{Catani:2013tia,Catani:2011kr} and they are independent of the final state system $F$. 
 
-The general estructure of the hard-virtual coefficients $H^{F}_{c}$ is known only recently \cite{Catani:2013tia}. Although this  factor is process dependent, in Ref. \cite{Catani:2013tia} was shown that it can be directly related in a universal (process-independent) way to  the IR finite part of the all-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. The precedent relation between $H^{F}_{c}$ and the all-order virtual correction to the  partonic subprocess $c{\bar c}\to F$ is explicitly known up to the NNLO and it is based on the definition of universal subtraction operators that cancel the IR divergences of the two-loop (NNLO) virtual corrections to the Born cross section. These universal second order operators contain an IR finite term of soft origin ($\delta^{(1)}_{q_{T}}$)  that only depends on the initial state partons \cite{Catani:2013tia}.
+The general structure of the hard-virtual coefficients $H^{F}_{c}$ is known only recently \cite{Catani:2013tia}. Although this  factor is process dependent, in Ref. \cite{Catani:2013tia} was shown that it can be directly related in a universal (process-independent) way to  the IR finite part of the all-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. The precedent relation between $H^{F}_{c}$ and the all-order virtual correction to the  partonic subprocess $c{\bar c}\to F$ is explicitly known up to the NNLO and it is based on the definition of universal subtraction operators that cancel the IR divergences of the two-loop (NNLO) virtual corrections to the Born cross section. These universal second order operators contain an IR finite term of soft origin ($\delta^{(1)}_{q_{T}}$)  that only depends on the initial state partons \cite{Catani:2013tia}.
 
 
 In the case of Higgs boson production the hard-virtual factor $H^{F=H;(2)}_{g}$ in the large-$m_t$ limit (in the hard scheme) is \cite{Catani:2011kr}
@@ -1326,6 +1326,22 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%\cite{Chen:2018pzu}
+\bibitem{Chen:2018pzu}
+  X.~Chen {\it et al.},
+  %``Precise QCD Description of the Higgs Boson Transverse Momentum Spectrum,''
+  arXiv:1805.00736 [hep-ph].
+  %%CITATION = ARXIV:1805.00736;%%
+  %3 citations counted in INSPIRE as of 03 Jul 2018
+
+%\cite{Bizon:2018foh}
+\bibitem{Bizon:2018foh}
+  W.~Bizoń {\it et al.},
+  %``Fiducial distributions in Higgs and Drell-Yan production at N$^3$LL+NNLO,''
+  arXiv:1805.05916 [hep-ph].
+  %%CITATION = ARXIV:1805.05916;%%
+  %2 citations counted in INSPIRE as of 03 Jul 2018
+  
 %\cite{Catani:2010pd}
 \bibitem{Catani:2010pd}
   S.~Catani and M.~Grazzini,
@@ -1596,7 +1612,7 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   J.\ Symb.\ Comput.\  {\bf 33} (2000) 1
   [cs/0004015 [cs-sc]].
   %%CITATION = CS/0004015;%%
- 
+
 \end{thebibliography}
 \end{document}
 
