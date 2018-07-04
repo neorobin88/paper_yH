@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  3 JUL 2018 12:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  4 JUL 2018 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -148,7 +148,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [1]
-[2] [3] [4] [5] [6] [7] [8] [9]
+[2] [3] [4] [5] [6] [7]
+Overfull \hbox (11.10075pt too wide) in paragraph at lines 427--430
+[]\OML/cmm/m/it/12 d[]=dq[][][]$ \OT1/cmr/m/n/12 does not ex-plic-itly de-pend 
+on the co-ef-fi-cient $\OMS/cmsy/m/n/12 H[]$\OT1/cmr/m/n/12 . Anal-o-gously, $[
+]\OML/cmm/m/it/12 d[]=dq[][][]$
+ []
+
+[8] [9]
 Overfull \hbox (1.24173pt too wide) in paragraph at lines 517--519
 \OT1/cmr/m/n/12 Therefore the nu-mer-i-cal ex-trac-tion is con-strained to the 
 func-tions $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n
@@ -247,10 +254,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1602--1608
 Here is how much of TeX's memory you used:
  1669 strings out of 492996
  19483 string characters out of 6132729
- 94107 words of memory out of 5000000
+ 94398 words of memory out of 5000000
  5217 multiletter control sequences out of 15000+600000
  17901 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,16n,26p,2642b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,16n,26p,2657b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (26 pages, 130184 bytes).
+Output written on HiggsN3LOdiff.dvi (26 pages, 130460 bytes).
