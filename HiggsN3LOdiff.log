@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  4 JUL 2018 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  5 JUL 2018 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -191,13 +191,13 @@ Package amsmath Warning: Foreign command \over;
 [21] [22]
 Missing character: There is no Å in font cmr12!
 Missing character: There is no „ in font cmr12!
-
+ [23]
 Underfull \hbox (badness 10000) in paragraph at lines 1456--1462
 []\OT1/cmr/m/n/12 Y. Li and H. X. Zhu, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \O
 T1/cmr/m/n/12 (2017) no.2, 022004
  []
 
-[23]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1465--1471
 []\OT1/cmr/m/n/12 A. A. Vladimirov, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \OT1/
 cmr/m/n/12 (2017) no.6, 062001
@@ -230,6 +230,7 @@ Underfull \hbox (badness 5771) in paragraph at lines 1539--1546
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
+[24]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
@@ -250,7 +251,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1602--1608
 /12 1603 \OT1/cmr/m/n/12 (2016) 189
  []
 
-[24] [25] (./HiggsN3LOdiff.aux) ) 
+[25] (./HiggsN3LOdiff.aux) ) 
 Here is how much of TeX's memory you used:
  1669 strings out of 492996
  19483 string characters out of 6132729
@@ -260,4 +261,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  27i,16n,26p,2657b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (26 pages, 130460 bytes).
+Output written on HiggsN3LOdiff.dvi (26 pages, 131844 bytes).
