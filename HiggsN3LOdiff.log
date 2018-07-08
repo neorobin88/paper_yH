@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  6 JUL 2018 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  8 JUL 2018 07:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -163,9 +163,9 @@ func-tions $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n
  )$ and $[]\OML/cmm/m/it/12 H[][][]$\OT1/cmr/m/n/12 .
  []
 
+[10] [11]
 (./figure/finN3LO.ps
 )
-[10] [11]
 (./figure/CN3.ps
 )
 (./figure/CN3_new_7_point_qT1_qT2_qT3.ps
@@ -186,23 +186,24 @@ func-tions $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1043.
+(amsmath)                 on input line 1048.
 
-[22] [23]
+[22] [23] [24]
 Missing character: There is no Å in font cmr12!
 Missing character: There is no „ in font cmr12!
- [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1473--1479
+
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1485
 []\OT1/cmr/m/n/12 Y. Li and H. X. Zhu, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \O
 T1/cmr/m/n/12 (2017) no.2, 022004
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1482--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1494
 []\OT1/cmr/m/n/12 A. A. Vladimirov, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \OT1/
 cmr/m/n/12 (2017) no.6, 062001
  []
 
+[25]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -210,72 +211,54 @@ Missing character: There is no ¼ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
-Underfull \hbox (badness 3769) in paragraph at lines 1556--1563
+Underfull \hbox (badness 3769) in paragraph at lines 1625--1632
 []\OT1/cmr/m/n/12 S. Catani, L. Cieri, D. de Flo-rian, G. Fer-rera and M. Grazz
 -ini, Phys. Rev.
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 1556--1563
+Underfull \hbox (badness 2818) in paragraph at lines 1625--1632
 \OT1/cmr/m/n/12 Lett. \OT1/cmr/bx/n/12 108 \OT1/cmr/m/n/12 (2012) 072001 Er-ra-
 tum: [Phys. Rev. Lett. \OT1/cmr/bx/n/12 117 \OT1/cmr/m/n/12 (2016) no.8, 089901
 ]
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 1556--1563
+Underfull \hbox (badness 5771) in paragraph at lines 1625--1632
 \OT1/cmr/m/n/12 doi:10.1103/PhysRevLett.108.072001, 10.1103/Phys-RevLett.117.08
 9901 [arXiv:1110.2375
  []
 
-[25]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
-Underfull \hbox (badness 3601) in paragraph at lines 1589--1595
+Underfull \hbox (badness 3601) in paragraph at lines 1658--1664
 []\OT1/cmr/m/n/12 E. Remiddi and J. A. M. Ver-maseren, Int. J. Mod. Phys. A \OT
 1/cmr/bx/n/12 15 \OT1/cmr/m/n/12 (2000) 725
  []
 
-
-Underfull \hbox (badness 3407) in paragraph at lines 1597--1603
+[26]
+Underfull \hbox (badness 3407) in paragraph at lines 1666--1672
 []\OT1/cmr/m/n/12 A. B. Gon-charov, Math. Res. Lett. \OT1/cmr/bx/n/12 5 \OT1/cm
 r/m/n/12 (1998) 497 doi:10.4310/MRL.1998.v5.n4.a7
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1625
+Underfull \hbox (badness 10000) in paragraph at lines 1688--1694
 []\OT1/cmr/m/n/12 H. Frellesvig, D. Tom-masini and C. Wever, JHEP \OT1/cmr/bx/n
 /12 1603 \OT1/cmr/m/n/12 (2016) 189
  []
 
-
-! LaTeX Error: \begin{appendix} on input line 955 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1634 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[26] (./HiggsN3LOdiff.aux) )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 955 (\begingroup)
-### bottom level 
+[27] (./HiggsN3LOdiff.aux) ) 
 Here is how much of TeX's memory you used:
- 1669 strings out of 492996
- 19483 string characters out of 6132729
- 94400 words of memory out of 5000000
- 5217 multiletter control sequences out of 15000+600000
+ 1676 strings out of 492996
+ 19598 string characters out of 6132729
+ 96294 words of memory out of 5000000
+ 5224 multiletter control sequences out of 15000+600000
  17901 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,16n,26p,2657b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (27 pages, 138736 bytes).
+Output written on HiggsN3LOdiff.dvi (28 pages, 143144 bytes).
