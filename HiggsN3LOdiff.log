@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  12 JUL 2018 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  12 JUL 2018 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -196,38 +196,38 @@ func-tions $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n
 )
 (./figure/CN3_new_7_point_qT1_qT2_qT3.ps
 )
-[14]
+[14] [15]
 (./figure/totXsecN3LO.ps
 )
-[15] [16] [17]
+[16] [17]
 (./figure/yH_B05_CN.ps
 )
-[18]
+[18] [19]
 (./figure/yH_B02_only_N3LO_qTcut_uncert_CN3_uncert.ps
 )
-[19] [20]
+[20] [21]
 (./figure/yH_B02_best.ps
 )
-[21] [22] [23] [24]
+[22] [23] [24]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1081.
+(amsmath)                 on input line 1091.
 
 [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1257--1264
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1274
 []\OT1/cmr/m/n/12 F. Du-lat, B. Mistl-berger and A. Pel-loni, JHEP \OT1/cmr/bx/
 n/12 1801 \OT1/cmr/m/n/12 (2018) 145
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1554--1561
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1571
 []\OT1/cmr/m/n/12 D. de Flo-rian and M. Grazz-ini, Phys. Rev. Lett. \OT1/cmr/bx
 /n/12 85 \OT1/cmr/m/n/12 (2000) 4678
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 1564--1571
+Underfull \hbox (badness 1194) in paragraph at lines 1574--1581
 []\OT1/cmr/m/n/12 D. de Flo-rian and M. Grazz-ini, Nucl. Phys. B \OT1/cmr/bx/n/
 12 616 \OT1/cmr/m/n/12 (2001) 247 doi:10.1016/S0550-
  []
@@ -235,13 +235,13 @@ Underfull \hbox (badness 1194) in paragraph at lines 1564--1571
 Missing character: There is no Å in font cmr12!
 Missing character: There is no „ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1602--1608
+Underfull \hbox (badness 10000) in paragraph at lines 1612--1618
 []\OT1/cmr/m/n/12 Y. Li and H. X. Zhu, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \O
 T1/cmr/m/n/12 (2017) no.2, 022004
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1611--1617
+Underfull \hbox (badness 10000) in paragraph at lines 1621--1627
 []\OT1/cmr/m/n/12 A. A. Vladimirov, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \OT1/
 cmr/m/n/12 (2017) no.6, 062001
  []
@@ -254,20 +254,20 @@ Missing character: There is no ¼ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 
-Underfull \hbox (badness 3769) in paragraph at lines 1748--1755
+Underfull \hbox (badness 3769) in paragraph at lines 1758--1765
 []\OT1/cmr/m/n/12 S. Catani, L. Cieri, D. de Flo-rian, G. Fer-rera and M. Grazz
 -ini, Phys. Rev.
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 1748--1755
+Underfull \hbox (badness 2818) in paragraph at lines 1758--1765
 \OT1/cmr/m/n/12 Lett. \OT1/cmr/bx/n/12 108 \OT1/cmr/m/n/12 (2012) 072001 Er-ra-
 tum: [Phys. Rev. Lett. \OT1/cmr/bx/n/12 117 \OT1/cmr/m/n/12 (2016) no.8, 089901
 ]
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 1748--1755
+Underfull \hbox (badness 5771) in paragraph at lines 1758--1765
 \OT1/cmr/m/n/12 doi:10.1103/PhysRevLett.108.072001, 10.1103/Phys-RevLett.117.08
 9901 [arXiv:1110.2375
  []
@@ -276,20 +276,20 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
-
-Underfull \hbox (badness 3601) in paragraph at lines 1781--1787
+[29]
+Underfull \hbox (badness 3601) in paragraph at lines 1791--1797
 []\OT1/cmr/m/n/12 E. Remiddi and J. A. M. Ver-maseren, Int. J. Mod. Phys. A \OT
 1/cmr/bx/n/12 15 \OT1/cmr/m/n/12 (2000) 725
  []
 
 
-Underfull \hbox (badness 3407) in paragraph at lines 1789--1795
+Underfull \hbox (badness 3407) in paragraph at lines 1799--1805
 []\OT1/cmr/m/n/12 A. B. Gon-charov, Math. Res. Lett. \OT1/cmr/bx/n/12 5 \OT1/cm
 r/m/n/12 (1998) 497 doi:10.4310/MRL.1998.v5.n4.a7
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 1811--1817
+
+Underfull \hbox (badness 10000) in paragraph at lines 1821--1827
 []\OT1/cmr/m/n/12 H. Frellesvig, D. Tom-masini and C. Wever, JHEP \OT1/cmr/bx/n
 /12 1603 \OT1/cmr/m/n/12 (2016) 189
  []
@@ -300,12 +300,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1684 strings out of 492996
- 19724 string characters out of 6132729
- 96285 words of memory out of 5000000
- 5232 multiletter control sequences out of 15000+600000
+ 1685 strings out of 492996
+ 19741 string characters out of 6132729
+ 97992 words of memory out of 5000000
+ 5233 multiletter control sequences out of 15000+600000
  17901 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,16n,26p,2657b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (31 pages, 157040 bytes).
+Output written on HiggsN3LOdiff.dvi (31 pages, 158032 bytes).
