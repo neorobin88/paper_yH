@@ -116,6 +116,8 @@ Among the motivations of the extension from NLO to NNLO accuracy, reduce the the
 
 Besides the success of the NNLO subtraction program, the large centre--of--mass energies reached at the LHC and the continuously increasing accuracy of the performed measurements, the NNLO reveals itself (in some cases) even not enough to describe properly the LHC data. In many processes in which the size of the NLO corrections were comparable with the LO, the NNLO corrections presented large corrections and the size of theoretical uncertainties was not satisfactory at the light of the new LHC precision. The precedent reasons originated  in the past few months the beginning of a new extension program from the NNLO to the next subsequent perturbative order: the next-to-next-to-next-to-leading order (N$^{3}$LO).
 
+Among several estibalished N$^3$LO calculations, Higgs rapidity distribution has been studied through exapnsion of the analytical N$^3$LO coefficient functions around the production threshold of the Higgs boson~\cite{Dulat:2017prg}. Contribution from the first two orders of threshold expansion has been calculated for Higgs rapidity distribution and detailed numerical impact of joining these contributions with full NNLO resutls has been illustrated. 
+
 In this paper we present for first time the extension of the $q_{T}$ subtraction program at N$^{3}$LO and its application to the Higgs boson production. 
 The paper is organized as follows: in Sec. \ref{sec:forma} we recall briefly the main ideas of the $q_{T}$ subtraction formalism and we present its necessary ingredients up to  N$^{3}$LO, specifying which elements are known analytically and the missing coefficients at N$^{3}$LO. In Sec. \ref{sec:numforCN3} we present a prescription in order to approximate the missing collinear functions at N$^{3}$LO based on the unitarity property of the total integral of the transverse momentum distribution. In Sec. \ref{sec:rapgen} we apply the $q_{T}$ subtraction formalism at N$^{3}$LO in order to produce completely differential distributions in the particular case of the rapidity of the Higgs boson. In Sec. \ref{sec:NNLOrap} we quantify the quality of the approximation made in Sec. \ref{sec:numforCN3} performing an exercise at NNLO where all the $q_{T}$ subtraction ingredients are known. Our first N$^{3}$LO results concerning the rapidity of the Higgs boson are presented in Sec. \ref{sec:N3LOrap}, where we estimate the uncertainties introduced by the use of the technical cut $\qt^{{\rm cut}}$ and the approximation introduced in Sec. \ref{sec:numforCN3} at N$^{3}$LO. In Sec. \ref{sec:results} we present the final results regarding our best estimation of the Higgs boson rapidity at N$^{3}$LO and its comparison with the rapidities of the previous orders. Finally, in Sect. \ref{Sec:conclu} we summarize our results. 
 
@@ -346,7 +348,10 @@ The explicit expression of the $B_c^{(3)}$ ($a=q,g$) coefficients in the hard sc
 B_g^{(3)}&=& - \f{2133}{64} +  \f{3029}{576} N_{f} - \f{349}{1728} N_{f}^{2}  + \f{109}{6} \pi^{2} - \f{283}{144} \pi^{2}  N_{f} + \f{5}{108} \pi^{2}  N_{f}^{2}-\f{253}{160} \pi^{4}+\f{23}{240} \pi^{4} N_{f}\nn\\
 &-& \f{843}{8} \zeta_{3} + 2 \zeta_{3} N_{f} + \f{1}{6} \zeta_{3} N_{f}^{2} + \f{9}{4} \pi^{2}  \zeta_{3} + \f{135}{2}  \zeta_{5}\;.
 \eeeq
-The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~(\ref{reslean}) (considering all the precedent resummation coefficients) is completely known and the subtraction of the divergencies can be performed at N$^{3}$LO without any approximation. The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is proportional to $\delta(q^{2}_{T})$, contains the functions $H^{H;(3)}_{c}$, $C^{(3)}_{ga}$ and $G^{(2)}_{ga}$  that are not completely known. Nevertheless, within our subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be determined for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. This point is discussed in detail in Sect.~\ref{sec:numforCN3}. 
+
+The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~(\ref{reslean}) can be obtained by expanding the Sudakov form factor to the matching order in hard resummation scheme. The full analytical formulae for $\Sigma^{F}}$ are resummation scheme dependent. However, the logarithmic singular behaviours for $\Sigma^{F}}$ at $q_T\rightarrow 0$ should be the same and can be validated through comparisons with fixed order results at small $q_T$. More specifically, the LO Higgs $q_T$ distribution was validated with singular contribution from NLL (next-to-leading-logarithm) resummation~\cite{Catani:1988vd,Kauffman:1991cx}, the NLO Higgs $q_T$ distribution was validated with singular contribution from NNLL resummation~\cite{deFlorian:2000pr,deFlorian:2001zd}, the NNLO Higgs $q_T$ distribution has been recently validated with singular contribution from N$^3$LL resummation~\cite{Chen:2018pzu,Bizon:2018foh}. A separate study joining $q_T$ subtraction formalism with resummation is expected in the future as an extansion of the current N$^3$LO calculation.
+
+The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is proportional to $\delta(q^{2}_{T})$, contains the functions $H^{H;(3)}_{c}$, $C^{(3)}_{ga}$ and $G^{(2)}_{ga}$  that are not completely known. Nevertheless, within our subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be determined for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. This point is discussed in detail in Sect.~\ref{sec:numforCN3}. 
 
 
 \setcounter{footnote}{0}
@@ -966,7 +971,9 @@ The central scale ($\mu=M_{H}/2$) is shown with a solid line while the variation
 }}
 \end{figure}
 %%====================================
-In the central rapidity region of $|y_{H}| \leq 3.6$, the impact of the N$^{3}$LO corrections on the NNLO result is almost independent of $y_{H}$ with a flat $k$ factor about $1.035$ for the central scale choice. The combined theoretical uncertainty at N$^3$LO is at most of $\pm 5 \%$ level with respect to the central scale choice. The precision of $y_H$ distribution is improved by more than  $50\%$ from NNLO to N$^3$LO. The N$^3$LO theoretical uncertainty band stays within the scale variation band of NNLO except for the very large rapidity region. 
+In the central rapidity region of $|y_{H}| \leq 3.6$, the impact of the N$^{3}$LO corrections on the NNLO result is almost independent of $y_{H}$ with a flat $k$ factor about $1.035$ for the central scale choice. The combined theoretical uncertainty at N$^3$LO is at most of $\pm 5 \%$ level with respect to the central scale choice. The precision of $y_H$ distribution is improved by more than  $50\%$ from NNLO to N$^3$LO. The N$^3$LO theoretical uncertainty band stays within the scale variation band of NNLO except for the very large rapidity region.
+
+Comparing Fig.(\ref{fig:yHN3LO}) with previous results from the expansion of analytic N$^3$LO coefficient functions around the production threshold of the Higgs boson~\cite{Dulat:2017prg}, although with different choices of PDFs and scale variation regions, the central scale results of the rapidity region $y_H < 0.5$ agree well between the two calculations. Both calculations demonstrate considerable reduction for the scale variation band from NNLO to N$^3$LO at central rapidity region. For the rapidity region $y_H > 1$, the current $q_T$ subtraction formalism at N$^3$LO present different results compare to threshold expansion with the first two orders at N$^3$LO that the scale variation band for N$^3$LO staies outside the corresponding one at NNLO. This indicates a combined effect for having $C_{N3}$ approximation in one calculation while the missing higher order terms from threshold expansion are sizable for the other calcualtion.  
 
 \section{Conclusions and outlook}
 \label{Sec:conclu}
@@ -1245,6 +1252,16 @@ Phys.\ Lett.\ B {\bf 564} (2003) 65.
   [arXiv:1505.04794 [hep-ph]].
   %%CITATION = doi:10.1007/JHEP09(2015)058;%%
 
+%\cite{Dulat:2017prg}
+\bibitem{Dulat:2017prg}
+  F.~Dulat, B.~Mistlberger and A.~Pelloni,
+  %``Differential Higgs production at N$^{3}$LO beyond threshold,''
+  JHEP {\bf 1801} (2018) 145
+  doi:10.1007/JHEP01(2018)145
+  [arXiv:1710.03016 [hep-ph]].
+  %%CITATION = doi:10.1007/JHEP01(2018)145;%%
+  %8 citations counted in INSPIRE as of 12 Jul 2018
+  
 %%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1409,24 +1426,9 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   JHEP {\bf 1802} (2018) 108
   doi:10.1007/JHEP02(2018)108
   [arXiv:1705.09127 [hep-ph]].
-  
   %%CITATION = doi:10.1007/JHEP02(2018)108;%%
   %11 citations counted in INSPIRE as of 10 Jul 2018
-%\cite{Chen:2018pzu}
-\bibitem{Chen:2018pzu}
-  X.~Chen {\it et al.},
-  %``Precise QCD Description of the Higgs Boson Transverse Momentum Spectrum,''
-  arXiv:1805.00736 [hep-ph].
-  %%CITATION = ARXIV:1805.00736;%%
-  %3 citations counted in INSPIRE as of 03 Jul 2018
 
-%\cite{Bizon:2018foh}
-\bibitem{Bizon:2018foh}
-  W.~Bizoń {\it et al.},
-  %``Fiducial distributions in Higgs and Drell-Yan production at N$^3$LL+NNLO,''
-  arXiv:1805.05916 [hep-ph].
-  %%CITATION = ARXIV:1805.05916;%%
-  %2 citations counted in INSPIRE as of 03 Jul 2018
   
 %\cite{Catani:2010pd}
 \bibitem{Catani:2010pd}
@@ -1526,6 +1528,64 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   Phys.\ Lett.\ B {\bf 679} (2009) 467
   [arXiv:0907.2997 [hep-ph]];
   %%CITATION = ARXIV:0907.2997;%%
+
+%%%% Higgs pT resummation %%%%%
+  
+%\cite{Catani:1988vd}
+\bibitem{Catani:1988vd}
+  S.~Catani, E.~D'Emilio and L.~Trentadue,
+  %``The Gluon Form-factor to Higher Orders: Gluon Gluon Annihilation at Small $Q^-$transverse,''
+  Phys.\ Lett.\ B {\bf 211} (1988) 335.
+  doi:10.1016/0370-2693(88)90912-4
+  %%CITATION = doi:10.1016/0370-2693(88)90912-4;%%
+  %174 citations counted in INSPIRE as of 12 Jul 2018
+
+%\cite{Kauffman:1991cx}
+\bibitem{Kauffman:1991cx}
+  R.~P.~Kauffman,
+  %``Higher order corrections to Higgs boson p(T),''
+  Phys.\ Rev.\ D {\bf 45} (1992) 1512.
+  doi:10.1103/PhysRevD.45.1512
+  %%CITATION = doi:10.1103/PhysRevD.45.1512;%%
+  %91 citations counted in INSPIRE as of 12 Jul 2018
+
+%\cite{deFlorian:2000pr}
+\bibitem{deFlorian:2000pr}
+  D.~de Florian and M.~Grazzini,
+  %``Next-to-next-to-leading logarithmic corrections at small transverse momentum in hadronic collisions,''
+  Phys.\ Rev.\ Lett.\  {\bf 85} (2000) 4678
+  doi:10.1103/PhysRevLett.85.4678
+  [hep-ph/0008152].
+  %%CITATION = doi:10.1103/PhysRevLett.85.4678;%%
+  %154 citations counted in INSPIRE as of 12 Jul 2018
+
+%\cite{deFlorian:2001zd}
+\bibitem{deFlorian:2001zd}
+  D.~de Florian and M.~Grazzini,
+  %``The Structure of large logarithmic corrections at small transverse momentum in hadronic collisions,''
+  Nucl.\ Phys.\ B {\bf 616} (2001) 247
+  doi:10.1016/S0550-3213(01)00460-6
+  [hep-ph/0108273].
+  %%CITATION = doi:10.1016/S0550-3213(01)00460-6;%%
+  %152 citations counted in INSPIRE as of 12 Jul 2018
+  
+  
+%\cite{Chen:2018pzu}
+\bibitem{Chen:2018pzu}
+  X.~Chen {\it et al.},
+  %``Precise QCD Description of the Higgs Boson Transverse Momentum Spectrum,''
+  arXiv:1805.00736 [hep-ph].
+  %%CITATION = ARXIV:1805.00736;%%
+  %3 citations counted in INSPIRE as of 03 Jul 2018
+
+%\cite{Bizon:2018foh}
+\bibitem{Bizon:2018foh}
+  W.~Bizoń {\it et al.},
+  %``Fiducial distributions in Higgs and Drell-Yan production at N$^3$LL+NNLO,''
+  arXiv:1805.05916 [hep-ph].
+  %%CITATION = ARXIV:1805.05916;%%
+  %2 citations counted in INSPIRE as of 03 Jul 2018
+
   
 %%%% gg->H with finite masses
 
