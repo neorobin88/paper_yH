@@ -10,8 +10,8 @@
 \setlength{\textheight}{24cm} 
 \setlength{\textwidth}{17.5cm} 
 \parskip = 2ex 
- %Figures
- \renewcommand{\thefigure}{\arabic{figure}}  
+%Figures
+\renewcommand{\thefigure}{\arabic{figure}}  
 % Equations and arrays
 \def\beq{\begin{equation}} 
 \def\eeq{\end{equation}} 
@@ -61,13 +61,13 @@
 \begin{flushright}
 07-04-2018 \\
 hep-ph/07-04-2018
-     \end{flushright}
+\end{flushright}
 \par \vspace{10mm}
 \begin{center}
 {\Large \bf
 Higgs boson production at the LHC\\
 \vskip .3cm
-using the $\qt$ subtraction formalism at N$^{3}$LO QCD}
+using the $\qt$ subtraction formalism at N$^\text{3}$LO QCD}
 \end{center}
 \par \vspace{2mm}
 \begin{center}
@@ -349,7 +349,7 @@ B_g^{(3)}&=& - \f{2133}{64} +  \f{3029}{576} N_{f} - \f{349}{1728} N_{f}^{2}  + 
 &-& \f{843}{8} \zeta_{3} + 2 \zeta_{3} N_{f} + \f{1}{6} \zeta_{3} N_{f}^{2} + \f{9}{4} \pi^{2}  \zeta_{3} + \f{135}{2}  \zeta_{5}\;.
 \eeeq
 
-The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~(\ref{reslean}) can be obtained by expanding the Sudakov form factor to the matching order in hard resummation scheme. The full analytical formulae for $\Sigma^{F}}$ are resummation scheme dependent. However, the logarithmic singular behaviours for $\Sigma^{F}}$ at $q_T\rightarrow 0$ should be the same and can be validated through comparisons with fixed order results at small $q_T$. More specifically, the LO Higgs $q_T$ distribution was validated with singular contribution from NLL (next-to-leading-logarithm) resummation~\cite{Catani:1988vd,Kauffman:1991cx}, the NLO Higgs $q_T$ distribution was validated with singular contribution from NNLL resummation~\cite{deFlorian:2000pr,deFlorian:2001zd}, the NNLO Higgs $q_T$ distribution has been recently validated with singular contribution from N$^3$LL resummation~\cite{Chen:2018pzu,Bizon:2018foh}. A separate study joining $q_T$ subtraction formalism with resummation is expected in the future as an extansion of the current N$^3$LO calculation.
+The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~(\ref{reslean}) can be obtained by expanding the Sudakov form factor to the matching order in hard resummation scheme. The full analytical formulae for $\Sigma^{F}$ are resummation scheme dependent. However, the logarithmic singular behaviours for $\Sigma^{F}$ at $q_T\rightarrow 0$ should be the same and can be validated through comparisons with fixed order results at small $q_T$. More specifically, the LO Higgs $q_T$ distribution was validated with singular contribution from NLL (next-to-leading-logarithm) resummation~\cite{Catani:1988vd,Kauffman:1991cx}, the NLO Higgs $q_T$ distribution was validated with singular contribution from NNLL resummation~\cite{deFlorian:2000pr,deFlorian:2001zd}, the NNLO Higgs $q_T$ distribution has been recently validated with singular contribution from N$^3$LL resummation~\cite{Chen:2018pzu,Bizon:2018foh}. A separate study joining $q_T$ subtraction formalism with resummation is expected in the future as an extansion of the current N$^3$LO calculation.
 
 The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is proportional to $\delta(q^{2}_{T})$, contains the functions $H^{H;(3)}_{c}$, $C^{(3)}_{ga}$ and $G^{(2)}_{ga}$  that are not completely known. Nevertheless, within our subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be determined for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. This point is discussed in detail in Sect.~\ref{sec:numforCN3}. 
 
@@ -357,7 +357,7 @@ The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is prop
 \setcounter{footnote}{0}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Higgs boson total cross section at N$^{3}$LO}
+\section{The Higgs boson total cross section at N$^\text{3}$LO}
 \label{sec:numforCN3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -922,7 +922,7 @@ C_{N2}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow
 \eeeq 
 In Fig. \ref{fig:yHCN} we show the rapidity distribution of the Higgs boson at NNLO computed with the exact $\qt$ subtraction (green band) and the NNLO prediction using the $C_{N2}$ coefficient (red, blue and black points). For this particular example at NNLO, we employ the three--point scale variation: $\mu=\mu_{R}=\mu_{F}=\{M_{H}/4,M_{H}/2,M_{H}\}$. Repeating the analysis performed for the completion of Table \ref{Table:CN3values}, and Fig. (\ref{fig:CN3}) we arrive to the following result: $C_{N2}=28\pm 1$. The numerical value of the $C_{N2}$ parameter corresponds to a specific $\widetilde{H}^{H;(2)}_{g}$ hard coefficient:
 \begin{align}
-\label{H2g}
+\label{Ht2g}
 \widetilde{H}^{H;(2)}_{g}&=\f{11399}{144}+\f{19}{8} L_{t}-\f{1189}{144} N_{f}+\f{2}{3} N_{f} L_{t}+\f{83}{6} \pi^{2} -\f{5}{18} \pi^{2} N_{f} + \f{13}{16} \pi^{4} - \f{165}{4} \zeta_{3} + \f{5}{6} N_{f} \zeta_{3}\;\;,
 \end{align}
 which is obtained with the same method that was used to arrive to Eq. (\ref{H3approx}).
@@ -934,7 +934,7 @@ The numerical implementation of the $\qt$ subtraction method (more precisely Eq.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Numerical stability of the N$^3$LO rapidity distribution}
+\subsection{Numerical stability of the N$^\text{3}$LO rapidity distribution}
 \label{sec:N3LOrap}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1088,7 +1088,7 @@ The remaining convolutions in Eqs. (vii)--(xii) of Table \ref{Table:convosN3LO} 
 
 The multiple poly--logarithms can be defined recursively, for $n\geq 0$, via the iterated integral~\cite{Goncharov:1998kja,Goncharov:2001iea}
  \beq\label{MultPolyLogdef}
- G(a_1,\ldots,a_n;z)=\,\int_0^z\,{\rd t\over t-a_1}\,G(a_2,\ldots,a_n;t)\,,\\
+ G(a_1,\ldots,a_n;z)=\,\int_0^z\,\frac{\rd t}{t-a_1}\,G(a_2,\ldots,a_n;t)\,,\\
 \eeq
 with $G(z) = G(;z)=1$ (an exception being when $z=0$ in which case we put $G(0)=0$) and with $a_i\in \mathbb{C}$ are chosen constants and $z$ is a complex variable. Nevertheless, for the convolutions in Table \ref{Table:convosN3LO} the following conditions verify: the variable $z\in \mathbb{R}$ and the weights $a_1,\ldots,a_n \in \mathbb{R}$.
 
@@ -1568,17 +1568,6 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   [hep-ph/0008152].
   %%CITATION = doi:10.1103/PhysRevLett.85.4678;%%
   %154 citations counted in INSPIRE as of 12 Jul 2018
-
-%\cite{deFlorian:2001zd}
-\bibitem{deFlorian:2001zd}
-  D.~de Florian and M.~Grazzini,
-  %``The Structure of large logarithmic corrections at small transverse momentum in hadronic collisions,''
-  Nucl.\ Phys.\ B {\bf 616} (2001) 247
-  doi:10.1016/S0550-3213(01)00460-6
-  [hep-ph/0108273].
-  %%CITATION = doi:10.1016/S0550-3213(01)00460-6;%%
-  %152 citations counted in INSPIRE as of 12 Jul 2018
-  
   
 %\cite{Chen:2018pzu}
 \bibitem{Chen:2018pzu}
