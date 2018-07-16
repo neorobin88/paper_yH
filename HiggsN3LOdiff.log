@@ -1,9 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.15)  12 JUL 2018 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.20)  16 JUL 2018 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode\input HiggsN3LOdiff.tex
+**HiggsN3LOdiff.tex
 (./HiggsN3LOdiff.tex
+LaTeX2e <2017-04-15>
+Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
@@ -22,7 +24,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -33,10 +35,10 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: dvips.def on input line 99.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -121,74 +123,48 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsfxsize=\dimen118
 \epsfysize=\dimen119
 \pspoints=\dimen120
-) (./HiggsN3LOdiff.aux
-
-LaTeX Warning: Label `H2g' multiply defined.
-
-
-LaTeX Warning: Label `deFlorian:2001zd' multiply defined.
-
-)
+) (./HiggsN3LOdiff.aux)
 \openout1 = `HiggsN3LOdiff.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Try loading font information for U+msa on input line 70.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [1]
-[2] [3] [4] [5] [6]
-! Extra }, or forgotten $.
-l.352 ...full analytical formulae for $\Sigma^{F}}
-                                                  $ are resummation scheme d...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+[2] [3] [4] [5]
+Overfull \hbox (0.56487pt too wide) in paragraph at lines 327--329
+[]\OT1/cmr/m/n/12 The gen-eral struc-ture of the hard--virtual co-ef-fi-cients 
+$\OML/cmm/m/it/12 H[]$ \OT1/cmr/m/n/12 has been es-tab-lished only re-cently [[
+]].
+ []
 
-! Extra }, or forgotten $.
-l.352 ...hmic singular behaviours for $\Sigma^{F}}
-                                                  $ at $q_T\rightarrow 0$ sh...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[7] [8]
-Overfull \hbox (11.10075pt too wide) in paragraph at lines 453--456
+[6] [7] [8]
+Overfull \hbox (11.10075pt too wide) in paragraph at lines 467--470
 []\OML/cmm/m/it/12 d[]=dq[][][]$ \OT1/cmr/m/n/12 does not ex-plic-itly de-pend 
 on the co-ef-fi-cient $\OMS/cmsy/m/n/12 H[]$\OT1/cmr/m/n/12 . Anal-o-gously, $[
 ]\OML/cmm/m/it/12 d[]=dq[][][]$
  []
 
-[9] [10]
-Overfull \hbox (1.24173pt too wide) in paragraph at lines 543--545
-\OT1/cmr/m/n/12 Therefore the nu-mer-i-cal ex-trac-tion is con-strained to the 
-func-tions $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n
-/12 )$, $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n/12
- )$ and $[]\OML/cmm/m/it/12 H[][][]$\OT1/cmr/m/n/12 .
- []
-
-[11] [12]
+[9] [10] [11] [12]
 (./figure/finN3LO.ps
 )
 [13]
@@ -205,107 +181,92 @@ func-tions $\OML/cmm/m/it/12 G[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n
 [18] [19]
 (./figure/yH_B02_only_N3LO_qTcut_uncert_CN3_uncert.ps
 )
-[20] [21]
+[20]
 (./figure/yH_B02_best.ps
 )
-[22] [23] [24]
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1091.
-
-[25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1267--1274
-[]\OT1/cmr/m/n/12 F. Du-lat, B. Mistl-berger and A. Pel-loni, JHEP \OT1/cmr/bx/
-n/12 1801 \OT1/cmr/m/n/12 (2018) 145
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1571
-[]\OT1/cmr/m/n/12 D. de Flo-rian and M. Grazz-ini, Phys. Rev. Lett. \OT1/cmr/bx
-/n/12 85 \OT1/cmr/m/n/12 (2000) 4678
- []
-
-
-Underfull \hbox (badness 1194) in paragraph at lines 1574--1581
-[]\OT1/cmr/m/n/12 D. de Flo-rian and M. Grazz-ini, Nucl. Phys. B \OT1/cmr/bx/n/
-12 616 \OT1/cmr/m/n/12 (2001) 247 doi:10.1016/S0550-
- []
-
-Missing character: There is no Å in font cmr12!
-Missing character: There is no „ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 1612--1618
-[]\OT1/cmr/m/n/12 Y. Li and H. X. Zhu, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \O
-T1/cmr/m/n/12 (2017) no.2, 022004
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1621--1627
-[]\OT1/cmr/m/n/12 A. A. Vladimirov, Phys. Rev. Lett. \OT1/cmr/bx/n/12 118 \OT1/
-cmr/m/n/12 (2017) no.6, 062001
- []
-
-[28]
+[21] [22] [23] [24] [25]
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+ [26]
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no Ê in font cmr12!
+ [27]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¼ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
-
-Underfull \hbox (badness 3769) in paragraph at lines 1758--1765
-[]\OT1/cmr/m/n/12 S. Catani, L. Cieri, D. de Flo-rian, G. Fer-rera and M. Grazz
--ini, Phys. Rev.
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 1758--1765
-\OT1/cmr/m/n/12 Lett. \OT1/cmr/bx/n/12 108 \OT1/cmr/m/n/12 (2012) 072001 Er-ra-
-tum: [Phys. Rev. Lett. \OT1/cmr/bx/n/12 117 \OT1/cmr/m/n/12 (2016) no.8, 089901
-]
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 1758--1765
-\OT1/cmr/m/n/12 doi:10.1103/PhysRevLett.108.072001, 10.1103/Phys-RevLett.117.08
-9901 [arXiv:1110.2375
- []
-
+ [28]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
-[29]
-Underfull \hbox (badness 3601) in paragraph at lines 1791--1797
-[]\OT1/cmr/m/n/12 E. Remiddi and J. A. M. Ver-maseren, Int. J. Mod. Phys. A \OT
-1/cmr/bx/n/12 15 \OT1/cmr/m/n/12 (2000) 725
- []
-
-
-Underfull \hbox (badness 3407) in paragraph at lines 1799--1805
-[]\OT1/cmr/m/n/12 A. B. Gon-charov, Math. Res. Lett. \OT1/cmr/bx/n/12 5 \OT1/cm
-r/m/n/12 (1998) 497 doi:10.4310/MRL.1998.v5.n4.a7
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1821--1827
-[]\OT1/cmr/m/n/12 H. Frellesvig, D. Tom-masini and C. Wever, JHEP \OT1/cmr/bx/n
-/12 1603 \OT1/cmr/m/n/12 (2016) 189
- []
-
-[30] (./HiggsN3LOdiff.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ [29] (./HiggsN3LOdiff.aux) ) 
 Here is how much of TeX's memory you used:
- 1685 strings out of 492996
- 19741 string characters out of 6132729
- 97992 words of memory out of 5000000
- 5233 multiletter control sequences out of 15000+600000
+ 1709 strings out of 492986
+ 20101 string characters out of 6132611
+ 97808 words of memory out of 5000000
+ 5267 multiletter control sequences out of 15000+600000
  17901 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,16n,26p,2657b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,16n,26p,2884b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (31 pages, 158032 bytes).
+Output written on HiggsN3LOdiff.dvi (30 pages, 158156 bytes).

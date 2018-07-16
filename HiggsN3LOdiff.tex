@@ -32,6 +32,7 @@
 \def\ito{\leftarrow} 
 \def\LN{\ln N} 
 \def\qt{q_T} 
+\def\qtcut{\ensuremath{q_T^\mathrm{cut}}} 
 \def\res{{\rm res.}} 
 \def\msbar{{\overline {\rm MS}}} 
 \def\asp{\f{\as}{\pi}} 
@@ -46,7 +47,7 @@
 \def\ms{${\overline {\rm MS}}$}
 \def\bqt{{\bf q_T}}
 \def\ETmax{E_{T\,{\rm max}}}
-\newcommand{\rd}{d}
+\newcommand{\rd}{\mathrm{d}}
 %\newcommand{\percent}{\scalebox{.2}{\%}}
 \newcommand{\percent}{{\%}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,7 +60,8 @@
 \begin{titlepage}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \begin{flushright}
-ZU-TH 27/18
+ZU-TH 27/18, 
+CERN-TH-2018-167
 \end{flushright}
 \par \vspace{10mm}
 \begin{center}
@@ -94,7 +96,7 @@ $^{(d)}$ Theoretical Physics Department, CERN, 1211 Geneva 23, Switzerland
 \begin{quote}
 \pretolerance 10000
 
-We consider higher-order QCD corrections to Higgs boson production through gluon--gluon fusion in the large top quark mass limit in hadron collisions. We extend the transverse-momentum ($q_T$) subtraction method at the next-to-next-to-next-to-leading order (N$^{3}$LO) and combine it with the NNLO Higgs-plus-jet calculation to numerically compute differential infrared-safe observables at N$^{3}$LO for Higgs boson production in gluon fusion. To cancel the infrared divergences, we exploit the universal behaviour of the associated $q_T$ distributions in the small-$q_T$ region. We document all the necessary ingredients of the transverse-momentum subtraction method up to N$^{3}$LO. The missing third order collinear functions, which contribute only at $q_{T}=0$, are approximated using a prescription which uses the known result for the total Higgs boson cross section at this order. As an application of the third-order $q_T$ subtraction method, we present the  N$^{3}$LO rapidity distribution of the Higgs boson at the LHC.
+We consider higher-order QCD corrections to Higgs boson production through gluon--gluon fusion in the large top quark mass limit in hadron collisions. We extend the transverse-momentum ($q_T$) subtraction method at the next-to-next-to-next-to-leading order (N$^{3}$LO) and combine it with the NNLO Higgs-plus-jet calculation to numerically compute differential infrared-safe observables at N$^{3}$LO for Higgs boson production in gluon fusion. To cancel the infrared divergences, we exploit the universal behaviour of the associated $q_T$ distributions in the small-$q_T$ region. We document all the necessary ingredients of the transverse-momentum subtraction method up to N$^{3}$LO. The missing third-order collinear functions, which contribute only at $q_{T}=0$, are approximated using a prescription which uses the known result for the total Higgs boson cross section at this order. As an application of the third-order $q_T$ subtraction method, we present the  N$^{3}$LO rapidity distribution of the Higgs boson at the LHC.
 
 \end{quote}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,33 +111,25 @@ We consider higher-order QCD corrections to Higgs boson production through gluon
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
-The most straightforward and successful (as well as systematically improvable) approach to 
- calculations for processes at high-momentum scales $M$ in QCD is to use a perturbative approximation, involving a series expansion in the strong coupling $\as(M^{2})$. The cross sections are written as a series expansion in the parameter $\as$ and an improvement in accuracy is obtained by calculating an increasing number of coefficients in the series. Until few years ago, the standard for such calculations was next-to-leading order (NLO) accuracy. Recent years have 
+The most straightforward and successful (as well as systematically improvable) approach to calculations for processes at high-momentum scales $M$ in QCD is to use a perturbative approximation, involving a series expansion in the strong coupling $\as(M^{2})$. The cross sections are written as a series expansion in the parameter $\as$ and an improvement in accuracy is obtained by calculating an increasing number of coefficients in the series. Until few years ago, the standard for such calculations was next-to-leading order (NLO) accuracy. Recent years have 
  seen an increasing number of  next-to-next-to-leading order (NNLO) results, such that the standard precision for LHC phenomenology became the second non-trivial order in the strong coupling $\as$ for many important processes of interest.
 
-Among the motivations of the extension from NLO to NNLO accuracy, reduce the theoretical uncertainties was one of the main objectives, in particular in two situations. Firstly, NNLO corrections appear mandatory for 
- those processes where NLO corrections are comparable to the leading order (LO) contribution, in order 
- to establish the convergence of the perturbative expansion and to obtain reliable predictions. Secondly, benchmark processes that are measured with high experimental precision and used in the extraction of precise information about Standard-Model (SM) couplings  or parton-distribution functions from measured cross-sections would be limited by the accuracy of the theoretical calculation rather than the measurement. Such improvement in the accuracy of the calculation implies developing methods and techniques to achieve the cancellation of infrared (IR) divergences that appear at intermediate steps of the calculations. The past  years have seen of a great development in NNLO subtractions prescriptions. The transverse momentum ($q_{T}$) subtraction method \cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy}, the $N$-jettiness subtraction \cite{Boughezal:2015eha, Gaunt:2015pea}, projection-to-Born~\cite{Cacciari:2015jma}, residue 
- subtraction~\cite{Czakon:2011ve,Boughezal:2011jf},  
- and the antenna subtraction method  \cite{Antenna:method} belong to the most widely-used NNLO subtraction prescriptions. 
+Among the motivations of the extension from NLO to NNLO accuracy, the reduction of theoretical uncertainties was one of the main objectives, in particular in two situations. Firstly, NNLO corrections appear mandatory for those processes where NLO corrections are comparable to the leading order (LO) contribution, in order to establish the convergence of the perturbative expansion and to obtain reliable predictions. Secondly, benchmark processes that are measured with high experimental precision and used in the extraction of precise information about Standard Model (SM) couplings or parton distribution functions (PDFs) from measured cross sections would be limited by the accuracy of the theoretical calculation rather than the measurement. Such improvement in the accuracy of the calculation implies developing methods and techniques to achieve the cancellation of infrared (IR) divergences that appear at intermediate steps of the calculations. The past  years have seen of a great development in NNLO subtractions prescriptions. The transverse momentum ($q_{T}$) subtraction method~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy}, the $N$-jettiness subtraction~\cite{Boughezal:2015eha, Gaunt:2015pea}, projection-to-Born~\cite{Cacciari:2015jma}, residue subtraction~\cite{Czakon:2011ve,Boughezal:2011jf}, and the antenna subtraction method~\cite{Antenna:method} belong to the most widely-used NNLO subtraction prescriptions. 
 
 Besides the success of the NNLO subtraction program, in view of the continuously increasing accuracy of the measurements  performed at LHC, the NNLO results turn out to be not sufficient in some cases to describe the LHC data properly. In many processes in which the size of the NLO corrections were comparable with the LO, the NNLO corrections still presented large modifications and the size of theoretical uncertainties was not satisfactory at the light of the new LHC precision. These originated  in the recent past a new extension program from the NNLO to the next subsequent perturbative order: the next-to-next-to-next-to-leading order (N$^{3}$LO). Sum rules, branching fractions~\cite{Chetyrkin:1994js} 
 and deep inelastic 
 structure functions~\cite{Vermaseren:2005qc} have been known to this order for quite some time. At present, the 
 only hadron collider observables for which N$^{3}$LO QCD corrections have been calculated are the total cross section
-for Higgs boson 
-production in gluon fusion~\cite{Anastasiou:2015ema,Mistlberger:2018etf} and in vector boson 
+for Higgs boson production in gluon fusion~\cite{Anastasiou:2015ema,Mistlberger:2018etf} and in vector boson 
 fusion~\cite{Dreyer:2016oyx}. First steps have been taken towards more differential observables by 
-computing the first N$^{3}$LO threshold expansion terms to the Higgs boson rapidity distribution in gluon
- fusion~\cite{Dulat:2017prg}. Moreover, the projection-to-Born method has been most recently extended to 
-compute differential distributions to N$^{3}$LO, with a proof-of-principle calculation~\cite{Currie:2018fgr} 
-of jet production in deep inelastic 
-scattering. 
+computing the first N$^{3}$LO threshold expansion terms to the Higgs boson rapidity distribution in gluon fusion~\cite{Dulat:2017prg}. Moreover, the projection-to-Born method has been most recently extended to 
+compute fully differential distributions to N$^{3}$LO, with a proof-of-principle calculation~\cite{Currie:2018fgr} of jet production in deep inelastic scattering. 
 
 In this paper we present for first time the extension of the $q_{T}$ subtraction method at N$^{3}$LO and its application to Higgs boson production. 
 The paper is organized as follows: in Sec.~\ref{sec:forma} we recall briefly the main ideas of the $q_{T}$ subtraction formalism and we present its necessary ingredients up to  N$^{3}$LO, specifying which elements are known analytically and identify the missing coefficients at N$^{3}$LO. In Sec.~\ref{sec:numforCN3} we present a prescription  to approximate the missing collinear functions at N$^{3}$LO based on the unitarity property of the integral of the transverse momentum distribution. In Sec.~\ref{sec:rapgen} we apply the $q_{T}$ subtraction formalism at N$^{3}$LO in order to produce differential distributions in the rapidity of the Higgs boson. Towards this aim, Sec.~\ref{sec:NNLOrap} quantifies the quality of the approximations by repeating them at lower NNLO order, where all ingredients to $q_{T}$ subtraction are known. 
 We assess the magnitude of different sources of systematic uncertainties at  N$^{3}$LO in Sec.~\ref{sec:N3LOrap}, 
 yielding  final results for the N$^{3}$LO Higgs rapidity distribution and its uncertainty in Sec.~\ref{sec:results}. Finally, in Sec.~\ref{Sec:conclu} we summarize our results. 
+
 
 
 
@@ -150,7 +144,7 @@ We consider the inclusive hard-scattering reaction
 h_1(p_1)+h_2(p_2)\to F(\{q_i\})+X\, ,
 \label{class}
 \end{equation}
-where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the identified final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons with centre--of--mass energy $\sqrt s$, are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1p_2)$. The observed final state $F$ consist of a generic system of non-QCD partons composed of {\em one} or {\em more} colour singlet particles (such as {\em one} or {\em more} vector bosons $(\gamma^*, W, Z, \dots)$, photons, Higgs particles, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ $(q^2=M^2)$, the transverse momentum $\bf \qt$ with respect to the direction of the colliding hadrons, and the rapidity $y$ $(2y = \ln (p_2q/p_1q))$ in the centre--of--mass system of the collision. 
+where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the identified final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons with centre-of-mass energy $\sqrt s$, are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1p_2)$. The observed final state $F$ consist of a generic system of non-QCD partons composed of {\em one} or {\em more} colour singlet particles (such as {\em one} or {\em more} vector bosons $(\gamma^*, W, Z, \dots)$, photons, Higgs particles, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ $(q^2=M^2)$, the transverse momentum $\bf \qt$ with respect to the direction of the colliding hadrons, and the rapidity $y$ $(2y = \ln (p_2q/p_1q))$ in the centre-of-mass system of the collision. 
 Since $F$ is colourless, the LO partonic Born cross section can be either initiated by $q\bar{q}^{\prime}$ annihilation,
  as in the case of the Drell--Yan process or by gluon--gluon fusion as in the case of the Higgs boson production.
 
@@ -159,21 +153,21 @@ In order to explain the basic idea  of the subtraction formalism we first notice
 \label{Eq:first}
 d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0) \equiv d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}\;\;\;\;{\rm with}\;\;\; n=1,2,3\;.
 \end{equation}
-The notation N$^{n}$LO stands for: N$^{0}$LO=LO, N$^{1}$LO=NLO, N$^{2}$LO=NNLO and so forth. Equation (\ref{Eq:first})  implies that if $\qt \neq 0$ the infra--red (IR) divergencies that appear in the computation of $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ are those already present in $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$.
-The IR singularities involved in $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ can be handled and cancelled with the available subtraction methods at N$^{n-1}$LO. The only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum distribution is well known thorough the resummation program \cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary counterterms (CT) in order to subtract the remaining singularity promoting the $q_T$ subtraction method proposed in Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy} to N$^{3}$LO. 
+The notation N$^{n}$LO stands for: N$^{0}$LO=LO, N$^{1}$LO=NLO, N$^{2}$LO=NNLO and so forth. Equation~\eqref{Eq:first}  implies that if $\qt \neq 0$ the infra--red (IR) divergencies that appear in the computation of $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ are those already present in $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$.
+The IR singularities involved in $d\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ can be handled and cancelled with the available subtraction methods at N$^{n-1}$LO. The only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum distribution is well known thorough the resummation program~\cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary counterterms (CT) in order to subtract the remaining singularity promoting the $q_T$ subtraction method proposed in Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy} to N$^{3}$LO. 
 
 
-The generic form of the $\qt$ subtraction method \cite{Catani:2007vq} for the N$^{n}$LO cross section is
+The generic form of the $\qt$ subtraction method~\cite{Catani:2007vq} for the N$^{n}$LO cross section is
  \begin{equation}
  \label{masterEqqT}
  d\sigma^{F}_{\rm N^{n}LO} = \mathcal{H}^{F}_{\rm N^{n}LO} \otimes d\sigma^{F}_{\rm LO} + \big[ d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO} -  d\sigma^{F\;{\rm CT}}_{\rm N^{n}LO} \big]\;\;\;\;{\rm with}\;\;\; n=1,2,3\;,
  \end{equation}
-where $d\sigma^{F\;{\rm CT}}_{\rm N^{n}LO}$ is the contribution of the counterterm to the N$^{n}$LO cross section which cancels the divergencies of $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$ in the limit $\qt \rightarrow 0$. The $n$-order counterterm can be written
+where $d\sigma^{F\;{\rm CT}}_{\rm N^{n}LO}$ is the contribution of the counterterm to the N$^{n}$LO cross section which cancels the divergencies of $d\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$ in the limit $\qt \rightarrow 0$. The $n$-th order counterterm can be written
 \begin{equation}
   d\sigma^{F\;{\rm CT}}_{\rm N^{n}LO} =   \Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})\;d^{2}\bom{q}_{T}   \otimes d\sigma^{F}_{\rm LO}\;,
 \end{equation}
 where the symbol $ \otimes$ denotes convolutions over momentum fractions and sum over flavour indices of the partons.
-More precisely, the function $\Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})$ is the $n$-order truncation of the perturbative series in $\as$
+More precisely, the function $\Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})$ is the $n$-th order truncation of the perturbative series in $\as$
 \beeq
 \Sigma^{F}_{c\bar{c}\leftarrow a_{1}a_{2}}\left(\f{\qt^{2}}{M^{2}};\f{M^2}{\hat s};\as;
 \f{M^2}{\mu_R^2},\f{M^2}{\mu_F^2}\right)=  \sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n \Sigma^{F;(n)}_{c\bar{c}\leftarrow a_{1}a_{2}}\left(\f{\qt^{2}}{M^{2}};\f{M^2}{\hat s};
@@ -181,7 +175,7 @@ More precisely, the function $\Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})$ is the $n
 \label{eq:sigexpansion}
 \eeeq
 where the labels $a_{1}$ and $a_{2}$ stands for the partonic channels of the N$^{n}$LO correction to the Born cross section ($d\sigma^{F}_{\rm LO}\equiv d\big[\sigma^{F;(0)}_{c\bar{c}}\big]$). Notice that at LO the only available configuration is $a_{1}=c$ and $a_{2}=\bar{c}$, where $c\bar{c}$ is (are) the partonic channel(s) through which the LO cross section is initiated.
-The function $ \Sigma^{F}(\qt^{2}/M^{2})$ embodies all the logarithmic terms that are divergent in the limit $\qt \rightarrow 0$ reproducing the singular behaviour of  $d\sigma^{F+{\rm jets}}$ in the small-$\qt$ limit. The counterterm is defined free of terms proportional to $\delta(\qt^{2})$ which are all considered in the perturbative factor $\mathcal{H}^{F}$. The hard coefficient function $\mathcal{H}^{F}_{\rm N^{n}LO}$  that encodes all the IR finite terms of the $n$-loop contributions, is obtained by the N$^{n}$LO truncation of the perturbative function
+The function $ \Sigma^{F}(\qt^{2}/M^{2})$ embodies all the logarithmic terms that are divergent in the limit $\qt \rightarrow 0$ reproducing the singular behaviour of  $d\sigma^{F+{\rm jets}}$ in the small-$\qt$ limit. The definition of the counterterm is free of terms proportional to $\delta(\qt^{2})$ which are all considered in the perturbative factor $\mathcal{H}^{F}$. The hard coefficient function $\mathcal{H}^{F}_{\rm N^{n}LO}$  that encodes all the IR finite terms of the $n$-loop contributions, is obtained by the N$^{n}$LO truncation of the perturbative function
 \begin{equation}
 \label{Hstexpand}
 {\cal H}^F_{c\bar{c}\ito a_{1}a_{2}}\left(\f{M^2}{\hat s};\as;
@@ -198,12 +192,12 @@ where $z=M^{2}/s$. According to the transverse momentum resummation formula (Eq.
 &&\!\!\!\!\!\!\!\ \times  \;S_c(M,b) \int_{x_{1}}^1 \f{dz_1}{z_{1}} \int_{x_{2}}^1  \f{dz_2}{z_{2}} d\hat{\sigma}^{F;(0)}_{c\bar{c}} \,
  f_{a_{1}/h_1}\left(x_{1}/z_1,b_0^2/b^2\right)f_{a_{2}/h_2}\left(x_{2}/z_2,b_0^2/b^2\right)\otimes\left[ H^{F} C_1 C_2 \right]_{c\bar{c};a_{1}a_{2}}\,, \nn
 \eeeq
-where $J_0(b q_T)$ is the $0$th-order Bessel function, $f_{c/h}$ corresponds to the distribution of a parton $c$ in a hadron $h$ and $b_0=2 e^{-\gamma_E}$ ($\gamma_E=0.5772...$  is the Euler number). In the left hand side of Eq. (\ref{reslean}) we are omitting the full dependence on the scales of these coefficients, fully specified in Eqs. (\ref{eq:sigexpansion}) and (\ref{Hstexpand}). The symbolic factor $d\hat{\sigma}^{F;(0)}_{c\bar{c}}$ for the partonic Born cross section $\hat{\sigma}^{F;(0)}_{c\bar{c}}$ denotes
+where $J_0(b q_T)$ is the $0$-th order Bessel function, $f_{c/h}$ corresponds to the distribution of a parton $c$ in a hadron $h$ and $b_0=2 e^{-\gamma_E}$ ($\gamma_E=0.5772...$  is the Euler--Mascheroni constant). In the left hand side of Eq.~\eqref{reslean} we are omitting the full dependence on the scales of these coefficients, fully specified in Eqs.~\eqref{eq:sigexpansion} and \eqref{Hstexpand}. The symbolic factor $d\hat{\sigma}^{F;(0)}_{c\bar{c}}$ for the partonic Born cross section $\hat{\sigma}^{F;(0)}_{c\bar{c}}$ denotes
 % $d\big[\sigma^{F;(0)}_{c\bar{c}}\big]$ 
 \beeq
 d\hat{\sigma}^{F;(0)}_{c\bar{c}}\equiv \f{d\hat{\sigma}^{F;(0)}_{c\bar{c}}}{d\phi}\;,
 \eeeq 
-where $\phi$ represents the phase--space of the final state system $F$. In the left hand side of Eq.~(\ref{reslean}) the convolution (as well as sum over flavour indices of the partons) between the resummation functions $\Sigma^{F}_{c\bar{c}}$ and $\mathcal{H}^{F}_{c\bar{c}}$, the partonic Born cross section and the parton distributions is symbolically denoted by $\otimes d\big[\sigma^{F;(0)}_{c\bar{c}}\big]_{a_{1}a_{2}}$.
+where $\phi$ represents the phase--space of the final state system $F$. In the left hand side of Eq.~\eqref{reslean} the convolution (as well as sum over flavour indices of the partons) between the resummation functions $\Sigma^{F}_{c\bar{c}}$ and $\mathcal{H}^{F}_{c\bar{c}}$, the partonic Born cross section and the parton distributions is symbolically denoted by $\otimes d\big[\sigma^{F;(0)}_{c\bar{c}}\big]_{a_{1}a_{2}}$.
 
 The large logarithmic corrections are exponentiated in the Sudakov form factor $S_c(M,b)$ of the quark  ($c=q, {\bar q}$) or of the gluon ($c=g$), and it has the following  expression:
 \begin{equation}
@@ -212,7 +206,7 @@ S_c(M,b) = \exp \left\{ - \int_{b_0^2/b^2}^{M^2} \frac{dq^2}{q^2}
 \left[ A_c(\as(q^2)) \;\ln \frac{M^2}{q^2} + B_c(\as(q^2)) \right] \right\} 
 \;\;. 
 \end{equation}
-The functions $A$ and $B$  in Eq.~(\ref{formfact}) are perturbative series in $\as$:
+The functions $A$ and $B$  in Eq.~\eqref{formfact} permit a perturbative expansion in $\as$:
 \beeq
 \label{aexp}
 A_c(\as) &=& \sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n A_c^{(n)} 
@@ -221,7 +215,7 @@ A_c(\as) &=& \sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n A_c^{(n)}
 B_c(\as) &= &\sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n B_c^{(n)}
 \;\;.
 \eeeq
-The structure of the symbolic factor denoted by $\left[ H^{F=H} C_1 C_2 \right]_{c\bar{c};a_{1} a_{2}}$ which depends on the initial state channel of the Born subprocess, is explained in detail in Refs. \cite{Catani:2010pd,Catani:2013tia}. Here we limit ourselves to the case in which the final state system $F$ is composed by a single Higgs boson
+The structure of the symbolic factor denoted by $\left[ H^{F=H} C_1 C_2 \right]_{c\bar{c};a_{1} a_{2}}$ which depends on the initial state channel of the Born subprocess, is explained in detail in Refs.~\cite{Catani:2010pd,Catani:2013tia}. Here we limit ourselves to the case in which the final state system $F$ is composed by a single Higgs boson
 \beeq
 \label{whathlean}
 \left[ H^{F=H} C_1 C_2 \right]_{gg;a_{1}a_{2}}
@@ -233,20 +227,20 @@ The structure of the symbolic factor denoted by $\left[ H^{F=H} C_1 C_2 \right]_
 \right]
 \;\;. 
 \eeeq 
-The right-hand side of Eq.~(\ref{whathlean}) does not depend on the direction of $\bf b$ and this implies that the $\bqt$ distribution has no azimuthal correlations in the small-$\qt$ region for Higgs boson production \cite{Catani:2010pd}. The presence of the $G_{g \,a}(z;\as)$ functions on the right--hand side of Eq.~(\ref{whathlean}) is the manifestation of the helicity-flip contributions. In Eq.~(\ref{whathlean}), there are contributions with two $G_{g \,a}(z;\as)$ functions, since
-for Higgs boson production there can are only double helicity-flip terms: helicity conservation in the hard-process factor for Higgs boson production forbids contributions with a single helicity-flip. The helicity-flip $G_{g \,a}(z;\as)$ functions are absent in processes initiated at the Born level by quark annihilation \cite{Catani:2010pd}. The gluonic hard--collinear coefficient function $C_{g \,a}(z;\as)$ ($a=q,{\bar q},g$) on the right-hand side of Eq.~(\ref{whathlean}) has the following perturbative expansion
+The right-hand side of Eq.~\eqref{whathlean} does not depend on the direction of $\bf b$ and this implies that the $\bqt$ distribution has no azimuthal correlations in the small-$\qt$ region for Higgs boson production~\cite{Catani:2010pd}. The presence of the $G_{g \,a}(z;\as)$ functions on the right-hand side of Eq.~\eqref{whathlean} is the manifestation of the helicity-flip contributions. In Eq.~\eqref{whathlean}, there are contributions with two $G_{g \,a}(z;\as)$ functions, since
+for Higgs boson production there can are only double helicity-flip terms: helicity conservation in the hard-process factor for Higgs boson production forbids contributions with a single helicity-flip. The helicity-flip $G_{g \,a}(z;\as)$ functions are absent in processes initiated at the Born level by quark annihilation~\cite{Catani:2010pd}. The gluonic hard--collinear coefficient function $C_{g \,a}(z;\as)$ ($a=q,{\bar q},g$) on the right-hand side of Eq.~\eqref{whathlean} has the following perturbative expansion
 \begin{equation}
 \label{cgexp} 
 C_{g \,a}(z;\as) = \delta_{g \,a} \;\,\delta(1-z) + 
 \sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n C_{g\, a}^{(n)}(z) \;\;.
 \end{equation}
-At variance with Eq.~(\ref{cgexp}), the perturbative expansion of the coefficient functions $G_{ga}$, which are specific to gluon-initiated processes, starts only at ${\cal O}(\as)$, and can be written as \cite{Catani:2010pd,Catani:2013tia}
+At variance with Eq.~\eqref{cgexp}, the perturbative expansion of the coefficient functions $G_{ga}$, which are specific to gluon-initiated processes, starts only at ${\cal O}(\as)$, and can be written as~\cite{Catani:2010pd,Catani:2013tia}
 \begin{equation}
 \label{gfexp}
 G_{g \,a}(z;\as) =
 \sum_{n=1}^\infty \left( \frac{\as}{\pi} \right)^n G_{g \,a}^{(n)}(z) \;\;.
 \end{equation}
-The IR finite contribution of the $n$-loop correction terms to the Born subprocess are contained in the hard-virtual function
+The IR finite contribution of the $n$-loop correction terms to the Born subprocess are contained in the hard--virtual function
 \begin{equation}
 \label{hexp}
 H_g^{F=H}(\as) = 1+ \sum_{n=1}^\infty 
@@ -256,7 +250,7 @@ H_g^{F=H \,;(n)}
 \end{equation} 
 
 We now turn to the discussion of the resummation scheme dependence of the coefficient functions.
-The resummation formula (\ref{reslean}) is invariant under the following `resummation scheme'  transformations \cite{Catani:2000vq}:
+The resummation formula~\eqref{reslean} is invariant under the following ``resummation scheme''  transformations~\cite{Catani:2000vq}:
 \beeq
 H_c^{F}(\as) & \to & H_c^{F}(\as) \; \left[ \, h(\as) \, \right]^{-1}
 \;, \nn \\
@@ -276,13 +270,13 @@ h(\as(b_0^2/b^2)) = h(\as(M^2)) \; \exp \left\{
 \;\beta(\as(q^2)) \;\frac{d \ln h(\as(q^2))}{d \ln \as(q^2)} 
 \right\} \;\;,
 \end{equation}
-which is valid for any perturbative function $h(\as)$. Notice that Eq.~(\ref{rgidenlean}) establishes the evolution of the perturbative functions from the scale $q^{2}=b_0^2/b^2$ to $q^{2}=M^2$. The QCD $\beta$-function and its corresponding $n$-order $\beta_n$ coefficient are defined as
+which is valid for any perturbative function $h(\as)$. Notice that Eq.~\eqref{rgidenlean} establishes the evolution of the perturbative functions from the scale $q^{2}=b_0^2/b^2$ to $q^{2}=M^2$. The QCD $\beta$-function and its corresponding $n$-order $\beta_n$ coefficient are defined as
 \begin{equation}
 \label{rge}
 \f{d \ln \as(\mu^2)}{d \ln \mu^2} = \beta(\as(\mu^2)) = 
 - \sum_{n=0}^{+\infty} \beta_n \left( \f{\as}{\pi} \right)^{n+1}\;\;.
 \end{equation}
-The explicit expression of the first three coefficients \cite{Tarasov:1980au,Larin:1993tp}, $\beta_0$, $\beta_1$ and
+The explicit expression of the first three coefficients~\cite{Tarasov:1980au,Larin:1993tp}, $\beta_0$, $\beta_1$ and
 $\beta_2$ are
 \begin{align}
 \beta_0 &= \frac{1}{12} \left( 11 C_A - 2 N_f \right) \;\;,
@@ -292,13 +286,13 @@ $\beta_2$ are
 - \f{1415}{54} C_A^2 N_f - \f{205}{18} C_A C_F N_f + C_F^2 N_f
 + \f{79}{54} C_A N_f^2 + \f{11}{9} C_F N_f^2 \right) \;\;,
 \end{align}
-where $N_f$ is the number of QCD massless flavours and the $SU(N_c)$ colour factors are $C_A=N_c$  and $C_F=(N_c^2-1)/(2N_c)$.
+where $N_f$ is the number of massless QCD flavours and the $SU(N_c)$ colour factors are $C_A=N_c$  and $C_F=(N_c^2-1)/(2N_c)$.
 
-The physical origin of the  resummation scheme invariance of Eq.~(\ref{reslean}) is discussed in  Ref.~\cite{Catani:2000vq}. 
-The invariance implies that the hard-virtual factors $H_c^{F}, S_c$ (more precisely, the function $B_c$ contained in it)  and $C_{ab}$ are not unambiguously defined order-by-order in perturbation theory. After choosing a `resummation scheme', these factors can be unambiguously specified and computed. We rely on the \textit{hard resummation scheme} defined in Ref. \cite{Catani:2013tia}, which states all the contributions proportional to $\delta(1-z)$ are considered in the hard-virtual functions $H_c^{F}$. The precedent condition directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$. In addition, the resummation coefficients $A_{c}$ and the helicity-flip functions $G_{ab}$ are also independent of the final state process.
+The physical origin of the  resummation scheme invariance of Eq.~\eqref{reslean} is discussed in  Ref.~\cite{Catani:2000vq}. 
+The invariance implies that the hard--virtual factors $H_c^{F}, S_c$ (more precisely, the function $B_c$ contained in it)  and $C_{ab}$ are not unambiguously defined order-by-order in perturbation theory. After choosing a ``resummation scheme'', these factors can be unambiguously specified and computed. We rely on the \textit{hard resummation scheme} defined in Ref.~\cite{Catani:2013tia}, which states all the contributions proportional to $\delta(1-z)$ are considered in the hard--virtual functions $H_c^{F}$. The precedent condition directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$. In addition, the resummation coefficients $A_{c}$ and the helicity-flip functions $G_{ab}$ are also independent of the final state process.
 
-The truncation of Eq.~(\ref{reslean}) at a given fixed order requieres the explicit use of several resummation coefficients and hard collinear coefficient functions.
-For $F=H$ at NLO, the coefficients $A^{(1)}_{g}$, $B^{(1)}_{g}$, $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(1)}_{g}$ are enough to compute the inclusive total cross section and differential distributions. Assuming that the Higgs boson couples to a single heavy quark of mass $m_Q$, the first-order coefficient $H_g^{H;(1)}$ in the hard scheme is~\cite{Catani:2013tia}
+The truncation of Eq.~\eqref{reslean} at a given fixed order requieres the explicit use of several resummation coefficients and hard collinear coefficient functions.
+For $F=H$ at NLO, the knowledge of the coefficients $A^{(1)}_{g}$, $B^{(1)}_{g}$, $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(1)}_{g}$ are sufficient to compute the inclusive total cross section and differential distributions. Assuming that the Higgs boson couples to a single heavy quark of mass $m_Q$, the first-order coefficient $H_g^{H;(1)}$ in the hard scheme is~\cite{Catani:2013tia}
 \begin{equation}
 \label{H1g}
 H_g^{H;(1)}=C_A\pi^2/2+c_H(m_Q)\, .
@@ -312,7 +306,7 @@ Therefore the complete NLO set of coefficients necessary to compute Higgs boson 
 A^{(1)}_{g}=C_{A}\;,\;\;\;\;\;\;\;\;\;&&B^{(1)}_{g}=- \f{1}{6} \left( 11 C_A - 2 N_f \right)\;,\;\;\;\;\;\;\;\;\;H^{H;(1)}_{g}=\f{1}{2}(11+C_{A}\pi^{2})\;,\nn\\
 &&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!C^{(1)}_{ga}(z)=\f{1}{2}C_F\, z\;\;\;\;\;\;\;\;\;\left[a=q,{\bar q}\right]\;,\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;C^{(1)}_{gg}(z)=0\;.
 \eeeq
-The coefficients $A^{(1)}_{g}$ and $B^{(1)}_{g}$ are process as well as resummation scheme independent. In the hard resummation scheme the collinear functions $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) are process-independent, whereas $H^{H;(1)}_{g}$ depends on final state system $(F=H)$, and both depend on the resummation scheme in such a way to ensure the resummation scheme independence of Eq.~(\ref{reslean}) at NLO. The computation of the hard-virtual coefficients $H^{H;(1)}_{c}$ requires the definition of a specific prescription~\cite{deFlorian:2001zd}. The explicit calculations and the results of Ref.~\cite{deFlorian:2001zd} show that the NLO hard-virtual coefficient $H^{F;(1)}_{c}$ is explicitly related in a process-independent form to $d{\hat \sigma}^{F}_{\rm LO}$ and to the IR finite part of the NLO virtual correction to the Born cross section. The previous process-independent relation is based on the definition of universal subtraction operators that cancel the IR divergences of the one-loop (NLO) virtual correction to the Born cross section and fix the first order IR finite constant $\delta_{q_{T}}$ \cite{Catani:2013tia}. The coefficient $\delta_{q_{T}}$, that only depends on the initial state partons, has a \textit{soft} origin and it is defined in Refs. \cite{deFlorian:2001zd} and \cite{Catani:2013tia}.
+The coefficients $A^{(1)}_{g}$ and $B^{(1)}_{g}$ are process- as well as resummation scheme independent. In the hard resummation scheme the collinear functions $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) are process independent, whereas $H^{H;(1)}_{g}$ depends on the final-state system $(F=H)$, and both depend on the resummation scheme in such a way to ensure the resummation scheme independence of Eq.~\eqref{reslean} at NLO. The computation of the hard--virtual coefficients $H^{H;(1)}_{c}$ requires the definition of a specific prescription~\cite{deFlorian:2001zd}. The explicit calculations and the results of Ref.~\cite{deFlorian:2001zd} show that the NLO hard--virtual coefficient $H^{F;(1)}_{c}$ is explicitly related in a process-independent form to $d{\hat \sigma}^{F}_{\rm LO}$ and to the IR finite part of the NLO virtual correction to the Born cross section. The previous process-independent relation is based on the definition of universal subtraction operators that cancel the IR divergences of the one-loop (NLO) virtual correction to the Born cross section and fix the first order IR finite constant $\delta_{q_{T}}$~\cite{Catani:2013tia}. The coefficient $\delta_{q_{T}}$, which only depends on the initial-state partons, has a \textit{soft} origin and it is defined in Refs.~\cite{deFlorian:2001zd} and \cite{Catani:2013tia}.
 
 
 At NNLO, the coefficients $A^{(2)}_{g}$ and $B^{(2)}_{g}$ are needed~\cite{Bozzi:2005wk,Catani:2013tia},
@@ -321,20 +315,20 @@ At NNLO, the coefficients $A^{(2)}_{g}$ and $B^{(2)}_{g}$ are needed~\cite{Bozzi
 A^{(2)}_{g}= \frac{1}{2}\; C_A \left[ \left( \f{67}{18} - \f{\pi^2}{6}
 \right) C_A - \f{5}{9} N_f \right] \;\;,\;\;\;\;\;\;\;\;\;\;B^{(2)}_{g}=\f{\gamma_{g}^{(1)}}{16}+\beta_0\, C_A\,\zeta_2\;,
 \eeeq
-where $\gamma_{g}^{(1)}$ is the coefficient of the $\delta(1-z)$ term in the NLO gluon splitting function \cite{Curci:1980uw,Furmanski:1980cm}, which reads
+where $\gamma_{g}^{(1)}$ is the coefficient of the $\delta(1-z)$ term in the NLO gluon splitting function~\cite{Curci:1980uw,Furmanski:1980cm}, which reads
 \begin{equation}
 \gamma_{g}^{(1)}= \left(-\frac{64}3-24\zeta_3\right)\,C_A^2
 +\frac{16}3\,C_A N_f
 +4\,C_F N_f\;,
 \label{ga1g}
 \end{equation}
-and $\zeta_n$ is the Riemann zeta-function ($\zeta_2=\pi^2/6, \zeta_3=1.202\dots, \zeta_4=\pi^4/90$). The coefficient $A^{(2)}_{g}$ does not depend on the resummation scheme whereas $B^{(2)}_{g}$  in Eq.~(\ref{A2andB2}) is expressed in the hard resummation scheme and both coefficients are process-independent. The collinear functions $C^{(2)}_{ga}$ ($a=q,{\bar q},g$) in the hard resummation scheme can be extracted from Refs.~\cite{Catani:2013tia,Catani:2011kr} and they are independent of the final state system $F$. 
+and $\zeta_n$ is the Riemann zeta-function for integer values $n$ ($\zeta_2=\pi^2/6$, $\zeta_3=1.202\dots$, $\zeta_4=\pi^4/90$). The coefficient $A^{(2)}_{g}$ does not depend on the resummation scheme whereas $B^{(2)}_{g}$  in Eq.~\eqref{A2andB2} is expressed in the hard resummation scheme and both coefficients are process independent. The collinear functions $C^{(2)}_{ga}$ ($a=q,{\bar q},g$) in the hard resummation scheme can be extracted from Refs.~\cite{Catani:2013tia,Catani:2011kr} and they are independent of the final state system $F$. 
 
-The general structure of the hard-virtual coefficients $H^{F}_{c}$ has been established only recently \cite{Catani:2013tia}. Although this  factor is process dependent, in Ref. \cite{Catani:2013tia} was shown that it can be directly related in a universal (process-independent) way to  the IR finite part of the all-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. The precedent relation between $H^{F}_{c}$ and the all-order virtual correction to the  partonic subprocess $c{\bar c}\to F$ is explicitly known up to the NNLO and it is based on the definition of universal subtraction operators that cancel the IR divergences of the two-loop (NNLO) virtual corrections to the Born 
-cross section~\cite{Catani:1998bh}. These universal second order operators contain an IR finite term of soft origin ($\delta^{(1)}_{q_{T}}$)  that only depends on the initial state partons \cite{Catani:2013tia}.
+The general structure of the hard--virtual coefficients $H^{F}_{c}$ has been established only recently~\cite{Catani:2013tia}. Although this  factor is process dependent, it was shown in Ref.~\cite{Catani:2013tia} that it can be directly related in a universal (process independent) way to  the IR finite part of the all-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. The precedent relation between $H^{F}_{c}$ and the all-order virtual correction to the  partonic subprocess $c{\bar c}\to F$ is explicitly known up to NNLO and it is based on the definition of universal subtraction operators that cancel the IR divergences of the two-loop (NNLO) virtual corrections to the Born 
+cross section~\cite{Catani:1998bh}. These universal second-order operators contain an IR finite term of soft origin ($\delta^{(1)}_{q_{T}}$)  that only depends on the initial-state partons~\cite{Catani:2013tia}.
 
 
-In the case of Higgs boson production the hard-virtual factor $H^{F=H;(2)}_{g}$ in the large-$m_t$ limit (in the hard scheme) is \cite{Catani:2011kr}
+In the case of Higgs-boson production the hard--virtual factor $H^{F=H;(2)}_{g}$ in the large-$m_t$ limit (in the hard scheme) is given by~\cite{Catani:2011kr}
 \begin{align}
 \label{H2g}
 H_g^{H;(2)}&=C_A^2\left(
@@ -343,14 +337,14 @@ H_g^{H;(2)}&=C_A^2\left(
 -\f{5}{96}C_A-\f{1}{12}C_F-C_A\, N_f\left(\f{287}{144}+\f{5}{36}\pi^2+\f{4}{9}\zeta_3\right)
 +C_F\, N_f\left(-\f{41}{24}+\f{1}{2}L_t+\zeta_3\right)\, ,
 \end{align}
-where $L_t=\ln (M_H^2/m_t^2)$. The two-loop scattering amplitude \cite{Harlander:2009bw}  used in the computation of  $H^{F=H;(2)}_{g}$ includes corrections to the large-$m_t$ approximation.
-At NNLO, in Eq.~(\ref{whathlean}) (which is proportional to $\delta(\qt^{2})$) the first order $G_{ga}^{(1)}$ helicity-flip functions are required, they read \cite{Catani:2010pd}
+where $L_t=\ln (M_H^2/m_t^2)$. The two-loop scattering amplitude~\cite{Harlander:2009bw}  used in the computation of  $H^{F=H;(2)}_{g}$ includes corrections to the large-$m_t$ approximation.
+At NNLO, in Eq.~\eqref{whathlean} (which is proportional to $\delta(\qt^{2})$) the first order $G_{ga}^{(1)}$ helicity-flip functions are required, they read~\cite{Catani:2010pd}
 \begin{equation}
 G_{g \,a}^{(1)}(z) = C_a \;\f{1-z}{z}~~~~~~~~~~~a=q,\bar{q},g\, ,
 \end{equation}
-where $C_{q;\bar{q}}=C_{F}$ and $C_g=C_{A}$. The first-order functions $G_{ga}^{(1)}$ are resummation-scheme independent and they do not depend on the final state system $F$.
+where $C_{q;\bar{q}}=C_{F}$ and $C_g=C_{A}$. The first-order functions $G_{ga}^{(1)}$ are resummation-scheme independent and they do not depend on the final-state system $F$.
 
-At N$^{3}$LO, the numerical implementation of Eq.~(\ref{reslean}) requieres the following ingredients: $A^{(3)}_{g}$, $B^{(3)}_{g}$, $C^{(3)}_{ga}$, $G^{(2)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(3)}_{g}$. The coefficient $A_g^{(3)}$ \cite{Becher:2010tm} reads
+At N$^{3}$LO, the numerical implementation of Eq.~\eqref{reslean} requieres the following ingredients: $A^{(3)}_{g}$, $B^{(3)}_{g}$, $C^{(3)}_{ga}$, $G^{(2)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(3)}_{g}$. The coefficient $A_g^{(3)}$~\cite{Becher:2010tm} reads
 \beeq
 \label{acoeff}
 A_g^{(3)}\!\!\!&&\!\!\!\!\!\!\!\!  =  C_A^3 \left( \frac{245}{96} - \frac{67}{36}\zeta_2
@@ -366,13 +360,13 @@ B_g^{(3)}&=& - \f{2133}{64} +  \f{3029}{576} N_{f} - \f{349}{1728} N_{f}^{2}  + 
 &-& \f{843}{8} \zeta_{3} + 2 \zeta_{3} N_{f} + \f{1}{6} \zeta_{3} N_{f}^{2} + \f{9}{4} \pi^{2}  \zeta_{3} + \f{135}{2}  \zeta_{5}\;.
 \eeeq
 
-The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~(\ref{eq:sigexpansion}) can be obtained by expanding Eq. (\ref{reslean}) to the corresponding matching order. The full analytical formula for $\Sigma^{F}$ is resummation scheme independent order by order in the strong coupling constant. Therefore the logarithmic singular behaviour for $\Sigma^{F}$ at $q_T\rightarrow 0$ at 
+The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~\eqref{eq:sigexpansion} can be obtained by expanding Eq.~\eqref{reslean} to the corresponding matching order. The full analytical formula for $\Sigma^{F}$ is resummation scheme independent order by order in the strong coupling constant. Therefore, the logarithmic singular behaviour for $\Sigma^{F}$ at $q_T\rightarrow 0$ at 
 each given order in $\as$ does not depend on the 
 resummation scheme, and can be validated against the behaviour of the fixed order results at small $q_T$. To fully 
 account for the logarithmically enhanced terms at a given order requires a sufficient depth in the resummation prior to 
-its fixed-order expansion in Eq.~(\ref{eq:sigexpansion}). Specifically, the LO Higgs $q_T$ distribution receives singular contributions from up to NLL (next-to-leading-logarithm) resummation~\cite{Catani:1988vd,Kauffman:1991cx}, the NLO Higgs $q_T$ distribution requires the expansion of NNLL resummation~\cite{deFlorian:2000pr,deFlorian:2001zd}, and the NNLO Higgs $q_T$ distribution has been recently validated against the singular contributions from N$^3$LL resummation~\cite{Chen:2018pzu,Bizon:2018foh}. 
+its fixed-order expansion in Eq.~\eqref{eq:sigexpansion}. Specifically, the LO Higgs $q_T$ distribution receives singular contributions from up to NLL (next-to-leading-logarithm) resummation~\cite{Catani:1988vd,Kauffman:1991cx}, the NLO Higgs $q_T$ distribution requires the expansion of NNLL resummation~\cite{deFlorian:2000pr,deFlorian:2001zd}, and the NNLO Higgs $q_T$ distribution has been recently validated against the singular contributions from N$^3$LL resummation~\cite{Chen:2018pzu,Bizon:2018foh}. 
 
-The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is proportional to $\delta(q^{2}_{T})$, contains the functions $H^{H;(3)}_{c}$, $C^{(3)}_{ga}$ and $G^{(2)}_{ga}$  that are known only in parts or not at all. Nevertheless, within the $\qt$ subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be inferred for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. This point is discussed in detail in Sect.~\ref{sec:numforCN3}. 
+The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is proportional to $\delta(q^{2}_{T})$, contains the functions $H^{H;(3)}_{c}$, $C^{(3)}_{ga}$ and $G^{(2)}_{ga}$  that are only known in parts or not at all. Nevertheless, within the $\qt$ subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be inferred for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. This point is discussed in detail in the next section.
 
 
 \setcounter{footnote}{0}
@@ -382,7 +376,7 @@ The function $\mathcal{H}^{F;(3)}_{c\bar{c}\leftarrow a_{1}a_{2}}$ which is prop
 \label{sec:numforCN3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We start this section with some observations related to the hard-scattering function ${\cal H}_{c{\bar c} \ito ab}^{F}$. This function is resummation-scheme independent, but it depends on the specific hard-scattering subprocess $c + {\bar c} \to F$. The coefficients ${\cal H}_{c{\bar c} \ito ab}^{F \,;(n)}$ of the perturbative expansion in Eq.~(\ref{Hstexpand}) can be determined by performing a perturbative calculation of the $q_T$ distribution in the limit $q_T \to 0$. In right-hand side of Eq.~(\ref{reslean}),  the function ${\cal H}^{F}$ controls the strict perturbative normalization of the corresponding total cross section (i.e. the integral of the total $q_T$ distribution). This unitary-related property can be exploited to determine the coefficients ${\cal H}_{c{\bar c} \ito ab}^{F \,;(n)}$ from the perturbative calculation of the total cross section.  At the partonic level, the integral of the total $q_T$ distribution in Eq.~(\ref{masterEqqT}) results in the total cross section ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$,
+We start this section with some observations related to the hard-scattering function ${\cal H}_{c{\bar c} \ito ab}^{F}$. This function is resummation-scheme independent, but it depends on the specific hard-scattering subprocess $c + {\bar c} \to F$. The coefficients ${\cal H}_{c{\bar c} \ito ab}^{F \,;(n)}$ of the perturbative expansion in Eq.~\eqref{Hstexpand} can be determined by performing a perturbative calculation of the $q_T$ distribution in the limit $q_T \to 0$. In right-hand side of Eq.~\eqref{reslean},  the function ${\cal H}^{F}$ controls the strict perturbative normalization of the corresponding total cross section (i.e.\ the integral of the total $q_T$ distribution). This unitary-related property can be exploited to determine the coefficients ${\cal H}_{c{\bar c} \ito ab}^{F \,;(n)}$ from the perturbative calculation of the total cross section.  At the partonic level, the integral of the total $q_T$ distribution in Eq.~\eqref{masterEqqT} results in the total cross section ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$,
 \begin{equation}
 \label{restotp}
 {\hat \sigma}_{F \,ab}^{{\rm {tot}}}(M,{\hat s};
@@ -392,7 +386,7 @@ We start this section with some observations related to the hard-scattering func
 \as(\mu_R^2),\mu_R^2,\mu_F^2) 
  \;.
 \end{equation}
-Since the the hard-scattering function ${\cal H}_{c{\bar c} \ito ab}^{F}$ is simply proportional to $\delta(\qt^{2})$, we evaluate the $\qt$ spectrum on right-hand side of Eq.~(\ref{masterEqqT}) according to the following decomposition
+Since the the hard-scattering function ${\cal H}_{c{\bar c} \ito ab}^{F}$ is simply proportional to $\delta(\qt^{2})$, we evaluate the $\qt$ spectrum on right-hand side of Eq.~\eqref{masterEqqT} according to the following decomposition
 \beeq
 \label{sigtotrel} 
 {\hat \sigma}_{F \,ab}^{{\rm {tot}}}
@@ -400,12 +394,12 @@ Since the the hard-scattering function ${\cal H}_{c{\bar c} \ito ab}^{F}$ is sim
 + \int_0^{\infty} dq_T^2 \;
 \f{d{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{d q_T^2}  \;\;,
 \eeeq
-where $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}$ is directly related to the quantity in square bracket in the right-hand side of Eq.~(\ref{masterEqqT})
+where $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}$ is directly related to the quantity in square bracket in the right-hand side of Eq.~\eqref{masterEqqT}
 \beeq
 \label{sigfin}
 \f{d{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{d q_T^2} \equiv \left[ \f{d{\hat \sigma}_{ab}^{F+{\rm jets}}}{d q_T^2} - \f{d{\hat \sigma}_{ab}^{F\;{\rm CT}}}{d q_T^2}\right]\;.
 \eeeq
-Considering Eqs. (\ref{reslean}) and (\ref{whathlean}) it is possible to write ${\cal H}_{gg}^H$ in terms of the functions $C_{g \,a}(z_1;\as)$ and $G_{g \,a}(z_1;\as)$ (in the particular case $F=H$), neglecting the scale dependent terms which are all known analytically (i.e considering $\mu_{F}=\mu_{R}=M$) 
+Considering Eqs.~\eqref{reslean} and \eqref{whathlean} it is possible to write ${\cal H}_{gg}^H$ in terms of the functions $C_{g \,a}(z_1;\as)$ and $G_{g \,a}(z_1;\as)$ (in the particular case $F=H$), neglecting the scale dependent terms which are all known analytically (i.e.\ considering $\mu_{F}=\mu_{R}=M$) 
 \begin{equation}
 \label{HCCGG}
 {\cal H}^H_{gg\ito ab}(z;\as) \equiv H_g^H(\as) \!\int_0^1\!dz_1 \int_0^1\!dz_2
@@ -414,18 +408,17 @@ Considering Eqs. (\ref{reslean}) and (\ref{whathlean}) it is possible to write $
 + G_{g \,a}(z_1;\as) G_{g \,b}(z_2;\as)\Big]\, .
 \end{equation}
 This expression for ${\cal H}_{ab}^F$ was written requiring specifically $F=H$, since its form depends on the initial state of the Born subprocess (quark annihilation or gluon fusion).
-There are two differences between Eqs.~(\ref{whathlean}) and (\ref{HCCGG}).
+There are two differences between Eqs.~\eqref{whathlean} and \eqref{HCCGG}.
 The first difference is due to the fact that the function ${\cal H}^H$ depends on
-the energy fraction $z$, since the right-hand side of Eq.~(\ref{HCCGG})
+the energy fraction $z$, since the right-hand side of Eq.~\eqref{HCCGG}
 involves a convolution integral over the momentum fractions $z_1$ and $z_2$. The second difference concerns the scale of $\as$: in the functions 
-$H^H_g(\as), C(\as)$ and $G(\as)$ on the right-hand side of Eq.~(\ref{HCCGG}),
+$H^H_g(\as), C(\as)$ and $G(\as)$ on the right-hand side of Eq.~\eqref{HCCGG},
 the argument of $\as$ is set to the same value (this common scale is not
-explicitly denoted in Eq.~(\ref{HCCGG})). Owing to this feature, the
+explicitly denoted in Eq.~\eqref{HCCGG}. Owing to this feature, the
 process-dependent function ${\cal H}^H_{gg\ito ab}$ is unambiguously defined
-(i.e., it is independent of the specification of the resummation scheme) 
-\cite{Catani:2000vq}. The ${\cal H}^H$ function in Eq.~(\ref{HCCGG}) can be expanded perturbatively without approximation at any order in the strong coupling constant $\as$.
+(i.e., it is independent of the specification of the resummation scheme)~\cite{Catani:2000vq}. The ${\cal H}^H$ function in Eq.~\eqref{HCCGG} can be expanded perturbatively without approximation at any order in the strong coupling constant $\as$.
 The perturbative expansion of the function
-${\cal H}^H$ directly follows from Eqs.~(\ref{cgexp})--(\ref{hexp}) and for the first-order and second-order contributions we have
+${\cal H}^H$ directly follows from Eqs.~\eqref{cgexp}--\eqref{hexp} and for the first-order and second-order contributions we have
 \begin{equation}
 \label{H1}
 {\cal H}^{H;(1)}_{gg\ito ab}(z)=\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) 
@@ -443,12 +436,12 @@ ${\cal H}^H$ directly follows from Eqs.~(\ref{cgexp})--(\ref{hexp}) and for the 
 +\left(C^{(1)}_{g\,a}\otimes C^{(1)}_{g\,b}\right)(z)+
 \left(G^{(1)}_{g\,a}\otimes G^{(1)}_{g\,b}\right)(z)\;\; .
 \end{align}
-In Eq.~(\ref{H2}) and in the following, the symbol $\otimes$ denotes the 
+In Eq.~\eqref{H2} and in the following, the symbol $\otimes$ denotes the 
 convolution integral
 (i.e., we define 
 $(g \otimes h) (z) \equiv \int_0^1 dz_1 \int_0^1 dz_2
 \,\delta(z - z_1z_2) \;g(z_1) \;h(z_2)$).
-The new third-order contribution is 
+The new third-order contribution is given by
 \begin{align}
 \label{H3}
 {\cal H}^{H;(3)}_{gg\ito ab}(z)&=\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z)
@@ -467,13 +460,13 @@ The new third-order contribution is
  +    H^{H;(1)}_g  \left(G^{(1)}_{g\,a}\otimes G^{(1)}_{g\,b}\right)(z) \;.         
 \end{align}
 The perturbative functions $C^{(1)}_{g\,a}(z)$, $C^{(2)}_{g\,a}(z)$, $G^{(1)}_{g\,a}(z)$, $H^{H;(1)}_g$ and $H^{H;(2)}_g$ are reported in Sec.~\ref{sec:forma}, and therefore the coefficient functions ${\cal H}^{H;(1)}$ and ${\cal H}^{H;(2)}$ are known analytically.
-As stated in Sec.~\ref{sec:forma}, the second-order helicity-flip functions $G^{(2)}_{g\,a}(z)$ and the third-order collinear functions $C^{(3)}_{g\,a}(z)$ are not known. In addition, the third-order hard-virtual coefficient $H^{H;(3)}_g$ is not fully determined. In the following, we describe a procedure to obtain an approximation to these missing contributions. 
+As stated in Sec.~\ref{sec:forma}, the second-order helicity-flip functions $G^{(2)}_{g\,a}(z)$ and the third-order collinear functions $C^{(3)}_{g\,a}(z)$ are not known. In addition, the third-order hard--virtual coefficient $H^{H;(3)}_g$ is not fully determined. In the following, we describe a procedure to obtain an approximation to these missing contributions. 
 
 
 
-The relation in Eq.~(\ref{sigtotrel}) is valid order-by-order in QCD perturbation theory. Once the perturbative coefficients of the fixed-order expansions of ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$, ${\cal H}_{ab}^F$ and  $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2$ are all known, the relation (\ref{sigtotrel}) has to be regarded as an identity, which can be explicitly checked. Since the fixed-order truncation of $ d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/{d q_T^2}$ does not contain any contributions proportional to $\delta(q_T^2)$, $\bigl[ d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2 \Bigr]_{\rm NLO}$ does not explicitly depend on the coefficient ${\cal H}_{ab}^{F \,;(1)}$. Analogously, $\bigl[ d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2 \Bigr]_{\rm NNLO}$ does not explicitly depend on the coefficient ${\cal H}_{ab}^{F \,;(2)}$, and so forth.
-Therefore, Eq.~(\ref{sigtotrel}) can be used to determine the $\rm N^nLO$ coefficient ${\cal H}_{ab}^{F \,;(n)}$ from the knowledge of ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$ at $\rm N^nLO$ and of $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2$ at $\rm N^{n}LO$, without the need of explicitly computing the small-$q_T$ behaviour of the spectrum $d{\hat \sigma}_{F \,ab}/d q_T^2$ at $\rm N^nLO$.
-For example, the  N$^{3}$LO  term in Eq.~(\ref{sigtotrel}) reads
+The relation in Eq.~\eqref{sigtotrel} is valid order-by-order in QCD perturbation theory. Once the perturbative coefficients of the fixed-order expansions of ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$, ${\cal H}_{ab}^F$ and  $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2$ are all known, the relation~\eqref{sigtotrel} has to be regarded as an identity, which can be explicitly checked. Since the fixed-order truncation of $ d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/{d q_T^2}$ does not contain any contributions proportional to $\delta(q_T^2)$, $\bigl[ d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2 \Bigr]_{\rm NLO}$ does not explicitly depend on the coefficient ${\cal H}_{ab}^{F \,;(1)}$. Analogously, $\bigl[ d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2 \Bigr]_{\rm NNLO}$ does not explicitly depend on the coefficient ${\cal H}_{ab}^{F \,;(2)}$, and so forth.
+Therefore, Eq.~\eqref{sigtotrel} can be used to determine the $\rm N^nLO$ coefficient ${\cal H}_{ab}^{F \,;(n)}$ from the knowledge of ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$ at $\rm N^nLO$ and of $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}/d q_T^2$ at $\rm N^{n}LO$, without the need of explicitly computing the small-$q_T$ behaviour of the spectrum $d{\hat \sigma}_{F \,ab}/d q_T^2$ at $\rm N^nLO$.
+For example, the  N$^{3}$LO  term in Eq.~\eqref{sigtotrel} reads
 \beeq
 \label{h3nnlo}
 &&\left( \f{\as}{\pi} \right)^3\;\f{M^2}{\hat s} 
@@ -500,7 +493,7 @@ where $\as=\as(\mu_R^2)$ and we have used
 \;\sum_c \sigma_{c{\bar c}, \,F}^{(0)}(\as,M) \;\delta_{ca} 
 \;\delta_{{\bar c}b} \;\;.
 \end{equation}
-The generalization at any order $n > 1$ is \cite{Bozzi:2005wk}
+The generalization at any order $n > 1$ is~\cite{Bozzi:2005wk}
 \beeq
 \label{hn}
 &&\left( \f{\as}{\pi} \right)^n\;\f{M^2}{\hat s} 
@@ -520,19 +513,19 @@ ab}^{F \,;(n)}\left(\f{M^2}{\hat s};
 \Bigr]_{\rm N^{n-1}LO}
 \right\} . \nn
 \eeeq
-At LO, where only the Born subprocess is available, $\Bigl[ \f{d{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{d q_T^2} \Bigr]_{\rm LO}$ is zero by definition. Notice that in Eqs. (\ref{h3nnlo}) and (\ref{hn}) the full  ${\cal H}_{c{\bar c} \ito ab}^{F \,;(n)}$ coefficient is used, i.e the scale independent terms as well as the terms that we omitted in Eq. (\ref{HCCGG}) (and therefore in Eqs. (\ref{H1}), (\ref{H2}) and (\ref{H3})) and embody the scale dependence through the ratios $M^{2}/\mu^{2}_{F}$ and $M^{2}/\mu^{2}_{R}$.
+At LO, where only the Born subprocess is available, $\Bigl[ \f{d{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{d q_T^2} \Bigr]_{\rm LO}$ is zero by definition. Notice that in Eqs.~\eqref{h3nnlo} and \eqref{hn} the full  ${\cal H}_{c{\bar c} \ito ab}^{F \,;(n)}$ coefficient is used, i.e.\ the scale independent terms as well as the terms that we omitted in Eq.~\eqref{HCCGG} (and therefore in Eqs.~\eqref{H1}, \eqref{H2} and \eqref{H3} and embody the scale dependence through the ratios $M^{2}/\mu^{2}_{F}$ and $M^{2}/\mu^{2}_{R}$.
 
 
 
-If all the components in right-hand side of Eq.~(\ref{hn}) are known analytically (as it was the case at NNLO in Refs. \cite{Catani:2011kr,Catani:2012qa}) the function ${\cal H}_{ab}^{F}$ can be extracted exactly in analytical form. At NLO the extraction of the function  ${\cal H}_{ab}^{F \,;(1)}$ is straightforward for Drell-Yan and Higgs boson production. The function ${\cal H}_{ab}^{F \,;(2)}$ at NNLO (for Higgs ($F=H$) boson production \cite{Catani:2011kr} and Drell-Yan ($F=DY$) \cite{Catani:2012qa}) can be obtained with a dedicated analytical computation using Eq.~(\ref{hn}) for $n=2$. Since for Higgs boson production, the transverse momentum cross section $H$+jet at NNLO is not known analytically, Eq.~(\ref{h3nnlo}) can be used only numerically in the computation of the function ${\cal H}_{ab}^{F\,;(3)}$. 
+If all the components in right-hand side of Eq.~\eqref{hn} are known analytically (as it was the case at NNLO in Refs.~\cite{Catani:2011kr,Catani:2012qa}) the function ${\cal H}_{ab}^{F}$ can be extracted exactly in analytical form. At NLO the extraction of the function  ${\cal H}_{ab}^{F \,;(1)}$ is straightforward for Drell--Yan and Higgs boson production. The function ${\cal H}_{ab}^{F \,;(2)}$ at NNLO (for Higgs ($F=H$) boson production~\cite{Catani:2011kr} and Drell--Yan ($F=DY$)~\cite{Catani:2012qa}) can be obtained with a dedicated analytical computation using Eq.~\eqref{hn} for $n=2$. Since for Higgs boson production, the transverse momentum cross section $H$+jet at NNLO is not known analytically, Eq.~\eqref{h3nnlo} can be used only numerically in the computation of the function ${\cal H}_{ab}^{F\,;(3)}$. 
 
 The following paragraphs will focus on the detailed degree of approximation that we  intend to use. Instead of computing the entire third order function ${\cal H}_{ab}^{H\,;(3)}$ numerically, we first report all its ingredients with the aim of reducing the numerical extraction to only a few components (perturbative functions). 
 
 The general structure of the coefficient ${\cal H}^{F \,;(3)}$ (which is proportional to $\delta(\qt^{2})$) is not known in analytic form for any hard-scattering process. Nonetheless, within the $\qt$ subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be reliably approximated for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. 
 
 
-At N$^{3}$LO the universal relation between $H^{F;(3)}_{c}$ and the third-order virtual correction to the partonic subprocess $c{\bar c}\to F$ presents one missing ingredient: a {\em single} coefficient (of {\em soft} origin) belonging to the finite part of the structure of the IR singularities, in the
-third-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. Although a general prescription to compute analytically the hard-virtual coefficient $H^{H;(3)}_{g}$ is not completely known, using the corresponding hard-virtual factor $C^{{\rm th}(3)}_{gg\to H}$ \cite{Catani:2014uta} for threshold resummation (in the large-$m_t$ limit) and the exponential equation that relates threshold and $\qt$ resummation hard-virtual coefficients (Eq.~(81) of Ref. \cite{Catani:2013tia}), we compute the following approximated expression
+At N$^{3}$LO, the universal relation between $H^{F;(3)}_{c}$ and the third-order virtual correction to the partonic subprocess $c{\bar c}\to F$ presents one missing ingredient: a {\em single} coefficient (of {\em soft} origin) belonging to the finite part of the structure of the IR singularities contained in the
+third-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. Although a general prescription to compute the hard--virtual coefficient $H^{H;(3)}_{g}$ analytically is not fully known, using the corresponding hard--virtual factor $C^{{\rm th}(3)}_{gg\to H}$~\cite{Catani:2014uta} from threshold resummation (in the large-$m_t$ limit) and the exponential equation that relates hard--virtual coefficients in threshold- and $\qt$-resummation (Eq.~(81) of Ref.~\cite{Catani:2013tia}), we compute the following approximate expression
 \beeq
 \label{H3approx}
 \widetilde{H}^{H;(3)}_{g}&&\!\!\!\!\!\!\!\!=C_{A}^{3}\left(-\frac{15649 \zeta_{3}}{432}-\frac{121 \pi ^2 \zeta_{3}}{432}+\frac{3
@@ -559,16 +552,16 @@ third-order virtual amplitude of the corresponding partonic subprocess $c{\bar c
    && \left. -5 C_{F}^2 \zeta_{ 5}+\frac{37 C_{F}^2 \zeta
    _{3}}{12}+\frac{19 C_{F}^2}{18}\right)\;.
 \eeeq
-Notice that we neglect all the third order terms in the exponent of Eq.~(81) in Ref. \cite{Catani:2013tia}, considering the entire $\mathcal{O}(\as^{3})$ correction (in the exponent) as unknown. The $\widetilde{H}^{H;(3)}_{g}$ coefficient in Eq.~(\ref{H3approx}) will be used in the numerical computations in the following.
+Notice that we neglect all the third-order terms in the exponent of Eq.~(81) in Ref.~\cite{Catani:2013tia}, considering the entire $\mathcal{O}(\as^{3})$ correction (in the exponent) as unknown. The $\widetilde{H}^{H;(3)}_{g}$ coefficient in Eq.~\eqref{H3approx} will be used in the numerical computations in the following.
 
- The missing terms in Eq.~(\ref{H3approx}), concerning the final expression of $H^{H;(3)}_g$, have a {\em soft} origin. Following notation of Ref. \cite{Catani:2013tia}, all the third order terms in the right hand side in Eq.~(81) of Ref. \cite{Catani:2013tia} are denoted by $\delta^{\qt}_{(2)}$. This allows to perform a subsequent decomposition for the third order hard-virtual coefficient defined in Eq.~(\ref{H3approx})
+ The missing terms in Eq.~\eqref{H3approx}, concerning the final expression of $H^{H;(3)}_g$, have a {\em soft} origin. Following the notation of Ref.~\cite{Catani:2013tia}, all the third-order terms in the right-hand side of Eq.~(81) of Ref.~\cite{Catani:2013tia} are denoted by $\delta^{\qt}_{(2)}$. This allows to perform a subsequent decomposition for the third-order hard--virtual coefficient defined in Eq.~\eqref{H3approx}
 \beeq
 \label{H3deltaqT2}
 \widetilde{H}^{H;(3)}_{g}  \equiv H^{H;(3)}_g  -  \big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})} \;.
 \eeeq
 Therefore the only missing ingredients to $H^{H;(3)}_{c}$ are 
  the functions $G^{(2)}_{g\,a}(z)$, $C^{(3)}_{g\,a}(z)$ and $ \big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$. 
- Their contribution to  Eq.~(\ref{h3nnlo}) can be approximated as follows:
+ Their contribution to  Eq.~\eqref{h3nnlo} can be approximated as follows:
 \beeq
 \label{CN3eq}
 C_{N3}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow\;\; \delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z)
@@ -577,12 +570,12 @@ C_{N3}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow
 &&
 +\left(G^{(1)}_{g\,a}\otimes G^{(2)}_{g\,b}\right)(z)+\left(G^{(2)}_{g\,a}\otimes G^{(1)}_{g\,b}\right)(z) \;\;, 
 \eeeq
-where the third-order numerical coefficient $C_{N3}$ embodies the numerical extraction of the hard-virtual coefficient $\big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$  \textit{plus} the numerical approximation of a function of the variable $z$ by a numerical term proportional to $\delta(1-z)$. The resulting numerical coefficient $\big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$ is exact since $C_{N3}$ is proportional to $\delta(1-z)$. The approximation that implies Eq.~(\ref{CN3eq}) is related only to the functions  $G^{(2)}_{g\,a}(z)$ and $C^{(3)}_{g\,a}(z)$, whose functional dependence on the variable $z$ goes beyond terms proportional to $\delta(1-z)$. 
+where the third-order numerical coefficient $C_{N3}$ embodies the numerical extraction of the hard--virtual coefficient $\big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$  \textit{plus} the numerical approximation of a function of the variable $z$ by a numerical term proportional to $\delta(1-z)$. The resulting numerical coefficient $\big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$ is exact since $C_{N3}$ is proportional to $\delta(1-z)$. The approximation that implies Eq.~\eqref{CN3eq} is related only to the functions  $G^{(2)}_{g\,a}(z)$ and $C^{(3)}_{g\,a}(z)$, whose functional dependence on the variable $z$ goes beyond terms proportional to $\delta(1-z)$. 
 
-The method outlined in Eq.~(\ref{CN3eq}) to approximate numerically unknown terms in the hard-virtual function ${\cal H}^H_{gg\ito ab}(z)$ is not new. It was first used in Ref. \cite{Bozzi:2005wk} in order to compute numerically the second order function ${\cal H}^{H;(2)}_{gg\ito ab}(z)$ at NNLO, providing a reasonable estimate of the exact result to better than $1\%$ accuracy. Notice that Eq.~(\ref{CN3eq}) allows to recover the total cross section (at N$^{3}$LO in this case) with no approximation. After integration over the transverse momentum $\qt$, Eq.~(\ref{restotp}) provides the same total integral (numerically in this case)  as in the fully analytical case. Even more, for IR safe observables (at fixed order) which fulfil that the \textit{back-to-back} kinematical region ($\qt=0$) is located in a single phase space point (e.g the $\qt$ distribution, the angular separation $\Delta \Phi _{\gamma\gamma}$ between the two photons for a Higgs boson decaying into diphotons, etc.), the fixed order result is also exact, i.e.\ the integral of the analytical unknown terms in Eq.~(\ref{CN3eq}) (which all have $\qt=0$) is located in one single point of the exclusive differential distributions. 
+The method outlined in Eq.~\eqref{CN3eq} to approximate numerically unknown terms in the hard--virtual function ${\cal H}^H_{gg\ito ab}(z)$ is not new. It was first used in Ref.~\cite{Bozzi:2005wk} in order to compute the second order function ${\cal H}^{H;(2)}_{gg\ito ab}(z)$ numerically at NNLO, providing a reasonable estimate of the exact result to better than $1\%$ accuracy. Notice that Eq.~\eqref{CN3eq} allows to recover the total cross section (at N$^{3}$LO in this case) with no approximation. After integration over the transverse momentum $\qt$, Eq.~\eqref{restotp} provides the same total integral (numerically in this case)  as in the fully analytical case. Even more, for IR safe observables (at fixed order) which fulfil that the \textit{back-to-back} kinematical region ($\qt=0$) is located in a single phase space point (e.g.\ the $\qt$ distribution, the angular separation $\Delta \Phi _{\gamma\gamma}$ between the two photons for a Higgs boson decaying into diphotons, etc.), the fixed order result is also exact, i.e.\ the integral of the analytical unknown terms in Eq.~\eqref{CN3eq} (which all have $\qt=0$) is located in one single point of the exclusive differential distributions. 
 
-The previous considerations about the approximation that proposes Eq.~(\ref{CN3eq}) were regarding the total cross section or differential distributions in which the Born--like configurations belong to one single phase space point.
-In order to quantify the quality of the approximation proposed in Eq.~(\ref{CN3eq}) at the differential level even when the Born differential cross section populates the entire differential range, we perform a detailed numerical study of the Higgs boson rapidity $y_{H}$ distribution in Sec. \ref{sec:NNLOrap} at NNLO. Anticipating these results,  we find that in the rapidity range $0\leq y_{H}\leq 4$ the approximated NNLO result differs less than $0.2\%$ from the exact NNLO Higgs rapidity distribution.
+The previous considerations about the approximation that proposes Eq.~\eqref{CN3eq} were regarding the total cross section or differential distributions in which the Born--like configurations belong to one single phase space point.
+In order to quantify the quality of the approximation proposed in Eq.~\eqref{CN3eq} at the differential level even when the Born differential cross section populates the entire differential range, we perform a detailed numerical study of the Higgs boson rapidity $y_{H}$ distribution in Sec.~\ref{sec:NNLOrap} at NNLO. Anticipating these results,  we find that in the rapidity range $0\leq y_{H}\leq 4$ the approximated NNLO result differs by less than $0.2\%$ from the exact NNLO Higgs rapidity distribution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -590,11 +583,11 @@ In order to quantify the quality of the approximation proposed in Eq.~(\ref{CN3e
 \label{sec:numsetup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-To extract the value of $C_{N3}$, we first introduce the numerical tools and the calculational setup in this section. We use the same setup throughout this paper also for the inclusive and differential predictions presented in Sections \ref{sec:numCN3}, \ref{sec:NNLOrap}, \ref{sec:N3LOrap} and \ref{sec:results}.
+To extract the value of $C_{N3}$, we first introduce the numerical tools and the calculational setup in this section. We use the same setup throughout this paper also for the inclusive and differential predictions presented in Sections~\ref{sec:numCN3}, \ref{sec:NNLOrap}, \ref{sec:N3LOrap} and \ref{sec:results}.
 
-We consider the Higgs boson production in proton-proton collisions at the centre--of--mass energy $\sqrt{s}=13$ TeV. In our computation we use the Higgs boson mass  $M_H= 125$~GeV and the vacuum expectation value  $v=246.2$~GeV. The Born subprocess is initiated with gluon-gluon fusion mediated through a top quark loop. For Higgs production, which has a typical energy scale of $M_H$, it is possible to integrate out the top quark loop by taking the large-$m_t$ limit ($m_{t}\rightarrow \infty$) and therefore, the Higgs boson is produced from the gluon-gluon-Higgs effective vertex~\cite{Heft}. The mass of the top quark is taken as $m_t = 173.2$~GeV in those contributions which do not vanish in the large-$m_t$ limit (e.g  Eqs. (\ref{H2g}) and  (\ref{H3approx}) and Wilson coefficient corrections at N$^3$LO). With the top quark loop replaced by an effective vertex, we consider a five-flavour scheme QCD with all light quarks being massless. We use the central set of the \texttt{PDF4LHC15} parton distribution functions (PDFs)~\cite{nnpdf} as implemented in the \texttt{LHAPDF} framework \cite{Buckley:2014ana} and the associated strong coupling constant $\as(M_Z)=0.118$. Notice that we systematically employ the same order of the PDFs (NNLO) for the LO,NLO,NNLO and N$^{3}$LO results presented in this paper. The default factorization and renormalization scales are chosen accordingly as $\mu \equiv \mu_R = \mu_F =  M_H / 2$. The theoretical uncertainty is estimated by varying the default scale choice independently for $\mu_R$ and $\mu_F$ by a factor of $\{1/2,2\}$ while omitting combinations of $\mu_R/\mu_F = 4$ or $1/4$ which result in seven--point scale variation choices. 
+We consider the Higgs boson production in proton--proton collisions at the centre-of-mass energy $\sqrt{s}=13$~TeV. In our computation we use the Higgs boson mass  $M_H= 125$~GeV and the vacuum expectation value  $v=246.2$~GeV. The Born subprocess is initiated with gluon--gluon fusion mediated through a top quark loop. For Higgs production, which has a typical energy scale of $M_H$, it is possible to integrate out the top quark loop by taking the large-$m_t$ limit ($m_{t}\rightarrow \infty$) and therefore, the Higgs boson is produced from the gluon-gluon-Higgs effective vertex~\cite{Heft}. The mass of the top quark is taken as $m_t = 173.2$~GeV in those contributions which do not vanish in the large-$m_t$ limit (e.g.\  Eqs.~\eqref{H2g} and \eqref{H3approx} and Wilson coefficient corrections at N$^3$LO). With the top quark loop replaced by an effective vertex, we consider a five-flavour scheme QCD with all light quarks being massless. We use the central set of the \texttt{PDF4LHC15} parton distribution functions (PDFs)~\cite{nnpdf} as implemented in the \texttt{LHAPDF} framework~\cite{Buckley:2014ana} and the associated strong coupling constant $\as(M_Z)=0.118$. Notice that we systematically employ the same order of the PDFs (NNLO) for the LO, NLO, NNLO and N$^{3}$LO results presented in this paper. The default factorization and renormalization scales are chosen accordingly as $\mu \equiv \mu_R = \mu_F =  M_H / 2$. The theoretical uncertainty is estimated by varying the default scale choice independently for $\mu_R$ and $\mu_F$ by a factor of $\{1/2,2\}$ while omitting combinations of $\mu_R/\mu_F = 4$ or $1/4$ which result in seven-point scale variation choices. 
 
-As stated in Sec. \ref{sec:numforCN3} and in Refs. \cite{Catani:2007vq,Bozzi:2005wk}, the computation of the total cross section or differential distributions with the  $\qt$ subtraction formalism can be separated into two main parts by inserting Eq.~(\ref{sigfin}) into Eq.~(\ref{sigtotrel}):
+As stated in Sec.~\ref{sec:numforCN3} and in Refs.~\cite{Catani:2007vq,Bozzi:2005wk}, the computation of the total cross section or differential distributions with the  $\qt$ subtraction formalism can be separated into two main parts by inserting Eq.~\eqref{sigfin} into Eq.~\eqref{sigtotrel}:
 \beeq
 \label{sigtotnumerical} 
 {\hat \sigma}_{F \,ab}^{{\rm {tot}}}
@@ -602,19 +595,20 @@ As stated in Sec. \ref{sec:numforCN3} and in Refs. \cite{Catani:2007vq,Bozzi:200
    \f{d{\hat \sigma}_{ab}^{F\;{\rm CT}}}{d q_T^2}\right]
 + \int_0^{\infty} dq_T^2 \;\f{d{\hat \sigma}_{ab}^{F+{\rm jets}}}{d q_T^2} \;\;.
 \eeeq
-Regarding the $d{\hat \sigma}_{ab}^{F+{\rm jets}}$ contribution in Eq.~(\ref{sigtotnumerical}), we make use of the parton-level event generator \texttt{NNLOJET} which provides the necessary infrastructure for the antenna subtraction method up to NNLO~\cite{Antenna:method}. This program performs the integration of all contributing subprocesses of the type  $d{\hat \sigma}_{ab}^{F+{\rm jets}}$ as well as the convolution with PDFs at this order. Processes at NNLO with the structure of $d{\hat \sigma}_{ab}^{F+{\rm jets}}$ implemented in \texttt{NNLOJET} are: $F=H$~\cite{Chen:2016zka}, $F=Z$~\cite{Ridder:2015dxa,Gehrmann-DeRidder:2016jns} and $F=W^{\pm}$~\cite{Gehrmann-DeRidder:2017mvr}. In this paper we only focus in the study of $F=H$ but the formalism could be easily extended  to $Z$ and $W^{\pm}$. 
+Regarding the $d{\hat \sigma}_{ab}^{F+{\rm jets}}$ contribution in Eq.~\eqref{sigtotnumerical}, we make use of the parton-level event generator \texttt{NNLOJET} which provides the necessary infrastructure for the antenna subtraction method up to NNLO~\cite{Antenna:method}. This program performs the integration of all contributing subprocesses of the type  $d{\hat \sigma}_{ab}^{F+{\rm jets}}$ as well as the convolution with PDFs at this order. Processes at NNLO with the structure of $d{\hat \sigma}_{ab}^{F+{\rm jets}}$ implemented in \texttt{NNLOJET} are: $F=H$~\cite{Chen:2016zka}, $F=Z$~\cite{Ridder:2015dxa,Gehrmann-DeRidder:2016jns} and $F=W^{\pm}$~\cite{Gehrmann-DeRidder:2017mvr}. In this paper we only focus in the study of $F=H$ but the formalism could be easily extended  to $Z$ and $W^{\pm}$. 
+\textbf{AH: for DY, the inclusive cross section is missing. mention here?}
 
-The terms in square brackets in Eq.~(\ref{sigtotnumerical}))  are encoded in a new Monte Carlo generator \texttt{HN3LO} up to the third order in the strong coupling constant. After expanding Eq.~(\ref{reslean}) to this order, several non-trivial convolutions emerge and we document the corresponding formulae implemented in \texttt{HN3LO} in Appendix \ref{app:Convos}. All our results up to the NNLO level are in agreement with the Monte Carlo generator \texttt{HNNLO} \cite{Catani:2007vq} at the per mille level of accuracy. On the right hand side of Eq.~(\ref{h3nnlo}), the partonic Higgs boson total cross sections at NNLO ($\bigl[ {\hat \sigma}_{H}^{{\rm {tot}}} \bigr]_{\rm NNLO}$) and N$^{3}$LO  ($\bigl[ {\hat \sigma}_{H}^{{\rm {tot}}} \bigr]_{\rm N^{3}LO}$) are also required. We use the analytical coefficient function for the 
-total Higgs boson cross section at N$^{3}$LO $\bigl[  \sigma_{H}^{{\rm {tot}}} \bigr]_{\rm N^{3}LO}$ (i.e $\bigl[ {\hat \sigma}_{H}^{{\rm {tot}}} \bigr]_{\rm N^{3}LO}$ convoluted with the PDFs)  calculated recently in Ref.~\cite{Mistlberger:2018etf} and  employ the numerical code \texttt{ihixs 2}~\cite{Dulat:2018rbf} to compute not only the N$^{3}$LO cross section, but also
+The terms in square brackets in Eq.~\eqref{sigtotnumerical}  are encoded in a new Monte Carlo generator \texttt{HN3LO} up to the third order in the strong coupling constant. After expanding Eq.~\eqref{reslean} to this order, several non-trivial convolutions emerge and we document the corresponding formulae implemented in \texttt{HN3LO} in Appendix~\ref{app:Convos}. All our results up to the NNLO level are in agreement with the Monte Carlo generator \texttt{HNNLO}~\cite{Catani:2007vq} at the per mille level of accuracy. On the right-hand side of Eq.~\eqref{h3nnlo}, the partonic Higgs boson total cross sections at NNLO ($\bigl[ {\hat \sigma}_{H}^{{\rm {tot}}} \bigr]_{\rm NNLO}$) and N$^{3}$LO  ($\bigl[ {\hat \sigma}_{H}^{{\rm {tot}}} \bigr]_{\rm N^{3}LO}$) are also required. We use the analytical coefficient function for the 
+total Higgs boson cross section at N$^{3}$LO $\bigl[  \sigma_{H}^{{\rm {tot}}} \bigr]_{\rm N^{3}LO}$ (i.e.\ $\bigl[ {\hat \sigma}_{H}^{{\rm {tot}}} \bigr]_{\rm N^{3}LO}$ convoluted with the PDFs)  calculated recently in Ref.~\cite{Mistlberger:2018etf} and  employ the numerical code \texttt{ihixs 2}~\cite{Dulat:2018rbf} to compute not only the N$^{3}$LO cross section, but also
  any of the analytical total cross sections ingredients required to extract the missing coefficient $C_{N3}$.
 
-The numerical computation of the integral of the difference $d{\sigma}_{\rm{NNLO}}^{F+{\rm jets}}-d{\sigma}_{\rm{N}^3\rm{LO}}^{F {\rm\ CT}}$ in Eq.~(\ref{sigfin}), although finite, requires the introduction of a suitable technical lower bound or $q_T^{cut}$, since both terms in this difference are logarithmically divergent at $q_T^{cut} \to 0$. 
- This technical cut introduces systematic uncertainties to both $d{\sigma}_{\rm{NNLO}}^{F+{\rm jets}}$ and $d{\sigma}_{\rm{N}^3\rm{LO}}^{F {\rm\ CT}}$. Once cancellations between the terms on the right hand side of Eq.~(\ref{sigtotnumerical}) take place, the numerically calculated total cross sections and differential distributions have to be $q_T^{cut}$ independent (within the statistical errors) over some range of $q_T^{cut}$. At the lower end of this range, 
+The numerical computation of the integral of the difference $d{\sigma}_{\rm{NNLO}}^{F+{\rm jets}}-d{\sigma}_{\rm{N}^3\rm{LO}}^{F {\rm\ CT}}$ in Eq.~\eqref{sigfin}, although finite, requires the introduction of a suitable technical lower bound or $\qtcut$, since both terms in this difference are logarithmically divergent at $\qtcut \to 0$. 
+ This technical cut introduces systematic uncertainties to both $d{\sigma}_{\rm{NNLO}}^{F+{\rm jets}}$ and $d{\sigma}_{\rm{N}^3\rm{LO}}^{F {\rm\ CT}}$. Once cancellations between the terms on the right-hand side of Eq.~\eqref{sigtotnumerical} take place, the numerically calculated total cross sections and differential distributions have to be $\qtcut$ independent (within the statistical errors) over some range of $\qtcut$. At the lower end of this range, 
 numerical instabilities in $d{\sigma}_{\rm{NNLO}}^{F+{\rm jets}}$ (arising from the large dynamical range in this calculation) 
 will limit the accuracy of the result, while at the 
 higher end of the range, missing non-logarithmic terms in  $d{\sigma}_{\rm{N}^3\rm{LO}}^{F {\rm\ CT}}$ will start to 
 become significant. 
- The numerical stability of $d{\sigma}_{\rm{NNLO}}^{F+{\rm jet}}$ at small $q_T$ using \texttt{NNLOJET} has been systematically validated for Higgs production (with $q_T^{cut}=0.7$ GeV in Ref.~\cite{Chen:2018pzu}) and Drell-Yan production (with $q_T^{cut}=2$ GeV in Ref.~\cite{Bizon:2018foh}) at the LHC. In Sections \ref{sec:numCN3}, \ref{sec:NNLOrap}, \ref{sec:N3LOrap} and \ref{sec:results}, we document numerical results obtained with $\qt$ subtraction formalism using $q_T^{cut}=(2\pm 1)$ GeV.
+ The numerical stability of $d{\sigma}_{\rm{NNLO}}^{F+{\rm jet}}$ at small $q_T$ using \texttt{NNLOJET} has been systematically validated for Higgs production (with $\qtcut=0.7$~GeV in Ref.~\cite{Chen:2018pzu}) and Drell--Yan production (with $\qtcut=2$~GeV in Ref.~\cite{Bizon:2018foh}) at the LHC. In Sections~\ref{sec:numCN3}, \ref{sec:NNLOrap}, \ref{sec:N3LOrap} and \ref{sec:results}, we document numerical results obtained with the $\qt$ subtraction formalism using $\qtcut=(2\pm 1)$~GeV.
 
 
 
@@ -632,16 +626,16 @@ become significant.
 \epsffile{./figure/finN3LO.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:finiten3lo}{\em The $\qt$ integrated finite contribution to the cross section of Eq.~(\ref{sigfin}) at N$^{3}$LO-only (i.e N$^{3}$LO-NNLO) between $\qt^{{\rm cut}}$ and $\infty$, for three different scales ($\mu=\mu_{R}=\mu_{F}$).}}
+\caption{\label{fig:finiten3lo}{\em The $\qt$ integrated finite contribution to the cross section of Eq.~\eqref{sigfin} at N$^{3}$LO-only (i.e.\ N$^{3}$LO-NNLO) between $\qtcut$ and $\infty$, for three different scales ($\mu=\mu_{R}=\mu_{F}$).}}
 \end{figure}
 %%====================================
 In the following, we describe the numerical results regarding the extraction of the $C_{N3}$ coefficient and the corresponding N$^3$LO total cross section. 
 
-In Fig. \ref{fig:finiten3lo} we display the $\sigma_{F=H}^{(\rm fin.)}$ (i.e ${\hat \sigma}_{H}^{(\rm fin.)}$ convoluted with the parton distribution functions) cross section at $\rm N^3LO$-only as a function of the $q_{T}^{\rm cut}$. With $\rm N^3LO$-only we denote  $\Bigl[ \sigma_{H}^{(\rm fin.)}\Bigr]_{\rm N^{3}LO} - \Bigl[ \sigma_{H}^{(\rm fin.)}\Bigr]_{\rm NNLO}$. Using Eq.~(\ref{H3}) with Eq.~(\ref{h3nnlo}) and the value of the resulting integral $ \sigma_{H}^{(\rm fin.)}(q_{T}^{\rm cut}=1\; {\rm GeV})$ in Fig. \ref{fig:finiten3lo}, it is possible to obtain the $\qt$ integrated cross section of the unknown terms on the right hand side of Eq.~(\ref{CN3eq}) and consequently extract $C_{N3}$. 
+In Fig.~\ref{fig:finiten3lo} we display the $\sigma_{F=H}^{(\rm fin.)}$ (i.e.\ ${\hat \sigma}_{H}^{(\rm fin.)}$ convoluted with the parton distribution functions) cross section at $\rm N^3LO$-only as a function of the $\qtcut$. With $\rm N^3LO$-only we denote  $\Bigl[ \sigma_{H}^{(\rm fin.)}\Bigr]_{\rm N^{3}LO} - \Bigl[ \sigma_{H}^{(\rm fin.)}\Bigr]_{\rm NNLO}$. Using Eq.~\eqref{H3} with Eq.~\eqref{h3nnlo} and the value of the resulting integral $ \sigma_{H}^{(\rm fin.)}(\qtcut=1~{\rm GeV})$ in Fig.~\ref{fig:finiten3lo}, it is possible to obtain the $\qt$ integrated cross section of the unknown terms on the right-hand side of Eq.~\eqref{CN3eq} and consequently extract $C_{N3}$. 
 
-The behaviour of the $\rm N^3LO$ $\sigma_{H}^{(\rm fin.)}$ cross section as a function of $q_{T}^{\rm cut}$ in Fig. \ref{fig:finiten3lo} allows also to estimate the systematical uncertainty corresponding to the use of this technical cut which turns out to be at the \textit{per mille} level in the domain $q_T^{cut}=(2\pm 1)$ GeV. More specifically, variations of the $q_{T}^{\rm cut}$ parameter from $q_{T}^{\rm cut}=1$ GeV to 3 GeV produce variations in the resulting $\sigma_{H}^{(\rm fin.)}$ cross section of the order of the $0.1\%$.
+The behaviour of the $\rm N^3LO$ $\sigma_{H}^{(\rm fin.)}$ cross section as a function of $\qtcut$ in Fig.~\ref{fig:finiten3lo} allows also to estimate the systematical uncertainty corresponding to the use of this technical cut which turns out to be at the \textit{per mille} level in the domain $\qtcut=(2\pm 1)$~GeV. More specifically, variations of the $\qtcut$ parameter from $\qtcut=1$~GeV to 3~GeV produce variations in the resulting $\sigma_{H}^{(\rm fin.)}$ cross section of the order of the $0.1\%$.
 
-In Fig. \ref{fig:CN3} we show the $C_{N3}$ value obtained for each scale (black points). Notice that the central value of each $C_{N3}$ is independent of the scale (within the uncertainties), in complete agreement with Eq.~(\ref{H3}). This scale independence of $C_{N3}$ is unrelated to the used ansatz of Eq.~(\ref{CN3eq}): the terms in the right-hand side of Eq.~(\ref{H3}) are all scale-independent and the relation between $C_{N3}$ and $\widetilde{H}^{H;(3)}_{g}$ is defined considering Eqs. (\ref{H3}), (\ref{H3deltaqT2}) and (\ref{CN3eq}). The black error bars for each one of the $C_{N3}$ values are calculated with the conventional propagation of the uncertainties and it is almost entirely due to the size of the statistical uncertainties of the $\rm N^3LO$ $\sigma_{H}^{(\rm fin.)}$ cross section in Fig. \ref{fig:finiten3lo}.
+In Fig.~\ref{fig:CN3} we show the $C_{N3}$ value obtained for each scale (black points). Notice that the central value of each $C_{N3}$ is independent of the scale (within the uncertainties), in complete agreement with Eq.~\eqref{H3}. This scale independence of $C_{N3}$ is unrelated to the used ansatz of Eq.~\eqref{CN3eq}: the terms in the right-hand side of Eq.~\eqref{H3} are all scale-independent and the relation between $C_{N3}$ and $\widetilde{H}^{H;(3)}_{g}$ is defined considering Eqs.~\eqref{H3}, \eqref{H3deltaqT2} and \eqref{CN3eq}. The black error bars for each one of the $C_{N3}$ values are calculated with the conventional propagation of the uncertainties and it is almost entirely due to the size of the statistical uncertainties of the $\rm N^3LO$ $\sigma_{H}^{(\rm fin.)}$ cross section in Fig.~\ref{fig:finiten3lo}.
 %%====================================
 \begin{figure}[tbh]
 \begin{center}
@@ -650,7 +644,7 @@ In Fig. \ref{fig:CN3} we show the $C_{N3}$ value obtained for each scale (black 
 \epsffile{./figure/CN3.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:CN3}{\em The numerically extracted $C_{N3}$ coefficient as defined in Eq.~(\ref{CN3eq}) (black points) for the particular case of  $q^{cut}_{T}=1$ GeV. The black error bars for each $C_{N3}$ point are obtained propagating the statistical uncertainties of the different terms involved in the computation. The red band is calculated with the average of the three particular $C_{N3}$ values for each scale as detailed in the text.}}
+\caption{\label{fig:CN3}{\em The numerically extracted $C_{N3}$ coefficient as defined in Eq.~\eqref{CN3eq} (black points) for the particular case of  $\qtcut=1$~GeV. The black error bars for each $C_{N3}$ point are obtained propagating the statistical uncertainties of the different terms involved in the computation. The red band is calculated with the average of the three particular $C_{N3}$ values for each scale as detailed in the text.}}
 \end{figure}
 %%====================================
 
@@ -662,20 +656,21 @@ In Fig. \ref{fig:CN3} we show the $C_{N3}$ value obtained for each scale (black 
 \epsffile{./figure/CN3_new_7_point_qT1_qT2_qT3.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:CN3qT}{\em The numerically extracted $C_{N3}$ coefficient (for three different values of $q^{cut}_{T}$) as a function of the combination of scales, as enumerated in Table~\ref{Table:CN3values}.
-The error bars for each particular $C_{N3}$ point are obtained propagating the statistical uncertainties of the different terms involved in the computation. The red band is calculated with the average of the three particular $C_{N3}$ values of the three scales present in Fig. \ref{fig:CN3} at $q^{cut}_{T}=1$ GeV, as detailed in the text.}}
+\caption{\label{fig:CN3qT}{\em The numerically extracted $C_{N3}$ coefficient (for three different values of $\qtcut$) as a function of the combination of scales, as enumerated in Table~\ref{Table:CN3values}.
+The error bars for each particular $C_{N3}$ point are obtained propagating the statistical uncertainties of the different terms involved in the computation. The red band is calculated with the average of the three particular $C_{N3}$ values of the three scales present in Fig.~\ref{fig:CN3} at $\qtcut=1$~GeV, as detailed in the text.}}
 \end{figure}
 %%====================================
 
-The solid red central line in Fig. \ref{fig:CN3}, is the average value calculated with the three different central black points corresponding to each scale choice, whereas the red band is the uncertainty, which is estimated considering the average of the three largest (smallest) values for the $C_{N3}$ coefficient resulting after adding (subtracting) the corresponding statistical error at each scale. The value of the resulting coefficient using the three scales presented in Fig. \ref{fig:CN3} is $C_{N3}=-932 \pm 224$.  Besides these three central scales we also considered four scales that complete a seven--point scale choice varying the default scale ($M_{H}/2$) by a factor $\{1/2,2\}$.  In Fig. \ref{fig:CN3qT} we show the extracted $C_{N3}$ coefficients corresponding to each one of the seven scales as a function of the label of the scale as stated in Table \ref{Table:CN3values}. The red band and central value (red line) is calculated with the first three black points at $q^{cut}_{T}=1$ GeV already present in Fig. \ref{fig:CN3} and detailed in Table \ref{Table:CN3values} in bold typeface.  In Fig. (\ref{fig:CN3qT}) we also compare the extracted $C_{N3}$ coefficients at $q^{cut}_{T}=1$ GeV with the cases in which $q^{cut}_{T}=2$ GeV (blue points) and 3 GeV (green points) are used. The variation of the $q^{cut}_{T}$ around 2 GeV quantifies the stability of the $C_{N3}$ extraction. The central value for the $C_{N3}$ coefficient was obtained only using the three central scales $\mu=M_{H},M_{H}/2,M_{H}/4$ since the other four scales, which are correlated with the previous, do not provide new and independent information to the average. Even more, considering in the average the seven scales, this will result in a shift of $-30$ units in the central value of $C_{N3}$, which at the level of the total cross sections (at each scale) represents an effect of less than $0.1\%$. For the estimation of the uncertainty on $C_{N3}$, considering the seven scales does not have an impact. In Sec. \ref{sec:N3LOrap} we will estimate how the uncertainty associated to the $C_{N3}$ parameter affects the differential distributions.
+The solid red central line in Fig.~\ref{fig:CN3}, is the average value calculated with the three different central black points corresponding to each scale choice, whereas the red band is the uncertainty, which is estimated considering the average of the three largest (smallest) values for the $C_{N3}$ coefficient resulting after adding (subtracting) the corresponding statistical error at each scale. The value of the resulting coefficient using the three scales presented in Fig.~\ref{fig:CN3} is $C_{N3}=-932 \pm 224$.  Besides these three central scales we also considered four scales that complete a seven-point scale choice varying the default scale ($M_{H}/2$) by a factor $\{1/2,2\}$.  In Fig.~\ref{fig:CN3qT} we show the extracted $C_{N3}$ coefficients corresponding to each one of the seven scales as a function of the label of the scale as stated in Table~\ref{Table:CN3values}. The red band and central value (red line) is calculated with the first three black points at $\qtcut=1$~GeV already present in Fig.~\ref{fig:CN3} and detailed in Table~\ref{Table:CN3values} in bold typeface.  In Fig.~\ref{fig:CN3qT} we also compare the extracted $C_{N3}$ coefficients at $\qtcut=1$~GeV with the cases in which $\qtcut=2$~GeV (blue points) and 3~GeV (green points) are used. The variation of the $\qtcut$ around 2~GeV quantifies the stability of the $C_{N3}$ extraction. The central value for the $C_{N3}$ coefficient was obtained only using the three central scales $\mu=M_{H},M_{H}/2,M_{H}/4$ since the other four scales, which are correlated with the previous, do not provide new and independent information to the average. Moreover, considering all seven scales in the average will result in a shift of only $-30$ units with respect to the central value of $C_{N3}$, which at the level of the total cross sections (at each scale) constitutes an effect of less than $0.1\%$. For the estimation of the uncertainty on $C_{N3}$, considering the seven scales does not have an impact. In Sec.~\ref{sec:N3LOrap} we will estimate how the uncertainty associated to the $C_{N3}$ parameter affects the differential distributions.
 
-Whereas the $C_{N3}$ coefficient is independent of the scale choice, its resulting cross section, after convolution with the PDFs (which depend on $\mu_{F}$) and the strong coupling constant $\as(\mu_{R})$, does depend on the scale choice. In Table \ref{Table:CN3values} we present all the $C_{N3}$ coefficients as a function of the scale choice and the $q^{cut}_{T}$ ($q^{cut}_{T} = 2 \pm 1$ GeV ).
+Whereas the $C_{N3}$ coefficient is independent of the scale choice, its resulting cross section, after convolution with the PDFs (which depend on $\mu_{F}$) and the strong coupling constant $\as(\mu_{R})$, does depend on the scale choice. 
+In Table~\ref{Table:CN3values} we collect all values for the $C_{N3}$ coefficients as determined using the different scales and values for $\qtcut$ ($\qtcut = 2 \pm 1$~GeV ).
  
-The numerically calculated $C_{N3}$ coefficient allows to compute the total cross section at N$^{3}$LO using 
+The numerically extracted $C_{N3}$ coefficient allows to compute the total cross section at N$^{3}$LO using 
 the $\qt$ subtraction method, which serves as a closure test of the approach and the approximations used, 
 and allows to quantify the impact of uncertainties associated to the numerical evaluation of the ingredients. 
-In Fig.~\ref{fig:totXsecN3LO} we compare the fully analytical N$^{3}$LO Higgs boson total cross section \cite{Mistlberger:2018etf} (black points) and our best estimation (green points) for three central scales, using $q^{cut}_{T}=1$ GeV. The blue squared points represent our best approximation without the use of the $C_{N3}$ coefficient (i.e $C_{N3}=0$), that can be considered as the prediction of the $\qt$ subtraction method in the case in which the total cross section is unknown (e.g.\ for Drell-Yan at N$^{3}$LO). The uncertainty bars in the $\qt$ subtraction prediction correspond to the statistical errors of the numerical computations and are mainly due to the finite contribution in Eq.~(\ref{sigfin}) at N$^{3}$LO-only. The magenta and cyan points correspond to our N$^{3}$LO prediction using $q^{cut}_{T}=2$ GeV and 3 GeV respectively. Notice that the $q^{cut}_{T}$ variation is performed at N$^{3}$LO-only, while the NNLO cross section is evaluated at fixed $q^{cut}_{T}$ parameter.
-The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star points) in order to put in evidence the size of the N$^{3}$LO corrections compared to the previous perturbative order. The total cross sections shown in Fig.~\ref{fig:totXsecN3LO} are reported in Table \ref{Table:totXsec}.
+In Fig.~\ref{fig:totXsecN3LO} we compare the fully analytical N$^{3}$LO Higgs boson total cross section~\cite{Mistlberger:2018etf} (black points) and our best estimation (green points) for three central scales, using $\qtcut=1$~GeV. The blue squared points represent our best approximation without the use of the $C_{N3}$ coefficient (i.e.\ $C_{N3}=0$), that can be considered as the prediction of the $\qt$ subtraction method in the case in which the total cross section is unknown (e.g.\ for Drell--Yan at N$^{3}$LO). The uncertainty bars in the $\qt$ subtraction prediction correspond to the statistical errors of the numerical computations and are mainly due to the finite contribution in Eq.~\eqref{sigfin} at N$^{3}$LO-only. The magenta and cyan points correspond to our N$^{3}$LO prediction using $\qtcut=2$~GeV and 3~GeV respectively. Notice that the $\qtcut$ variation is performed at N$^{3}$LO-only, while the NNLO cross section is evaluated at fixed $\qtcut$ parameter.
+The NNLO cross section is also shown in Fig.~\ref{fig:totXsecN3LO} (red star points) in order to put the size of the N$^{3}$LO corrections in relation to the previous perturbative order. The total cross sections shown in Fig.~\ref{fig:totXsecN3LO} are reported in Table~\ref{Table:totXsec}.
 
 %%====================================
 \begin{figure}[tbh]
@@ -685,7 +680,7 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 \epsffile{./figure/totXsecN3LO.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:totXsecN3LO}{\em Total cross section of Higgs boson production, $\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm N^{3}LO}$, as obtained by the $\qt$ subtraction formalism, compared with the corresponding analytical $\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm N^{3}LO}$ of Ref.~\cite{Mistlberger:2018etf} (black diamonds).  Green points denote the $\qt$ subtraction prediction for $q^{cut}_{T}$=1 GeV, magenta points are  $\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm N^{3}LO}$ using $q^{cut}_{T}$=2 GeV, and  cyan using $q^{cut}_{T}$=3 GeV. Whereas the $q^{cut}_{T}$ is changed (from 1 to 3 GeV) the coefficient $C_{N3}$ is always considered the same (as extracted in Fig.\ \ref{fig:CN3} for $q^{cut}_{T}$=1 GeV). The $\qt$ subtraction prediction at N$^{3}$LO with the $C_{N3}$ numerical coefficient fixed to zero (using $q^{cut}_{T}$=1 GeV) is shown with blue squared points. The NNLO analytical Higgs boson cross section ($\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm NNLO}$) is represented by red points. All the cross sections are shown for three different scales: $\mu \equiv \mu_R = \mu_F = \{1/4,1/2,1 \} M_H$ and horizontally displaced for better visibility. The uncertainty bars in the $\qt$ subtraction predictions are calculated with the customary propagation of statistical uncertainties.}}
+\caption{\label{fig:totXsecN3LO}{\em Total cross section of Higgs boson production, $\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm N^{3}LO}$, as obtained by the $\qt$ subtraction formalism, compared with the corresponding analytical $\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm N^{3}LO}$ of Ref.~\cite{Mistlberger:2018etf} (black diamonds).  Green points denote the $\qt$ subtraction prediction for $\qtcut$=1~GeV, magenta points are  $\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm N^{3}LO}$ using $\qtcut$=2~GeV, and  cyan using $\qtcut$=3~GeV. Whereas the $\qtcut$ is changed (from 1 to 3~GeV) the coefficient $C_{N3}$ is always considered the same (as extracted in Fig.~\ref{fig:CN3} for $\qtcut$=1~GeV). The $\qt$ subtraction prediction at N$^{3}$LO with the $C_{N3}$ numerical coefficient fixed to zero (using $\qtcut$=1~GeV) is shown with blue squared points. The NNLO analytical Higgs boson cross section ($\bigl[\sigma_{H}^{{\rm {tot}}}\bigr]_{\rm NNLO}$) is represented by red points. All the cross sections are shown for three different scales: $\mu \equiv \mu_R = \mu_F = \{1/4,1/2,1 \} M_H$ and horizontally displaced for better visibility. The uncertainty bars in the $\qt$ subtraction predictions are calculated with the customary propagation of statistical uncertainties.}}
 \end{figure}
 %%====================================
 
@@ -703,9 +698,9 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 
 \multirow{5}{*}{ } \!\!\!\!n &
 \multicolumn{1}{ |p{30mm}| }{ $\big[\tilde{\mu_{R}},\tilde{\mu_{F}} \big]$ $\times M_{H}$} &
-\multicolumn{1}{ |p{30mm}| }{$C_{N3}$ {\scriptsize ( $q^{\rm cut}_{T}=1$ GeV) }} &
-\multicolumn{1}{ |p{30mm}| }{$C_{N3}$ {\scriptsize ( $q^{\rm cut}_{T}=2$ GeV) }} &
-\multicolumn{1}{ |p{30mm}| }{$C_{N3}$ {\scriptsize ( $q^{\rm cut}_{T}=3$ GeV) }} \\
+\multicolumn{1}{ |p{30mm}| }{$C_{N3}$ {\scriptsize ( $\qtcut=1$~GeV) }} &
+\multicolumn{1}{ |p{30mm}| }{$C_{N3}$ {\scriptsize ( $\qtcut=2$~GeV) }} &
+\multicolumn{1}{ |p{30mm}| }{$C_{N3}$ {\scriptsize ( $\qtcut=3$~GeV) }} \\
 \hline
 %\cline{2-5}
 
@@ -798,7 +793,7 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 \end{tabular}
 
 \caption{\label{Table:CN3values}
-{\em Extracted values of the $C_{N3}$ coefficients as a function of the $q^{cut}_{T}$ as shown in Fig. \ref{fig:CN3qT} for each scale choice. In bold typeface the $C_{N3}$ coefficients (for the case $q^{cut}_{T}=$1 GeV) which are used to compute the averaged value $C_{N3}=-932\pm 224$ shown in Figs. \ref{fig:CN3} and \ref{fig:CN3qT}, with the central red line and the corresponding red band. The uncertainty for each one of the $C_{N3}$ coefficients is calculated with the customary propagations of the uncertainties. The first column is used to label each particular scale choice used in Fig. \ref{fig:CN3qT}.
+{\em Extracted values of the $C_{N3}$ coefficients as a function of the $\qtcut$ as shown in Fig.~\ref{fig:CN3qT} for each scale choice. In bold typeface the $C_{N3}$ coefficients (for the case $\qtcut=$1~GeV) which are used to compute the averaged value $C_{N3}=-932\pm 224$ shown in Figs.~\ref{fig:CN3} and \ref{fig:CN3qT}, with the central red line and the corresponding red band. The uncertainty for each one of the $C_{N3}$ coefficients is calculated with the customary propagations of the uncertainties. The first column is used to label each particular scale choice used in Fig.~\ref{fig:CN3qT}.
 }
 }
 \renewcommand{\arraystretch}{1}
@@ -825,9 +820,9 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 
 \multirow{5}{*}{ } $ \sigma_{H}^{{\rm {tot}}} $~~(pb)
 &\multicolumn{1}{ |c| }{Exact} &
-\multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($q^{\rm cut}_{T}=1$ GeV)}} &
-\multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($q^{\rm cut}_{T}=2$ GeV) }} &
-\multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($q^{\rm cut}_{T}=3$ GeV)}} &
+\multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($\qtcut=1$~GeV)}} &
+\multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($\qtcut=2$~GeV) }} &
+\multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($\qtcut=3$~GeV)}} &
 \multicolumn{1}{ |p{30mm}| }{\rm $q_{T}$~ subtraction \newline  {\scriptsize ($C_{N3}=0$)}}\\
 \hline
 %\cline{2-5}
@@ -911,7 +906,7 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 \end{tabular}
 }
 \caption{\label{Table:totXsec}
-{\em The total cross section for Higgs boson production $\sigma_{H}^{{\rm {tot}}}$ at the LHC ($\sqrt{s}=13$~TeV). Results for NNLO and N$^{3}$LO cross sections for three different scales $\mu=M_{H}/2$ (central scale), $\mu=M_{H}$ and $\mu=M_{H}/4$. The column \lq{}\lq{}Exact\rq{}\rq{} contains the results of Ref. \cite{Mistlberger:2018etf} computed with the numerical code of Ref. \cite{Dulat:2018rbf} as detailed in the text. The results with the $\qt$ subtraction method are obtained using three different values of $\qt^{{\rm cut}}$ (1,2 and 3 GeV), and their uncertainties are calculated with the customary propagation of statistical errors. The last column shows $ \sigma_{H}^{{\rm {tot}}}$ obtained with the $\qt$ subtraction method and using $C_{N3}=0$ at $N^{3}LO$. The values of $ \sigma_{H}^{{\rm {tot}}}$ reported in this Table are shown in Fig. \ref{fig:totXsecN3LO}. The NNLO cross sections computed with the $\qt$ subtraction method are obtained using $\qt^{{\rm cut}}=1$ GeV, i.e.\ the variation of this parameter in the N$^{3}$LO cross section is considered at N$^{3}$LO-only.
+{\em The total cross section for Higgs boson production $\sigma_{H}^{{\rm {tot}}}$ at the LHC ($\sqrt{s}=13$~TeV). Results for NNLO and N$^{3}$LO cross sections for three different scales $\mu=M_{H}/2$ (central scale), $\mu=M_{H}$ and $\mu=M_{H}/4$. The column \lq{}\lq{}Exact\rq{}\rq{} contains the results of Ref.~\cite{Mistlberger:2018etf} computed with the numerical code of Ref.~\cite{Dulat:2018rbf} as detailed in the text. The results with the $\qt$ subtraction method are obtained using three different values of $\qtcut$ (1,2 and 3~GeV), and their uncertainties are calculated with the customary propagation of statistical errors. The last column shows $ \sigma_{H}^{{\rm {tot}}}$ obtained with the $\qt$ subtraction method and using $C_{N3}=0$ at $N^{3}LO$. The values of $ \sigma_{H}^{{\rm {tot}}}$ reported in this Table are shown in Fig.~\ref{fig:totXsecN3LO}. The NNLO cross sections computed with the $\qt$ subtraction method are obtained using $\qtcut=1$~GeV, i.e.\ the variation of this parameter in the N$^{3}$LO cross section is considered at N$^{3}$LO-only.
 }
 }
 %\renewcommand{\arraystretch}{1}
@@ -927,14 +922,14 @@ The NNLO cross section is also shown in Fig. \ref{fig:totXsecN3LO} (red star poi
 \label{sec:rapgen}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this section we use the $C_{N3}$ coefficient (extracted in Sec. \ref{sec:numCN3}) to produce differential predictions at N$^{3}$LO. In particular we present differential results for the rapidity distribution of the Higgs boson. In Sec. \ref{sec:NNLOrap}  we estimate at NNLO the uncertainties introduced in the rapidity distribution, by the procedure proposed in Eq.~(\ref{CN3eq}). In Sec. \ref{sec:N3LOrap} we present the rapidity distribution at N$^{3}$LO with the corresponding estimation of the uncertainties associated to the variation of the $q_{T}^{\rm cut}$ and $C_{N3}$ parameters.
+In this section we use the $C_{N3}$ coefficient (extracted in Sec.~\ref{sec:numCN3}) to produce differential predictions at N$^{3}$LO. In particular, we present differential results for the rapidity distribution of the Higgs boson. In Sec.~\ref{sec:NNLOrap}  we estimate at NNLO the uncertainties introduced in the rapidity distribution, by the procedure proposed in Eq.~\eqref{CN3eq}. In Sec.~\ref{sec:N3LOrap} we present the rapidity distribution at N$^{3}$LO with the corresponding estimation of the uncertainties associated to the variation of the $\qtcut$ and $C_{N3}$ parameters.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The NNLO rapidity distribution}
 \label{sec:NNLOrap}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this section we aim quantify the uncertainty in the approximation used in Eq.~(\ref{CN3eq}). This approximation was first proposed in Ref.~\cite{Bozzi:2005wk} for Higgs production at NNLO. Since all the ingredients of the $\qt$ subtraction formalism at NNLO are now known in analytical form~\cite{Catani:2011kr}, it is possible to evaluate the deviation caused by the approximation from the exact result. This analysis allows to assess the deviation from the exact result that could be present at N$^3$LO in Sec. \ref{sec:N3LOrap} and \ref{sec:results} below. For this quantitative exercise we take as known the collinear functions $C^{(1)}_{g\,a}$ and the hard-virtual factor $H^{H;(1)}_g$ in Eq.~(\ref{H2}). The collinear functions $C^{(2)}_{g\,a}$ and the first order helicity-flip functions $G^{(1)}_{g\,a}$ are regarded as unknown. The hard-virtual factor $H^{H;(2)}_g$ is divided in two contributions as in Eq.~(\ref{H3deltaqT2})
+In this section we aim to quantify the uncertainty in the approximation used in Eq.~\eqref{CN3eq}. This approximation was first proposed in Ref.~\cite{Bozzi:2005wk} for Higgs production at NNLO. Since all the ingredients of the $\qt$ subtraction formalism at NNLO are now known in analytical form~\cite{Catani:2011kr}, it is possible to evaluate the deviation caused by the approximation from the exact result. This analysis allows to assess the deviation from the exact result that could be present at N$^3$LO in Sec.~\ref{sec:N3LOrap} and \ref{sec:results} below. For this quantitative study we consider the collinear functions $C^{(1)}_{g\,a}$ and the hard--virtual factor $H^{H;(1)}_g$ in Eq.~\eqref{H2} as known. The collinear functions $C^{(2)}_{g\,a}$ and the first order helicity-flip functions $G^{(1)}_{g\,a}$ are regarded as unknown. The hard--virtual factor $H^{H;(2)}_g$ is divided in two contributions as in Eq.~\eqref{H3deltaqT2}
 \beeq
 \widetilde{H}^{H;(2)}_{g}  \equiv H^{H;(2)}_g  -  \big[H^{H;(2)}_{g}\big]_{(\delta^{\qt}_{(1)})} \;,
 \eeeq
@@ -947,11 +942,11 @@ where $\big[H^{H;(2)}_{g}\big]_{(\delta^{\qt}_{(1)})}$ is considered as unknown 
 \epsffile{./figure/yH_B05_CN.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:yHCN}{\em Rapidity distribution at NNLO computed using the $\qt$ subtraction formalism (solid green band) compared with the evaluation using the $C_{N2}$ numerical coefficient (red, blue and black points). In the lower panel we show the ratio to the exact NNLO result. For this particular example at NNLO, we employ the three points scale variation: $\mu=\mu_{R}=\mu_{F}=\{M_{H}/4,M_{H}/2,M_{H}\}$. 
+\caption{\label{fig:yHCN}{\em Rapidity distribution at NNLO computed using the $\qt$ subtraction formalism (solid green band) compared with the evaluation using the $C_{N2}$ numerical coefficient (red, blue and black points). In the lower panel we show the ratio to the exact NNLO result. For this particular example at NNLO, we employ the three-point scale variation: $\mu=\mu_{R}=\mu_{F}=\{M_{H}/4,M_{H}/2,M_{H}\}$. 
 }}
 \end{figure}
 %%====================================
-These so-called \textit{unknown functions} (for this exercise) which depend on the variable $z$ in Eq.~(\ref{H2}) are approximated with a single numerical coefficient $C_{N2}$ proportional to $\delta(1-z)$ (the $C_{N2}$ here was labeled as $C_{N}$ in Ref.~\cite{Bozzi:2005wk}):
+These so-called \textit{unknown functions} (for this exercise) which depend on the variable $z$ in Eq.~\eqref{H2} are approximated with a single numerical coefficient $C_{N2}$ proportional to $\delta(1-z)$ (the $C_{N2}$ here was labeled as $C_{N}$ in Ref.~\cite{Bozzi:2005wk}):
 \beeq
 \label{CNeq}
 C_{N2}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow\;\; \delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z)
@@ -959,17 +954,17 @@ C_{N2}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow
 &&+\delta_{g\,a} \,C^{(2)}_{g\,b}(z)+\delta_{g\,b} \,C^{(2)}_{g\,a}(z)+
 \left(G^{(1)}_{g\,a}\otimes G^{(1)}_{g\,b}\right)(z)\;\; .
 \eeeq 
-In Fig. \ref{fig:yHCN} we show the rapidity distribution of the Higgs boson at NNLO computed with the exact $\qt$ subtraction (green band) and the NNLO prediction using the $C_{N2}$ coefficient (red, blue and black points). For this particular example at NNLO, we employ the three--point scale variation: $\mu=\mu_{R}=\mu_{F}=\{M_{H}/4,M_{H}/2,M_{H}\}$. Repeating the analysis performed for the completion of Table \ref{Table:CN3values}, and Fig. (\ref{fig:CN3}) we arrive to the following result: $C_{N2}=28\pm 1$. The numerical value of the $C_{N2}$ parameter corresponds to a specific $\widetilde{H}^{H;(2)}_{g}$ hard coefficient:
+In Fig.~\ref{fig:yHCN} we show the rapidity distribution of the Higgs boson at NNLO computed with the exact $\qt$ subtraction (green band) and the NNLO prediction using the $C_{N2}$ coefficient (red, blue and black points). For this particular example at NNLO, we employ the three--point scale variation: $\mu=\mu_{R}=\mu_{F}=\{M_{H}/4,M_{H}/2,M_{H}\}$. Repeating the analysis performed for the completion of Table~\ref{Table:CN3values}, and Fig.~\ref{fig:CN3} we arrive to the following result: $C_{N2}=28\pm 1$. The numerical value of the $C_{N2}$ parameter corresponds to a specific $\widetilde{H}^{H;(2)}_{g}$ hard coefficient:
 \begin{align}
 \label{Ht2g}
 \widetilde{H}^{H;(2)}_{g}&=\f{11399}{144}+\f{19}{8} L_{t}-\f{1189}{144} N_{f}+\f{2}{3} N_{f} L_{t}+\f{83}{6} \pi^{2} -\f{5}{18} \pi^{2} N_{f} + \f{13}{16} \pi^{4} - \f{165}{4} \zeta_{3} + \f{5}{6} N_{f} \zeta_{3}\;\;,
 \end{align}
-which is obtained with the same method that was used to arrive to Eq.~(\ref{H3approx}).
+which is obtained with the same method that was used to arrive to Eq.~\eqref{H3approx}.
 Using this $C_{N2}$ parameter we can produce differential predictions which are obtained \textit{mimicking} the strategy that we intend to use at N$^{3}$LO. 
 
-In the lower panel of Fig. \ref{fig:yHCN} we show the ratio to the exact NNLO result, i.e we present the ratio for each scale. As expected, the approximation presents its best behaviour at central rapidity and the deviation from the exact results is at \textit{per mile} level throughout the presented rapidity region of $|y_{H}|\leq 4$.
+In the lower panel of Fig.~\ref{fig:yHCN} we show the ratio to the exact NNLO result, i.e.\ we present the ratio for each scale. As expected, the approximation presents its best behaviour at central rapidity and the deviation from the exact results is at \textit{per mille} level throughout the presented rapidity region of $|y_{H}|\leq 4$.
 
-The numerical implementation of the $\qt$ subtraction method (more precisely Eq.~(\ref{hn}) at NNLO) requires the implementation of a lower technical cut ($q_{T}^{\rm cut}$) in the integral performed over the transverse momentum of the finite contribution in Eq.~(\ref{sigfin}). The computation of the NNLO Higgs boson cross section and differential distributions do not represent a numerical challenge, and the $q_{T}^{\rm cut}$ can be considered as low as the computation demands. We performed variations of the $q_{T}^{\rm cut}$ between 0.1 GeV and 3 GeV, and the NNLO cross sections (and differential distributions) present deviations within an interval of $0.5\%$ level (the largest deviation $0.5\%$ is always observed for the scale choice $\mu=M_{H}/4$).
+The numerical implementation of the $\qt$ subtraction method (more precisely Eq.~\eqref{hn} at NNLO) requires the use of a lower technical cut ($\qtcut$) in the integral performed over the transverse momentum of the finite contribution in Eq.~\eqref{sigfin}. The computation of the NNLO Higgs boson cross section and differential distributions do not constitute a big numerical challenge, and the $\qtcut$ can be chosen as low as the computation demands. We performed variations of the $\qtcut$ value between 0.1~GeV and 3~GeV, and the NNLO cross sections (and differential distributions) present deviations within an interval of $0.5\%$ level (the largest deviation $0.5\%$ is always observed for the scale choice $\mu=M_{H}/4$).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -985,20 +980,20 @@ The numerical implementation of the $\qt$ subtraction method (more precisely Eq.
 \epsffile{./figure/yH_B02_only_N3LO_qTcut_uncert_CN3_uncert.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:yHN3LOonly}{\em Rapidity distribution of the Higgs boson as computed using the $\qt$ subtraction formalism at N$^{3}$LO. All bands include the seven--point scale variation as detailed in Table \ref{Table:totXsec}. The magenta band constitutes our result with $q_{T}^{\rm cut}=2$ GeV using the central value for the $C_{N3}$ coefficient ($C_{N3}=-932$). The black band is obtained as the envelope between the prediction at $q_{T}^{\rm cut}=1$ GeV and $2$ GeV using $C_{N3}=-932$. The blue band is computed at fixed $q_{T}^{\rm cut}=2$ GeV  taking the two extremal values of the C$_{N3}$ coefficient according to the calculated uncertainty ($C_{N3}=-932 \pm 224$), and performing seven--point scale variation,  as described in the text.
+\caption{\label{fig:yHN3LOonly}{\em Rapidity distribution of the Higgs boson as computed using the $\qt$ subtraction formalism at N$^{3}$LO. All bands include the seven-point scale variation as detailed in Table~\ref{Table:totXsec}. The magenta band constitutes our result with $\qtcut=2$~GeV using the central value for the $C_{N3}$ coefficient ($C_{N3}=-932$). The black band is obtained as the envelope between the prediction at $\qtcut=1$~GeV and $2$~GeV using $C_{N3}=-932$. The blue band is computed at fixed $\qtcut=2$~GeV  taking the two extremal values of the C$_{N3}$ coefficient according to the calculated uncertainty ($C_{N3}=-932 \pm 224$), and performing seven-point scale variation,  as described in the text.
 }}
 \end{figure}
 %%====================================
-In this section, we quantify the numerical stability (as well the involved intrinsic uncertainties) of the Higgs boson rapidity distributions at N$^3$LO regarding the $q_{T}^{\rm cut}$ and $C_{N3}$ parameters and the statistical uncertainties introduced by $d\sigma_{F=H}^{(\rm fin.)}/dy_H$ at N$^3$LO-only.
+In this section, we quantify the numerical stability (as well as the involved intrinsic uncertainties) of the Higgs boson rapidity distributions at N$^3$LO regarding the $\qtcut$ and $C_{N3}$ parameters and the statistical uncertainties introduced by $d\sigma_{F=H}^{(\rm fin.)}/dy_H$ at N$^3$LO-only.
 
-In Fig.~\ref{fig:yHN3LOonly} we show the rapidity distribution at N$^{3}$LO obtained with the $q_{T}$ subtraction method using the $C_{N3}$ coefficient extracted in Sec. \ref{sec:numCN3} ($C_{N3}=-932 \pm 224$). The NNLO prediction is always computed with $q_{T}^{\rm cut}=1$ GeV. 
-The magenta band in Fig.~\ref{fig:yHN3LOonly} is computed using $q_{T}^{\rm cut}=2$ GeV and performing the seven--point scale variation specified in Table \ref{Table:totXsec}. 
+In Fig.~\ref{fig:yHN3LOonly} we show the rapidity distribution at N$^{3}$LO obtained with the $q_{T}$ subtraction method using the $C_{N3}$ coefficient extracted in Sec.~\ref{sec:numCN3} ($C_{N3}=-932 \pm 224$). The NNLO prediction is always computed with $\qtcut=1$~GeV. 
+The magenta band in Fig.~\ref{fig:yHN3LOonly} is computed using $\qtcut=2$~GeV and performing the seven-point scale variation specified in Table~\ref{Table:totXsec}. 
 
-The black band is calculated as the envelope of the scale variation  bands for two different values of $q_{T}^{\rm cut}$: 1~GeV and 2~GeV. Therefore, the black band in Fig.~\ref{fig:yHN3LOonly} can be taken as estimation of the uncertainty due to the implementation of different $q_{T}^{\rm cut}$ parameters at N$^{3}$LO exclusively. In Fig. \ref{fig:totXsecN3LO} (and Table \ref{Table:totXsec}), we observed that the total cross section (for the three central scales) is rather stable as a function of the $q_{T}^{\rm cut}$. The variations of the N$^{3}$LO cross sections were at the \textit{per mille} level of accuracy if we consider  $q_{T}^{\rm cut}=2 \pm 1$ GeV, which is far better than the associated statistical uncertainty (see Table \ref{Table:totXsec}). The estimation of the uncertainty due to the $q_{T}^{\rm cut}$ variation performed in Fig.~\ref{fig:yHN3LOonly}, differential in the rapidity of the Higgs boson, confirms the stability of the total cross section reported in Table \ref{Table:totXsec}. 
-The rapidity distribution is almost insensitive to the change in the $q_{T}^{\rm cut}$ parameter in the region where
+The black band is calculated as the envelope of the scale variation  bands for two different values of $\qtcut$: 1~GeV and 2~GeV. Therefore, the black band in Fig.~\ref{fig:yHN3LOonly} can be taken as estimation of the uncertainty due to the implementation of different $\qtcut$ parameters at N$^{3}$LO exclusively. In Fig.~\ref{fig:totXsecN3LO} (and Table~\ref{Table:totXsec}), we observed that the total cross section (for the three central scales) is rather stable as a function of the $\qtcut$. The variations of the N$^{3}$LO cross sections were at the \textit{per mille} level of accuracy if we consider  $\qtcut=2 \pm 1$~GeV, which is far better than the associated statistical uncertainty (see Table~\ref{Table:totXsec}). The estimation of the uncertainty due to the $\qtcut$ variation performed in Fig.~\ref{fig:yHN3LOonly}, differential in the rapidity of the Higgs boson, confirms the stability of the total cross section reported in Table~\ref{Table:totXsec}. 
+The rapidity distribution is almost insensitive to the change in the $\qtcut$ parameter in the region where
  the bulk of the cross section is concentrated ($|y_{H}| \leq 3.6$). At large rapidities ($|y_{H}| \sim 4$), where the overall contribution to the total cross section is less than $0.5\%$, we found the largest deviations. Such deviations are mainly related to the numerical uncertainties from $d\sigma_{F=H}^{(\rm fin.)}/dy_H$ at  N$^3$LO-only.
  
-Finally, we consider the uncertainty introduced by the statistical errors of the $C_{N3}$ coefficient. The blue band in Fig.~\ref{fig:yHN3LOonly} is obtained as the envelope of the seven--scale variation at $q_{T}^{\rm cut}=2$ GeV now considering for each scale the two extremal $C_{N3}$ coefficients corresponding to its maximum and minimum statistical deviations: $C_{N3} =\{-1156,-708\}$. Therefore the envelope is taken making use of 14 rapidities distributions (two extremal predictions for each one of the seven scales). The net effect of this $C_{N3}$ variation result in an overall enlargement of the magenta band at $q_{T}^{\rm cut}=2$ GeV. Our final estimation of the uncertainties in the rapidity of the Higgs boson at N$^{3}$LO is computed as the envelope of three bands: seven--scale  variation only, combined with $q_{T}^{\rm cut}$ variation,
+Finally, we consider the uncertainty introduced by the statistical errors of the $C_{N3}$ coefficient. The blue band in Fig.~\ref{fig:yHN3LOonly} is obtained as the envelope of the seven-point scale variation at $\qtcut=2$~GeV now considering for each scale the two extremal $C_{N3}$ coefficients corresponding to its maximum and minimum statistical deviations: $C_{N3} =\{-1156,-708\}$. Therefore the envelope is taken from a total of 14 rapidity distributions (two extremal predictions for each one of the seven scales). The net effect of this $C_{N3}$ variation result in an overall enlargement of the magenta band at $\qtcut=2$~GeV. Our final estimation of the uncertainties in the rapidity of the Higgs boson at N$^{3}$LO is computed as the envelope of three bands: seven-point scale  variation only, combined with $\qtcut$ variation,
 combined with  $C_{N3}$ variation. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1008,11 +1003,12 @@ combined with  $C_{N3}$ variation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we present our predictions for the Higgs boson rapidity distributions at the LHC, applying the N$^{3}$LO $\qt$ subtraction method presented in Sec.~\ref{sec:forma}. The setup of the calculation was described in Sec.~\ref{sec:numCN3}. Fig.~\ref{fig:yHN3LO} shows the rapidity distribution of the Higgs boson at LO (dashed black band), NLO (blue solid band), NNLO (green solid band) and N$^{3}$LO (magenta solid band). The N$^{3}$LO band is computed taking into account the uncertainties due to $q_{T}^{\rm cut}$ and $C_{N3}$  as explained in Sec. \ref{sec:N3LOrap}.
+In this section we present our predictions for the Higgs boson rapidity distributions at the LHC, applying the N$^{3}$LO $\qt$ subtraction method presented in Sec.~\ref{sec:forma}. The setup of the calculation was described in Sec.~\ref{sec:numCN3}. Fig.~\ref{fig:yHN3LO} shows the rapidity distribution of the Higgs boson at LO (dashed black band), NLO (blue solid band), NNLO (green solid band) and N$^{3}$LO (magenta solid band). The N$^{3}$LO band is computed taking into account the uncertainties due to $\qtcut$ and $C_{N3}$  as explained in Sec.~\ref{sec:N3LOrap}.
+\textbf{AH: Nicer to separate scale uncertainties from the rest? Maybe show bands = scale and error bars for the $\qtcut$ etc. uncert.?}
 
-The central scale ($\mu=M_{H}/2$) is shown with a solid line while the variation of the scales by a factor $\{1/2,2\}$ is producing the seven--point scale variation band. It is interesting to notice that from LO to NNLO, the scale $\mu=M_{H}/2$ is always at the center of the corresponding scale variation band in Fig. \ref{fig:yHN3LO}.  At N$^{3}$LO the central scale $\mu=M_{H}/2$ (magenta solid line) almost coincides with the upper limit of the band, as was already observed for the total cross section~\cite{Anastasiou:2015ema,Mistlberger:2018etf}, see 
-Table \ref{Table:totXsec} and Fig.~\ref{fig:totXsecN3LO}.
-Figs.~\ref{fig:totXsecN3LO} and \ref{fig:yHN3LO} show a substantial reduction in the size of the scale variation band at N$^{3}$LO, in the total cross section and in differential distributions, respectively.  
+The central scale ($\mu=M_{H}/2$) is shown with a solid line while the variation of the scales by a factor $\{1/2,2\}$ is producing the seven-point scale variation band. It is interesting to notice that from LO to NNLO, the scale $\mu=M_{H}/2$ is always at the center of the corresponding scale variation band in Fig.~\ref{fig:yHN3LO}.  At N$^{3}$LO the central scale $\mu=M_{H}/2$ (magenta solid line) almost coincides with the upper edge of the band, as was already observed for the total cross section~\cite{Anastasiou:2015ema,Mistlberger:2018etf}, see 
+Table~\ref{Table:totXsec} and Fig.~\ref{fig:totXsecN3LO}.
+Figures~\ref{fig:totXsecN3LO} and \ref{fig:yHN3LO} show a substantial reduction in the size of the scale variation band at N$^{3}$LO, in the total cross section and in differential distributions, respectively.  
 
 %%====================================
 \begin{figure}[tbh]
@@ -1022,7 +1018,7 @@ Figs.~\ref{fig:totXsecN3LO} and \ref{fig:yHN3LO} show a substantial reduction in
 \epsffile{./figure/yH_B02_best.ps}\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:yHN3LO}{\em Rapidity distribution of the Higgs boson computed using the $\qt$ subtraction formalism up to N$^{3}$LO. The seven--point scale variation bands (as stated in Table \ref{Table:CN3values}) of the LO, NLO, NNLO and N$^{3}$LO($C_{N3}$) results are as follows: LO (black dashed), NLO (blue solid), NNLO (green solid) and N$^{3}$LO($C_{N3}$) (magenta solid). The central scale ($\mu=M_{H}/2$) at each perturbative order is shown with solid lines. In the lower panel, the ratio to the NNLO prediction is shown. While the bands for the predictions at LO, NLO and NNLO are computed with the seven scales as detailed in the text, the N$^{3}$LO($C_{N3}$) band is obtained after considering also the uncertainties due to the variation of the $q_{T}^{\rm cut}$ and the $C_{N3}$ coefficient in the 
+\caption{\label{fig:yHN3LO}{\em Rapidity distribution of the Higgs boson computed using the $\qt$ subtraction formalism up to N$^{3}$LO. The seven-point scale variation bands (as stated in Table~\ref{Table:CN3values}) of the LO, NLO, NNLO and N$^{3}$LO($C_{N3}$) results are as follows: LO (black dashed), NLO (blue solid), NNLO (green solid) and N$^{3}$LO($C_{N3}$) (magenta solid). The central scale ($\mu=M_{H}/2$) at each perturbative order is shown with solid lines. In the lower panel, the ratio to the NNLO prediction is shown. While the bands for the predictions at LO, NLO and NNLO are computed with the seven scales as detailed in the text, the N$^{3}$LO($C_{N3}$) band is obtained after considering also the uncertainties due to the variation of the $\qtcut$ and the $C_{N3}$ coefficient in the 
 N$^{3}$LO-only contribution.
 }}
 \end{figure}
@@ -1032,23 +1028,26 @@ In the central rapidity region of $|y_{H}| \leq 3.6$, the impact of the N$^{3}$L
 The N$^3$LO corrections to the Higgs boson rapidity distribution have been investigated recently in~\cite{Dulat:2017prg},
 where an analytic calculation of the leading terms of the threshold expansion of the  rapidity-differential coefficient function 
 was presented. Based on the behaviour of the threshold expansion for the total cross section~\cite{Anastasiou:2015ema}, 
-it is anticipated that the currently known threshold expansion terms~\cite{Dulat:2017prg}
- for the rapidity distribution are not yet sufficient to provide a fully earnest result.  
+it is anticipated that the currently known terms in the threshold expansion
+ for the rapidity distribution~\cite{Dulat:2017prg} are not yet sufficient to provide a proper description.  
 Comparing Fig.~\ref{fig:yHN3LO} with the results obtained in Ref.~\cite{Dulat:2017prg}, although with different choices of PDFs and scale variation prescriptions, we observe that the central scale N$^3$LO values for the rapidity region $y_H < 0.5$ agree well between the two calculations. Both calculations demonstrate a considerable reduction of the scale variation band from NNLO to N$^3$LO in this central rapidity region. For the rapidity region $y_H > 1$, substantial differences 
 between the two calculations appear, with $q_T$ subtraction generally yielding considerably smaller N$^3$LO corrections 
 (within the NNLO scale uncertainty band) than what is observed from the leading terms in the threshold expansion.  
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and outlook}
 \label{Sec:conclu}
-In this paper we have made a detailed study of Higgs boson production at the LHC using the $q_T$ subtraction formalism at N$^3$LO. We systematically describe the $q_T$ subtraction formalism using the hard resummation scheme for a generic colourless and massive system $F(\{q_i\})$ produced at hadron colliders. Fully differential cross sections for this type of final state system are separated into $\delta(q_T)$ and $q_T\ne 0$ contributions. The contribution for $q_T\ne 0$ is calculated, 
-using a phase space cut-off $q_T^{cut}$,
- as the difference between $F(\{q_i\})\rm{+jets}$ production and $q_T$ counter-terms. Specifically, we use the \texttt{NNLOJET} package to compute NNLO Higgs-plus-jet production and expand the Sudakov from factor in the hard resummation scheme to the matching order for the corresponding $q_T$ counter-terms. The contribution at $\delta(q_T)$ is further factorized into convolutions of Sudakov form factor, hard-virtual function, helicity-flip coefficient function, hard-collinear coefficient function as well as parton-distribution function (Sec.\ref{sec:forma}). The factorization under the hard resummation scheme guarantees that all the process dependent contributions proportional to a form factor are included in the hard-virtual function which depends on both initial and final state particles. All other factorized contributions only depend on the initial states. Some of the factorized ingredients contributing at $\delta(q_T)$ are not analytically known at N$^3$LO for the moment. We collect all analytically available contributions and approximate the unknown pieces by a constant coefficient $C_{N3}$ which is scale and process-independent (Sec.\ref{sec:numforCN3}). Using the available inclusive total cross section for N$^3$LO Higgs production and the known pieces from  the $q_T$ subtraction formalism, we numerically extract the value of $C_{N3}$. By comparing the numerical results of $C_{N3}$ from different scales and $q_T^{cut}$ setups during the abstraction, we conclude with very consistent results that $C_{N3}$ is independent of the scale choices and the averaged value is $C_{N3}=-932\pm 224$ (Sec.\ref{sec:numCN3}).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this paper we have performed a detailed study of Higgs boson production at the LHC using the $q_T$ subtraction formalism at N$^3$LO. We systematically describe the $q_T$ subtraction formalism using the hard resummation scheme for a generic colourless and massive system $F(\{q_i\})$ produced at hadron colliders. Fully differential cross sections for this type of final state system are separated into $\delta(q_T)$ and $q_T\ne 0$ contributions. The contribution for $q_T\ne 0$ is calculated, 
+using a phase space cut-off $\qtcut$, as the difference between $F(\{q_i\})\rm{+jets}$ production and $q_T$ counter-terms. Specifically, we use the \texttt{NNLOJET} package to compute NNLO Higgs-plus-jet production and expand the Sudakov from factor in the hard resummation scheme to the matching order for the corresponding $q_T$ counter-terms. The contribution at $\delta(q_T)$ is further factorized into convolutions of the Sudakov form factor, the hard--virtual function, the helicity-flip coefficient function, the hard--collinear coefficient function as well as the parton distribution functions (Sec.~\ref{sec:forma}). The factorization under the hard resummation scheme guarantees that all the process-dependent contributions proportional to a form factor are included in the hard--virtual function which depends on both initial- and final-state particles. All other factorized contributions only depend on the initial states. Some of the factorized ingredients contributing at $\delta(q_T)$ are not known analytically at N$^3$LO for the moment. We collect all analytically available contributions and approximate the unknown pieces by a constant coefficient $C_{N3}$ which is scale- and process-independent (Sec.~\ref{sec:numforCN3}). Using the available inclusive total cross section for N$^3$LO Higgs production and the known pieces from  the $q_T$ subtraction formalism, we numerically extract the value of $C_{N3}$. By comparing the numerical values for $C_{N3}$ using different scales and $\qtcut$ setups in the extraction, we conclude from mutually consistent results that $C_{N3}$ is independent of the scale choice with the averaged value of $C_{N3}=-932\pm 224$ (Sec.~\ref{sec:numCN3}).
 
-As a proof-of-concept implementation of the $q_T$ subtraction method at N$^3$LO,  we calculate the total cross section and rapidity distributions for Higgs boson production at LHC using a new Monte Carlo generator \texttt{HN3LO}. Using the same averaged value of $C_{N3}$, we produce the inclusive total cross section in three different scale choices and find excellent agreement with the exact results (from \texttt{ihixs 2} \cite{Dulat:2018rbf})  at $0.02\%$ level of accuracy for all three scales. For differential rapidity distribution of the Higgs boson, we first study the systematic error from the $C_{N3}$ approximation, by considering the  NNLO calculation and introducing an approximate $C_{N2}$. The NNLO $y_H$ distributions show at per mille level agreement between the $C_{N2}$ approximation and the exact results, showing the reliability of the procedure. 
-We calculate, with seven--point scale variations, the $y_H$ distribution at N$^3$LO including also systematic errors regarding different $q_T^{cut}$ and $C_{N3}$ values. Compared to the NNLO $y_H$ distributions, we observe a large reduction of theory uncertainty of more than $50\%$ at N$^3$LO. The scale variation band at N$^3$LO stays within the NNLO band with a flat $K$-factor about $1.035$ in the central rapidity region ($|y_H|\leq3.6$). Both the systematic error analysis and the phenomenology predictions confirm that our calculations at N$^3$LO using $q_T$ subtraction formalism are well under control. The approximation related to the $C_{N3}$ coefficient in our approach can be easily replaced by the full analytical results once available. 
+As a proof-of-concept implementation of the $q_T$ subtraction method at N$^3$LO,  we calculate the total cross section and rapidity distributions for Higgs boson production at LHC using a new Monte Carlo generator \texttt{HN3LO}. Using the same averaged value of $C_{N3}$, we produce the inclusive total cross section in three different scale choices and find excellent agreement with the exact results (from \texttt{ihixs 2}~\cite{Dulat:2018rbf})  at $0.02\%$ level of accuracy for all three scales. For the differential rapidity distribution of the Higgs boson, we first study the systematic error from the $C_{N3}$ approximation by considering the NNLO calculation and introducing an approximate $C_{N2}$. The NNLO $y_H$ distribution exhibit per mille level agreement between the $C_{N2}$ approximation and the exact result, supporting the reliability of the procedure. 
+We calculate the $y_H$ distribution at N$^3$LO employing a seven-point scale variation and carefully assess systematic errors arising form different $\qtcut$ and $C_{N3}$ values. Compared to the NNLO $y_H$ distributions, we observe a large reduction of theory uncertainties by more than $50\%$ at N$^3$LO. The scale variation band at N$^3$LO stays within the NNLO band with a flat $K$-factor of about $1.035$ in the central rapidity region ($|y_H|\leq3.6$). Both the systematic error analysis and the phenomenological predictions confirm that our calculations at N$^3$LO using $q_T$ subtraction formalism are well under control. The approximation related to the $C_{N3}$ coefficient in our approach can be easily replaced by the full analytical results once available. 
 
-With the upcoming larger data set and more accurate measurements of Higgs properties at LHC, we prepare precise theoretical tools that could match the frontier accuracy of experimental results. More differential properties at N$^3$LO involving the Higgs boson and its decay products can be studied using the same framework established in this paper. The current N$^3$LO calculation, using the approximation of large top quark mass, attains a level of  precision that several 
+With the upcoming larger data set and more accurate measurements of Higgs properties at the phenomenologialLHC, we prepare precise theoretical tools that could match the frontier accuracy of experimental results. More differential properties at N$^3$LO involving the Higgs boson and its decay products can be studied using the same framework established in this paper. The current N$^3$LO calculation, using the approximation of large top quark mass, attains a level of  precision that several 
 other contributions will need to taken into account for a full study of precision phenomenology~\cite{Anastasiou:2016cez}: finite top quark mass effects, heavy-light quark interference contributions  
 and electroweak corrections. 
 
@@ -1060,15 +1059,15 @@ LC would like to thank Stefano Catani for very useful and valuable discussions. 
 \section*{Appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{appendix}
-\section{Convolutions at N$^{3}$LO}
+\section{Convolutions at N$^\text{3}$LO}
 \label{app:Convos}
-The numerical implementation of Eq.~(\ref{reslean}) requires the computation of several convolutions between splitting functions, collinear and helicity-flip functions. In principle, taking the $N$-moments of the functions involved in the calculation, one can avoid the use of convolutions, since in $N$-space they are simply products. However the numerical implementation of Eq.~(\ref{reslean}) on the Monte Carlo code \texttt{HN3LO} was carried out in the $z$-space (e.g as in the codes \texttt{HNNLO} \cite{Catani:2007vq}, \texttt{DYNNLO} \cite{Catani:2009sm}, \texttt{2$\gamma$NNLO} \cite{Catani:2011qz}, etc), and therefore the new third order convolutions have to be calculated as well. 
+The numerical implementation of Eq.~\eqref{reslean} requires the computation of several convolutions between splitting functions, collinear and helicity-flip functions. In principle, taking the $N$-moments of the functions involved in the calculation, one can avoid the use of convolutions, since in $N$-space they correspond to simple products. However, the numerical implementation of Eq.~\eqref{reslean} in the Monte Carlo code \texttt{HN3LO} was carried out in the $z$-space (e.g.\ as in the codes \texttt{HNNLO}~\cite{Catani:2007vq}, \texttt{DYNNLO}~\cite{Catani:2009sm}, \texttt{2$\gamma$NNLO}~\cite{Catani:2011qz}, etc.), and therefore the new third order convolutions have to be calculated as well. 
 
-The convolutions in Eqs. (\ref{H2}), (\ref{H3}), (\ref{CN3eq}) and (\ref{CNeq}) between two functions ($f(z)$ and $g(z)$) of the the variable $z$ are defined through the following integral
+The convolutions in Eqs.~\eqref{H2}, \eqref{H3}, \eqref{CN3eq} and \eqref{CNeq} between two functions ($f(z)$ and $g(z)$) of the the variable $z$ are defined through the following integral
 \beeq
 \left( f \otimes g \right)(z) \equiv \int^{1}_{z}~\f{dy}{y}~f\left(\f{z}{y}\right)~g(y)\;.
 \eeeq
-In the case of processes initiated by gluon fusion, the complete list of third order convolutions to be calculated can be found in Table \ref{Table:convosN3LO}. All the remaining convolutions in Eq.~(\ref{reslean}) at N$^{3}$LO already  contributed to the previous orders and they are regarded as known.
+In the case of processes initiated by gluon fusion, the complete list of third order convolutions to be calculated can be found in Table~\ref{Table:convosN3LO}. All the remaining convolutions in Eq.~\eqref{reslean} at N$^{3}$LO already  contributed to the previous orders and they are regarded as known.
 %%====================================
 \begin{table}
 %%====================================
@@ -1133,7 +1132,7 @@ In the case of processes initiated by gluon fusion, the complete list of third o
 \end{tabular}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \caption{\label{Table:convosN3LO}
-{\em Convolutions appearing at the N$^{3}$LO-only between the collinear $C^{(n)}_{a_{1}a_{2}}$, the helicity-flip $G^{(n)}_{a_{1}a_{2}}$ and the splitting functions $\gamma^{(n)}_{a_{1}a_{2}}$ ($n=1,2)$. The repeated subindices $a,a_{1}$ and $a_{2}$ imply a sum over the parton flavors $q,\bar{q},g$.  The first and last subindices denote the partonic channel in which they are contributing, i.e the convolutions in the first column are used in the $gg$ partonic channel whereas the second (and last) column is for the $qg$ and $gq$ partonic channels.
+{\em Convolutions appearing at the N$^{3}$LO-only between the collinear $C^{(n)}_{a_{1}a_{2}}$, the helicity-flip $G^{(n)}_{a_{1}a_{2}}$ and the splitting functions $\gamma^{(n)}_{a_{1}a_{2}}$ ($n=1,2)$. The repeated subindices $a,a_{1}$ and $a_{2}$ imply a sum over the parton flavors $q,\bar{q},g$.  The first and last subindices denote the partonic channel in which they are contributing, i.e.\ the convolutions in the first column are used in the $gg$ partonic channel whereas the second (and last) column is for the $qg$ and $gq$ partonic channels.
 }}
 \renewcommand{\arraystretch}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1141,17 +1140,17 @@ In the case of processes initiated by gluon fusion, the complete list of third o
 %%====================================
 \end{table}
 %%====================================
-The symbol $\gamma_{ab}^{(n)}$ in Table \ref{Table:convosN3LO} denotes the usual splitting functions of $n$-order and they contribute to Eq.~(\ref{reslean}) since the PDFs have to be evolved from the scale $b_0^2/b^2$ to the customary factorization scale $\mu_{F}$.
-The first three rows in Eq.~(\ref{Table:convosN3LO}) were calculated in Ref. \cite{Hoschele:2012xc} and cross-checked with a dedicated computation for the results presented in this paper. The \texttt{Mathematica} public code \texttt{MT} \cite{Hoeschele:2013gga} used to calculate the necessary convolutions (i)--(vi) in Ref. \cite{Hoschele:2012xc} is allowed to provide the resulting convolutions in terms of \textit{Harmonic Poly--Logarithms} (HPLs) \cite{Remiddi:1999ew} exploiting the \texttt{Mathematica} package \texttt{HPL} \cite{Maitre:2005uu}. 
-The remaining convolutions in Eqs. (vii)--(xii) of Table \ref{Table:convosN3LO}  were computed  for this work. The \texttt{MT} \cite{Hoeschele:2013gga} package is not able to solve all the convolutions of weight 3 and 4 that are needed in (vii)--(xii). For instance the \texttt{MT} package can not handle convolutions in which their result has to be expressed in terms of multiple poly--logarithms (or {\em Goncharov Poly--Logarithms} GPLs) \cite{Goncharov:1998kja,Gehrmann:2000zt,Goncharov:2001iea} as it is the case when the collinear functions $C^{(2)}_{gj}$ are involved. For those, we computed the convolutions (vii)--(xii) with a newly developed code \texttt{Convo}, which is able to provide results in terms of GPLs and also can handle terms that are individually divergent,   but finite after addition.
+The symbol $\gamma_{ab}^{(n)}$ in Table~\ref{Table:convosN3LO} denotes the usual splitting functions of $n$-th order and they contribute to Eq.~\eqref{reslean}) since the PDFs have to be evolved from the scale $b_0^2/b^2$ to the factorization scale $\mu_{F}$.
+The first three rows in Eq.~\eqref{Table:convosN3LO} were calculated in Ref.~\cite{Hoschele:2012xc} and cross-checked with a dedicated computation for the results presented in this paper. The public \texttt{Mathematica} package \texttt{MT}~\cite{Hoeschele:2013gga} is used to calculate the necessary convolutions (i)--(vi) in Ref.~\cite{Hoschele:2012xc}, which can be further expressed in terms of \textit{harmonic polylogarithms} (HPLs)~\cite{Remiddi:1999ew} using the \texttt{Mathematica} package \texttt{HPL}~\cite{Maitre:2005uu}. 
+The remaining convolutions in Eqs. (vii)--(xii) of Table~\ref{Table:convosN3LO}  were computed  for this work. The \texttt{MT}~\cite{Hoeschele:2013gga} package is not able to solve all the convolutions of weight 3 and 4 that are needed in (vii)--(xii). For instance, the \texttt{MT} package cannot handle convolutions in which their result has to be expressed in terms of multiple polylogarithms (or {\em Goncharov polylogarithms} GPLs)~\cite{Goncharov:1998kja,Gehrmann:2000zt,Goncharov:2001iea} as it is the case when the collinear functions $C^{(2)}_{gj}$ are involved. For those, we have computed the convolutions (vii)--(xii) with a newly developed code \texttt{Convo}, which is able to provide results in terms of GPLs and also can handle terms that are individually divergent, but finite after addition.
 
-The multiple poly--logarithms can be defined recursively, for $n\geq 0$, via the iterated integral~\cite{Goncharov:1998kja,Gehrmann:2000zt,Goncharov:2001iea}
+The multiple polylogarithms can be defined recursively, for $n\geq 0$, via the iterated integral~\cite{Goncharov:1998kja,Gehrmann:2000zt,Goncharov:2001iea}
  \beq\label{MultPolyLogdef}
  G(a_1,\ldots,a_n;z)=\,\int_0^z\,\frac{\rd t}{t-a_1}\,G(a_2,\ldots,a_n;t)\,,\\
 \eeq
-with $G(z) = G(;z)=1$ (an exception being when $z=0$ in which case we put $G(0)=0$) and with $a_i\in \mathbb{C}$ are chosen constants and $z$ is a complex variable. For the convolutions in Table \ref{Table:convosN3LO} the variable $z$ and the weights $a_1,\ldots,a_n$ are all real constants.
+with $G(z) = G(;z)=1$ (an exception being when $z=0$ in which case we put $G(0)=0$) and with $a_i\in \mathbb{C}$ are chosen constants and $z$ is a complex variable. For the convolutions in Table~\ref{Table:convosN3LO} the variable $z$ and the weights $a_1,\ldots,a_n$ are all real constants.
 
-From the convolutions in Table \ref{Table:convosN3LO} we quote some  examples which appear as building blocks in the computation of Eqs.~(vii)--(xii),
+From the convolutions in Table~\ref{Table:convosN3LO} we quote some  examples which appear as building blocks in the computation of Eqs.~(vii)--(xii),
 \beeq
 \!\!\!\!\!\!\!\!\!\!\!\!&&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\bigg\{{\rm D}_{0}[1-y];\f{1}{y};1;y;y^{2}\bigg\} \otimes \left( \f{f(y)}{1+y} \right)\;\;,
 \eeeq
@@ -1164,9 +1163,9 @@ where the \textit{plus} distribution ${\rm D}_{0}[1-z]$ is defined as usual
 \beeq
 \int^{1}_{0}dz~f(z)~{\rm D}_{0}[1-z] =\int^{1}_{0}dz~\f{f(z)}{(1-z)_{+}} = \int^{1}_{0}\f{dz}{1-z}\left( f(z)-f(1)\right)\;\;.
 \eeeq
-After performing all the convolutions listed in Table \ref{Table:convosN3LO}, their final expressions (each one of the convolutions) are finite in the domain $z\in (0,1)$. Even more, convolutions evaluated in the domain $z\in (0,1)$ produce results belonging to $\mathbb{R}$. It is possible to write the expressions in Table \ref{Table:convosN3LO} (after simplifying) in terms of twelve GPLs that are not reducible to polylogarithmic functions of type ${\rm Li}_n(z)$, 
- and can not be combined (e.g through the \textit{shuffle} algebra) with other GPLs in order to produce simpler results. 
-The list of the irreducible GPLs is presented in Table \ref{Table:GPLsused}.
+After performing all the convolutions listed in Table~\ref{Table:convosN3LO}, their final expressions (each one of the convolutions) are finite in the domain $z\in (0,1)$. Even more, convolutions evaluated in the domain $z\in (0,1)$ produce results in $\mathbb{R}$. It is possible to write the expressions in Table~\ref{Table:convosN3LO} (after simplifying) in terms of twelve GPLs that are not reducible to polylogarithmic functions of type ${\rm Li}_n(z)$, 
+ and cannot be combined (e.g.\ through the \textit{shuffle} algebra) with other GPLs in order to produce simpler results. 
+The list of the irreducible GPLs is presented in Table~\ref{Table:GPLsused}.
 %%====================================
 \begin{table}
 %%====================================
@@ -1240,7 +1239,7 @@ The list of the irreducible GPLs is presented in Table \ref{Table:GPLsused}.
 \end{tabular}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \caption{\label{Table:GPLsused}
-{\em Basis for the GPLs used in the numerical implementation of the convolutions listed in Table \ref{Table:convosN3LO}. 
+{\em Basis for the GPLs used in the numerical implementation of the convolutions listed in Table~\ref{Table:convosN3LO}. 
 }}
 \renewcommand{\arraystretch}{1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1248,7 +1247,7 @@ The list of the irreducible GPLs is presented in Table \ref{Table:GPLsused}.
 %%====================================
 \end{table}
 %%====================================
-All the other GPLs appearing in the resulting convolutions of Table \ref{Table:convosN3LO} can be related to the set of Table \ref{Table:GPLsused} using the results of Refs. \cite{Frellesvig:2016ske,Maitre:2005uu,Duhr:2011zq} and performing the customary \textit{shuffle} algebra. The numerical implementation of the GPLs in Table \ref{Table:GPLsused} was made using the package \texttt{GiNaC} \cite{Bauer:2000cp,Vollinga:2004sn}. The basis of GPLs in Table \ref{Table:GPLsused} is not unique, but 
+All remaining GPLs appearing in the convolutions of Table~\ref{Table:convosN3LO} can be related to the set given in Table~\ref{Table:GPLsused} using the results of Refs.~\cite{Frellesvig:2016ske,Maitre:2005uu,Duhr:2011zq} and performing the customary \textit{shuffle} algebra. The numerical implementation of the GPLs in Table~\ref{Table:GPLsused} was made using the package \texttt{GiNaC}~\cite{Bauer:2000cp,Vollinga:2004sn}. The basis of GPLs in Table~\ref{Table:GPLsused} is not unique, but 
 sufficient for  numerical evaluation.
 
 An example of a third order convolution is the following integral
@@ -1557,7 +1556,7 @@ Phys.\ Lett.\ B {\bf 123} (1983) 335;
 %%CITATION = PHLTA,B123,335;%%
 %\bibitem{Collins:1984kg}
 J.~C.~Collins, D.~E.~Soper and G.~Sterman,
-%``Transverse Momentum Distribution In Drell-Yan Pair And W And Z Boson 
+%``Transverse Momentum Distribution In Drell--Yan Pair And W And Z Boson 
 %Production,''
 Nucl.\ Phys.\ B {\bf 250} (1985) 199;
 %%CITATION = NUPHA,B250,199;%%
@@ -1745,7 +1744,7 @@ X.~Chen, T.~Gehrmann, E.W.N.~Glover, A.~Huss, Y.~Li, D.~Neill, M.~Schulze, I.W.~
 %\cite{Bizon:2018foh}
 \bibitem{Bizon:2018foh}
   W.~Bizon {\it et al.},
-  %``Fiducial distributions in Higgs and Drell-Yan production at N$^3$LL+NNLO,''
+  %``Fiducial distributions in Higgs and Drell--Yan production at N$^3$LL+NNLO,''
   arXiv:1805.05916.
   %%CITATION = ARXIV:1805.05916;%%
   %2 citations counted in INSPIRE as of 03 Jul 2018
@@ -1787,7 +1786,7 @@ X.~Chen, T.~Gehrmann, E.W.N.~Glover, A.~Huss, Y.~Li, D.~Neill, M.~Schulze, I.W.~
 
 \bibitem{Becher:2010tm}
   T.~Becher, M.~Neubert,
-  %``Drell-Yan production at small q_T, transverse parton distributions 
+  %``Drell--Yan production at small q_T, transverse parton distributions 
   %and the collinear anomaly,''
   Eur.\ Phys.\ J.\  {\bf C71 } (2011)  1665
 [arXiv:1007.4005].
@@ -1852,7 +1851,7 @@ X.~Chen, T.~Gehrmann, E.W.N.~Glover, A.~Huss, Y.~Li, D.~Neill, M.~Schulze, I.W.~
 %\cite{Gehrmann-DeRidder:2016jns}
 \bibitem{Gehrmann-DeRidder:2016jns}
   A.~Gehrmann-De Ridder, T.~Gehrmann, E.~W.~N.~Glover, A.~Huss and T.~A.~Morgan,
-  %``NNLO QCD corrections for Drell-Yan $p_T^Z$ and $\phi^*$ observables at the LHC,''
+  %``NNLO QCD corrections for Drell--Yan $p_T^Z$ and $\phi^*$ observables at the LHC,''
   JHEP {\bf 1611} (2016) 094
   doi:10.1007/JHEP11(2016)094
   [arXiv:1610.01843].
