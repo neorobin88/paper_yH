@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.20)  16 JUL 2018 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.20)  16 JUL 2018 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -126,24 +126,24 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 ) (./HiggsN3LOdiff.aux)
 \openout1 = `HiggsN3LOdiff.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -151,17 +151,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [1]
 [2] [3] [4] [5]
-Overfull \hbox (0.56487pt too wide) in paragraph at lines 327--329
+Overfull \hbox (0.56487pt too wide) in paragraph at lines 306--308
 []\OT1/cmr/m/n/12 The gen-eral struc-ture of the hard--virtual co-ef-fi-cients 
 $\OML/cmm/m/it/12 H[]$ \OT1/cmr/m/n/12 has been es-tab-lished only re-cently [[
 ]].
  []
 
 [6] [7] [8]
-Overfull \hbox (11.10075pt too wide) in paragraph at lines 467--470
-[]\OML/cmm/m/it/12 d[]=dq[][][]$ \OT1/cmr/m/n/12 does not ex-plic-itly de-pend 
-on the co-ef-fi-cient $\OMS/cmsy/m/n/12 H[]$\OT1/cmr/m/n/12 . Anal-o-gously, $[
-]\OML/cmm/m/it/12 d[]=dq[][][]$
+Overfull \hbox (12.7896pt too wide) in paragraph at lines 446--449
+[]\OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 q[][][
+]$ \OT1/cmr/m/n/12 does not ex-plic-itly de-pend on the co-ef-fi-cient $\OMS/cm
+sy/m/n/12 H[]$\OT1/cmr/m/n/12 . Anal-o-gously, $[]d[]\OML/cmm/m/it/12 =\OT1/cmr
+/m/n/12 d\OML/cmm/m/it/12 q[][][]$
  []
 
 [9] [10] [11] [12]
@@ -261,12 +262,12 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
  [29] (./HiggsN3LOdiff.aux) ) 
 Here is how much of TeX's memory you used:
- 1709 strings out of 492986
- 20101 string characters out of 6132611
- 97808 words of memory out of 5000000
- 5267 multiletter control sequences out of 15000+600000
+ 1697 strings out of 492986
+ 20052 string characters out of 6132611
+ 96470 words of memory out of 5000000
+ 5255 multiletter control sequences out of 15000+600000
  17901 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,16n,26p,2884b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,16n,26p,2742b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (30 pages, 158156 bytes).
+Output written on HiggsN3LOdiff.dvi (30 pages, 158040 bytes).
