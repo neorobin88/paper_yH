@@ -18,11 +18,9 @@
 \def\beeq{\begin{eqnarray}} 
 \def\eeeq{\end{eqnarray}} 
 % Inside Equations
-\def\bom#1{{\mbox{\boldmath $#1$}}} 
 \def\nn{\nonumber} 
 \DeclareRobustCommand{\as}{\ensuremath{\alpha_{\mathrm{s}}}} 
 \newcommand\f[2]{\frac{#1}{#2}} 
-\def\lra{\leftrightarrow} 
 \def\to{\rightarrow}
 \def\ito{\leftarrow} 
 \DeclareRobustCommand{\qt}{q_T} 
@@ -120,7 +118,7 @@ h_1(p_1)+h_2(p_2)\to F(\{q_i\})+X\, ,
 where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the identified colourless final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons have centre--of--mass energy $\sqrt s$, and are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1\cdot p_2)$. The observed final state $F$ consists of a generic system of non-QCD partons composed of {\em one} or {\em more} colour singlet particles (such as vector bosons, photons, Higgs bosons, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ $(q^2=M^2)$, the transverse momentum $\bqt$ with respect to the direction of the colliding hadrons, and the rapidity $y$ $(2y = \ln (p_2\cdot q/p_1\cdot q))$ in the centre--of--mass system of the collision. 
 Since $F$ is colourless, the LO partonic Born cross section can be either initiated by $q\bar{q}^{\prime}$ annihilation, as in the case of the Drell--Yan process, or by gluon--gluon fusion, as in the case of Higgs boson production.
 
-In order to explain the basic idea  of the subtraction formalism, we first notice that at LO, the transverse momentum $\bom{q}_{T}=\sum_i \bom{q}_{T\;i}$ of the final state system $F$ is identically zero. Therefore, as long as $\qt \neq 0$, the N$^{n}$LO QCD contributions (with $n=1,2,3$) are given by the N$^{n-1}$LO QCD contributions to the $F$+jet(s) final state. Consequently, if $\qt \neq 0$ we have:
+In order to explain the basic idea  of the subtraction formalism, we first notice that at LO, the transverse momentum $\mathbf{q}_{T}=\sum_i \mathbf{q}_{T\;i}$ of the final state system $F$ is identically zero. Therefore, as long as $\qt \neq 0$, the N$^{n}$LO QCD contributions (with $n=1,2,3$) are given by the N$^{n-1}$LO QCD contributions to the $F$+jet(s) final state. Consequently, if $\qt \neq 0$ we have:
 \begin{equation}
 \label{Eq:first}
 \rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0) \equiv \rd\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}\;\;\;\;{\rm with}\;\;\; n=1,2,3\;.
@@ -136,7 +134,7 @@ The generic form of the $\qt$ subtraction method~\cite{Catani:2007vq} for the N$
 where $\rd\sigma^{F\;{\rm CT}}_{\rm N^{n}LO}$ is the contribution of the counterterm to the N$^{n}$LO cross section which cancels the divergences of $\rd\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$ in the limit $\qt \rightarrow 0$ and renders the term in square brackets finite for all values of $\qt$. 
 The $n$th-order counterterm can be written
 \begin{equation}
-  \rd\sigma^{F\;{\rm CT}}_{\rm N^{n}LO} =   \Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})\;\rd^{2}\bom{q}_{T}   \otimes \rd\sigma^{F}_{\rm LO}\;,
+  \rd\sigma^{F\;{\rm CT}}_{\rm N^{n}LO} =   \Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})\;\rd^{2}\mathbf{q}_{T}   \otimes \rd\sigma^{F}_{\rm LO}\;,
 \end{equation}
 where the symbol $ \otimes$ denotes convolutions over momentum fractions and sums over flavour indices of the partons.
 More precisely, the function $\Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})$ is the $n$th-order truncation of the perturbative series in $\as$
@@ -164,7 +162,7 @@ where $z=M^{2}/s$. According to the transverse momentum resummation formula (Eq.
 &&\!\!\!\!\!\!\!\ \times  \;S_c(M,b) \int_{x_{1}}^1 \f{\rd z_1}{z_{1}} \int_{x_{2}}^1  \f{\rd z_2}{z_{2}} \rd\hat{\sigma}^{F;(0)}_{c\bar{c}} \,
  f_{a/h_1}\left(x_{1}/z_1,b_0^2/b^2\right)f_{b/h_2}\left(x_{2}/z_2,b_0^2/b^2\right)\otimes\left[ H^{F} C_1 C_2 \right]_{c\bar{c};ab}\,, \nn
 \eeeq
-where $J_0(b \qt)$ is the $0$-th order Bessel function, $f_{c/h}$ corresponds to the distribution of a parton $c$ in a hadron $h$ and $b_0=2 e^{-\gamma_E}$ ($\gamma_E=0.5772...$  is the Euler--Mascheroni constant). In the left hand side of Eq.~\eqref{reslean}, we omit the full scale dependence of these coefficients, which is however, fully specified in Eqs.~\eqref{eq:sigexpansion} and \eqref{Hstexpand}. The symbolic factor $\rd\hat{\sigma}^{F;(0)}_{c\bar{c}}$ for the partonic Born cross section $\hat{\sigma}^{F;(0)}_{c\bar{c}}$ denotes
+where $J_0(b \qt)$ is the $0$th-order Bessel function, $f_{c/h}$ corresponds to the distribution of a parton $c$ in a hadron $h$ and $b_0=2 e^{-\gamma_E}$ ($\gamma_E=0.5772...$  is the Euler--Mascheroni constant). In the left hand side of Eq.~\eqref{reslean}, we omit the full scale dependence of these coefficients, which is however, fully specified in Eqs.~\eqref{eq:sigexpansion} and \eqref{Hstexpand}. The symbolic factor $\rd\hat{\sigma}^{F;(0)}_{c\bar{c}}$ for the partonic Born cross section $\hat{\sigma}^{F;(0)}_{c\bar{c}}$ denotes
 \beeq
 \rd\hat{\sigma}^{F;(0)}_{c\bar{c}}\equiv \f{\rd\hat{\sigma}^{F;(0)}_{c\bar{c}}}{\rd\phi}\;,
 \eeeq 
@@ -241,7 +239,7 @@ h(\as(b_0^2/b^2)) = h(\as(M^2)) \; \exp \left\{
 \;\beta(\as(q^2)) \;\frac{\rd \ln h(\as(q^2))}{\rd \ln \as(q^2)} 
 \right\} \;\;,
 \end{equation}
-which is valid for any perturbative function $h(\as)$. Notice that Eq.~\eqref{rgidenlean} establishes the evolution of the perturbative functions from the scale $q^{2}=b_0^2/b^2$ to $q^{2}=M^2$. The QCD $\beta$-function and its corresponding $n$-order $\beta_n$ coefficient are defined as
+which is valid for any perturbative function $h(\as)$. Notice that Eq.~\eqref{rgidenlean} establishes the evolution of the perturbative functions from the scale $q^{2}=b_0^2/b^2$ to $q^{2}=M^2$. The QCD $\beta$-function and its corresponding $n$th-order $\beta_n$ coefficient are defined as
 \begin{equation}
 \label{rge}
 \f{\rd \ln \as(\mu^2)}{\rd \ln \mu^2} = \beta(\as(\mu^2)) = 
@@ -492,7 +490,7 @@ At LO, where only the Born subprocess is available, $\Bigl[ \f{\rd{\hat \sigma}_
 
 If all the components on the right-hand side of Eq.~\eqref{hn} are known analytically (as it was the case at NNLO in Refs.~\cite{Catani:2011kr,Catani:2012qa}) the function ${\cal H}_{ab}^{F}$ can be extracted exactly in analytical form. At NLO the extraction of the function  ${\cal H}_{ab}^{F \,;(1)}$ is straightforward for Drell--Yan and Higgs boson production. The function ${\cal H}_{ab}^{F \,;(2)}$ at NNLO (for Higgs ($F=H$) boson production~\cite{Catani:2011kr} and Drell--Yan ($F=DY$)~\cite{Catani:2012qa}) can be obtained with a dedicated analytical computation using Eq.~\eqref{hn} for $n=2$. Since for Higgs boson production, the transverse momentum cross section $H$+jet at NNLO is not known analytically, Eq.~\eqref{h3nnlo} can be used only numerically to compute ${\cal H}_{ab}^{F\,;(3)}$. 
 
-The following paragraphs will focus on the details of the approximation that we intend to use. Instead of computing the entire third order function ${\cal H}_{ab}^{H\,;(3)}$ numerically, we first report all its ingredients with the aim of reducing the numerical extraction to only a few components (perturbative functions). 
+The following paragraphs will focus on the details of the approximation that we intend to use. Instead of computing the entire third-order function ${\cal H}_{ab}^{H\,;(3)}$ numerically, we first report all its ingredients with the aim of reducing the numerical extraction to only a few components (perturbative functions). 
 
 The general structure of the coefficient ${\cal H}^{F \,;(3)}$ (which is proportional to $\delta(\qt^{2})$) is not known in analytic form for any hard-scattering process. Nonetheless, within the $\qt$ subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be reliably approximated for any hard-scattering process whose corresponding total cross section is known at N$^{3}$LO. 
 
@@ -545,7 +543,7 @@ C_{N3}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow
 \eeeq
 where the third-order numerical coefficient $C_{N3}$ embodies the numerical extraction of the hard--virtual coefficient $\big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$  \textit{plus} the numerical approximation of a function of the variable $z$ by a numerical term proportional to $\delta(1-z)$. The resulting numerical coefficient $\big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$ is exact since $C_{N3}$ is proportional to $\delta(1-z)$. The approximation that implies Eq.~\eqref{CN3eq} is related only to the functions  $G^{(2)}_{g\,a}(z)$ and $C^{(3)}_{g\,a}(z)$, whose functional dependence on the variable $z$ goes beyond terms proportional to $\delta(1-z)$. 
 
-The method outlined in Eq.~\eqref{CN3eq} to approximate numerically unknown terms in the hard--virtual function ${\cal H}^H_{gg\ito ab}(z)$ is not new. It was first used in Ref.~\cite{Bozzi:2005wk} in order to compute the second order function ${\cal H}^{H;(2)}_{gg\ito ab}(z)$ numerically at NNLO, providing a reasonable estimate of the exact result to better than $1\%$ accuracy. Notice that Eq.~\eqref{CN3eq} allows to recover the total cross section (at N$^{3}$LO in this case) with no approximation. After integration over the transverse momentum $\qt$, Eq.~\eqref{restotp} provides the same total integral (numerically in this case)  as in the fully analytical case. Even more, for IR safe observables (at fixed order) which fulfil that the \textit{back-to-back} kinematical region ($\qt=0$) is located in a single phase space point (e.g.\ the $\qt$ distribution, the angular separation $\Delta \Phi _{\gamma\gamma}$ between the two photons for a Higgs boson decaying into diphotons, etc.), the fixed order result is also exact, i.e.\ the integral of the analytical unknown terms in Eq.~\eqref{CN3eq} (which all have $\qt=0$) is located in one single point of the exclusive differential distributions. 
+The method outlined in Eq.~\eqref{CN3eq} to approximate numerically unknown terms in the hard--virtual function ${\cal H}^H_{gg\ito ab}(z)$ is not new. It was first used in Ref.~\cite{Bozzi:2005wk} in order to compute the second-order function ${\cal H}^{H;(2)}_{gg\ito ab}(z)$ numerically at NNLO, providing a reasonable estimate of the exact result to better than $1\%$ accuracy. Notice that Eq.~\eqref{CN3eq} allows to recover the total cross section (at N$^{3}$LO in this case) with no approximation. After integration over the transverse momentum $\qt$, Eq.~\eqref{restotp} provides the same total integral (numerically in this case)  as in the fully analytical case. Even more, for IR safe observables (at fixed order) which fulfil that the \textit{back-to-back} kinematical region ($\qt=0$) is located in a single phase space point (e.g.\ the $\qt$ distribution, the angular separation $\Delta \Phi _{\gamma\gamma}$ between the two photons for a Higgs boson decaying into diphotons, etc.), the fixed-order result is also exact, i.e.\ the integral of the analytical unknown terms in Eq.~\eqref{CN3eq} (which all have $\qt=0$) is located in one single point of the exclusive differential distributions. 
 
 The previous considerations about the approximation that proposes Eq.~\eqref{CN3eq} were regarding the total cross section or differential distributions in which the Born--like configurations belong to one single phase space point.
 In order to quantify the quality of the approximation proposed in Eq.~\eqref{CN3eq} at the differential level even when the Born differential cross section populates the entire differential range, we perform a detailed numerical study of the Higgs boson rapidity $y_{H}$ distribution in Sec.~\ref{sec:NNLOrap} at NNLO. Anticipating these results,  we find that in the rapidity range $0\leq y_{H}\leq 4$ the approximated NNLO result differs by less than $0.2\%$ from the exact NNLO Higgs boson rapidity distribution.
@@ -1118,7 +1116,7 @@ In the case of processes initiated by gluon fusion, the complete list of third o
 %%====================================
 \end{table}
 %%====================================
-The symbol $\gamma_{ab}^{(n)}$ in Table~\ref{Table:convosN3LO} denotes the usual splitting functions of $n$-th order and they contribute to Eq.~\eqref{reslean}) since the PDFs have to be evolved from the scale $b_0^2/b^2$ to the factorization scale $\mu_{F}$.
+The symbol $\gamma_{ab}^{(n)}$ in Table~\ref{Table:convosN3LO} denotes the usual splitting functions of $n$th-order and they contribute to Eq.~\eqref{reslean}) since the PDFs have to be evolved from the scale $b_0^2/b^2$ to the factorization scale $\mu_{F}$.
 The first three rows in Eq.~\eqref{Table:convosN3LO} were calculated in Ref.~\cite{Hoschele:2012xc} and cross-checked with a dedicated computation for the results presented in this paper. The public \texttt{Mathematica} package \texttt{MT}~\cite{Hoeschele:2013gga} is used to calculate the necessary convolutions (i)--(vi) in Ref.~\cite{Hoschele:2012xc}, which can be further expressed in terms of \textit{harmonic polylogarithms} (HPLs)~\cite{Remiddi:1999ew} using the \texttt{Mathematica} package \texttt{HPL}~\cite{Maitre:2005uu}. 
 The remaining convolutions in Eqs. (vii)--(xii) of Table~\ref{Table:convosN3LO}  were computed  for this work. The \texttt{MT}~\cite{Hoeschele:2013gga} package is not able to solve all the convolutions of weight 3 and 4 that are needed in (vii)--(xii). For instance, the \texttt{MT} package cannot handle convolutions in which their result has to be expressed in terms of multiple polylogarithms (or {\em Goncharov polylogarithms} GPLs)~\cite{Goncharov:1998kja,Gehrmann:2000zt,Goncharov:2001iea} as it is the case when the collinear functions $C^{(2)}_{gj}$ are involved. For those, we have computed the convolutions (vii)--(xii) with a newly developed code \texttt{Convo}, which is able to provide results in terms of GPLs and also can handle terms that are individually divergent, but finite after addition.
 
