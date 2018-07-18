@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.20)  17 JUL 2018 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.12.20)  18 JUL 2018 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -150,15 +150,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [1]
-[2] [3] [4] [5]
-Overfull \hbox (0.56487pt too wide) in paragraph at lines 296--298
-[]\OT1/cmr/m/n/12 The gen-eral struc-ture of the hard--virtual co-ef-fi-cients 
-$\OML/cmm/m/it/12 H[]$ \OT1/cmr/m/n/12 has been es-tab-lished only re-cently [[
-]].
- []
+[2] [3] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 231.
 
-[6] [7] [8]
-Overfull \hbox (12.7896pt too wide) in paragraph at lines 438--441
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 231.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 255.
+
+[5] [6] [7] [8]
+Overfull \hbox (12.7896pt too wide) in paragraph at lines 445--448
 []\OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 q[][][
 ]$ \OT1/cmr/m/n/12 does not ex-plic-itly de-pend on the co-ef-fi-cient $\OMS/cm
 sy/m/n/12 H[]$\OT1/cmr/m/n/12 . Anal-o-gously, $[]d[]\OML/cmm/m/it/12 =\OT1/cmr
@@ -248,25 +252,19 @@ Missing character: There is no Ê in font cmr12!
 Missing character: There is no Ê in font cmr12!
 Missing character: There is no Ê in font cmr12!
  [27]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¼ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
- [28]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¶ in font cmr12!
- [29] (./HiggsN3LOdiff.aux) ) 
+Underfull \hbox (badness 2460) in paragraph at lines 1808--1814
+\OT1/cmr/m/n/12 and G. Watt, Eur. Phys. J. C \OT1/cmr/bx/n/12 75 \OT1/cmr/m/n/1
+2 (2015) 132 doi:10.1140/epjc/s10052-015-3318-8
+ []
+
+[28] [29] (./HiggsN3LOdiff.aux) ) 
 Here is how much of TeX's memory you used:
- 1683 strings out of 492986
- 19922 string characters out of 6132611
- 99290 words of memory out of 5000000
- 5247 multiletter control sequences out of 15000+600000
+ 1703 strings out of 492986
+ 20262 string characters out of 6132611
+ 99403 words of memory out of 5000000
+ 5264 multiletter control sequences out of 15000+600000
  16060 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,16n,26p,2737b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on HiggsN3LOdiff.dvi (30 pages, 157068 bytes).
+Output written on HiggsN3LOdiff.dvi (30 pages, 156784 bytes).
