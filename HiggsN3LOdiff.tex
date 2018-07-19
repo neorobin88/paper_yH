@@ -92,7 +92,7 @@ The most straightforward and successful (as well as systematically improvable) a
 
 Reducing the theoretical uncertainties was one of the main motivations for the extension from NLO to NNLO accuracy.  This is particularly relevant in two distinct situations. Firstly, NNLO corrections are mandatory for those processes where NLO corrections are comparable in size to the leading order (LO) contribution, both to establish the convergence of the perturbative expansion and to obtain reliable predictions. Secondly, benchmark processes that are measured with high experimental precision require equally precise theoretical predictions, otherwise the extraction of precise information about Standard-Model (SM) couplings  or parton-distribution functions would be limited by the accuracy of the theoretical calculation rather than by the measurement. 
 
-Pushing the perturbative accuracy of QCD calculations to one order higher, implies developing new methods and techniques to achieve the cancellation of infrared (IR) divergences that appear at intermediate steps of the calculations. The past few years have witnessed a great development in NNLO subtraction prescriptions. The transverse momentum ($\qt$) subtraction method~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy}, the $N$-jettiness subtraction~\cite{Boughezal:2015eha, Gaunt:2015pea}, projection-to-Born~\cite{Cacciari:2015jma}, residue subtraction~\cite{Czakon:2011ve,Boughezal:2011jf}, and the antenna subtraction method~\cite{Antenna:method} have all been successfully used for LHC phenomenology. 
+Pushing the perturbative accuracy of QCD calculations to one order higher, implies developing new methods and techniques to achieve the cancellation of infrared (IR) divergences that appear at intermediate steps of the calculations. The past few years have witnessed a great development in NNLO subtraction prescriptions. The transverse momentum ($\qt$) subtraction method~\cite{Catani:2007vq,Bozzi:2005wk,Bonciani:2015sha}, the $N$-jettiness subtraction~\cite{Boughezal:2015eha, Gaunt:2015pea}, projection-to-Born~\cite{Cacciari:2015jma}, residue subtraction~\cite{Czakon:2011ve,Boughezal:2011jf}, and the antenna subtraction method~\cite{Antenna:method} have all been successfully used for LHC phenomenology. 
 
 However, in view of the impressive and continuously increasing quality of the measurements performed at LHC, in some cases NNLO accuracy is simply not enough to fully describe the LHC data. Typically, these are processes in which the size of the NLO corrections were comparable with the LO, and where the NNLO corrections still presented large modifications such that the size of the theoretical uncertainties remained larger than the experimental uncertainties. 
 
@@ -108,7 +108,7 @@ In this paper, we present the generalisation of the $\qt$ subtraction method to 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The $\qt$ subtraction formalism at N$^{3}$LO}
 \label{sec:forma}
-This section is devoted to the generalisation of the transverse-momentum subtraction formalism to N$^{3}$LO in perturbative QCD. The method is illustrated in its general form and special attention is paid to the case of Higgs boson production through gluon--gluon fusion. The $\qt$ subtraction formalism presented in this section is the third order extension of the subtraction method originally proposed in Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy}.
+This section is devoted to the generalisation of the transverse-momentum subtraction formalism to N$^{3}$LO in perturbative QCD. The method is illustrated in its general form and special attention is paid to the case of Higgs boson production through gluon--gluon fusion. The $\qt$ subtraction formalism presented in this section is the third order extension of the subtraction method originally proposed in Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bonciani:2015sha}.
 
 We consider the inclusive hard-scattering reaction 
 \begin{equation}
@@ -124,7 +124,7 @@ In order to explain the basic idea  of the subtraction formalism, we first notic
 \rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0) \equiv \rd\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}\;\;\;\;{\rm with}\;\;\; n=1,2,3\;.
 \end{equation}
 The notation N$^{n}$LO stands for: N$^{0}$LO=LO, N$^{1}$LO=NLO, N$^{2}$LO=NNLO and so forth. Equation~\eqref{Eq:first} implies that if $\qt \neq 0$ the infrared (IR) divergences that appear in the computation of $\rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ are those already present in $\rd\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO}$.
-Therefore, provided that the IR singularities involved in $\rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ can be handled and cancelled with the available subtraction methods at N$^{n-1}$LO, the only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum distribution is well known through the resummation program~\cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary N$^{n}$LO counterterms (CT) to subtract the remaining singularity at $\qt=0$, thereby promoting the $\qt$ subtraction method proposed in Refs.~\cite{Catani:2007vq,Bozzi:2005wk,Bozzi:2003jy} to N$^{3}$LO. 
+Therefore, provided that the IR singularities involved in $\rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ can be handled and cancelled with the available subtraction methods at N$^{n-1}$LO, the only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum distribution is well known through the resummation program~\cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary N$^{n}$LO counterterms (CT) to subtract the remaining singularity at $\qt=0$, thereby promoting the $\qt$ subtraction method proposed in Refs.~\cite{Catani:2007vq} to N$^{3}$LO. 
 
 The generic form of the $\qt$ subtraction method~\cite{Catani:2007vq} for the N$^{n}$LO cross section is
  \begin{equation}
@@ -227,46 +227,8 @@ H_g^{F=H \,;(n)}
 \;\;.
 \end{equation} 
 
-The precise identification of the Sudakov form factor $S_c$, the hard--virtual function 
-$H_g^{F=H}$ and the hard--collinear coefficient functions, $C_{g\, a}$ and $G_{g\, a}$ is not unique, and the resummation formula~\eqref{reslean} is invariant under the following ``resummation scheme''  transformations~\cite{Catani:2000vq}:\footnote{This invariance can easily be proven by using the following renormalization-group identity:
-\begin{equation}
-\label{rgidenlean}
-h(\as(b_0^2/b^2)) = h(\as(M^2)) \; \exp \left\{ 
--\int_{b_0^2/b^2}^{M^2} \frac{\rd q^2}{q^2} 
-\;\beta(\as(q^2)) \;\frac{\rd \ln h(\as(q^2))}{\rd \ln \as(q^2)} 
-\right\} \;\;,
-\end{equation}
-which is valid for any perturbative function $h(\as)$. Notice that Eq.~\eqref{rgidenlean} establishes the evolution of the perturbative functions from the scale $q^{2}=b_0^2/b^2$ to $q^{2}=M^2$. The QCD $\beta$-function and its corresponding $n$-order $\beta_n$ coefficient are defined as
-\begin{equation}
-\label{rge}
-\f{\rd \ln \as(\mu^2)}{\rd \ln \mu^2} = \beta(\as(\mu^2)) = 
-- \sum_{n=0}^{+\infty} \beta_n \left( \f{\as}{\pi} \right)^{n+1}\;\;.
-\end{equation}
-The explicit expression of the first three coefficients~\cite{Tarasov:1980au,Larin:1993tp}, $\beta_0$, $\beta_1$ and
-$\beta_2$ are
-\begin{align}
-\beta_0 &= \frac{1}{12} \left( 11 C_A - 2 N_f \right) \;\;,
-\quad\quad \beta_1=  \frac{1}{24} 
-\left( 17 C_A^2 - 5 C_A N_f - 3 C_F N_f \right) \;\;,\nn\\
-\beta_2 &= \frac{1}{64} \left( \f{2857}{54} C_A^3
-- \f{1415}{54} C_A^2 N_f - \f{205}{18} C_A C_F N_f + C_F^2 N_f
-+ \f{79}{54} C_A N_f^2 + \f{11}{9} C_F N_f^2 \right) \;\;,
-\end{align}
-where $N_f$ is the number of massless QCD flavours and the $SU(N_c)$ colour factors are $C_A=N_c$  and $C_F=(N_c^2-1)/(2N_c)$.}
-\beeq
-H_c^{F}(\as) & \to & H_c^{F}(\as) \; \left[ \, h(\as) \, \right]^{-1}
-\;, \nn \\
-\label{restranf}
-B_c(\as) & \to & B_c(\as) - \beta(\as) \;\frac{d\ln h(\as)}{d\ln \as} 
-\;,\\
-C_{ab}(\as,z) & \to & C_{ab}(\as,z) \;
-\left[ \, h(\as) \, \right]^{1/2} \;,\nn\\
-G_{ab}(\as,z) & \to & G_{ab}(\as,z) \;
-\left[ \, h(\as) \, \right]^{1/2} \;. \nn
-\eeeq
-The physical origin of the  resummation scheme invariance of Eq.~\eqref{reslean} is discussed in  Ref.~\cite{Catani:2000vq}. 
-
-The invariance implies that the hard--virtual factors $H_c^{F}$, the Sudakov form factor $S_c$ (more precisely, the function $B_c$ contained in it)  and the hard-collinear coefficient functions $C_{ab}$ are not unambiguously defined order-by-order in perturbation theory. Only after choosing a ``resummation scheme'', can these factors be unambiguously specified and computed. We use the \textit{hard resummation scheme} defined in Ref.~\cite{Catani:2013tia}, which states that all the contributions proportional to $\delta(1-z)$ are considered to belong to the hard--virtual functions $H_c^{F}$. This directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$. In addition, the resummation coefficients $A_{c}$ and the helicity-flip functions $G_{ab}$ are also independent of the final state process.
+The resummation formula in the right-hand side of Eq.~\eqref{reslean} is invariant under ``resummation scheme''  transformations~\cite{Catani:2000vq}, whereas the individual coefficients $H_g^{F=H}$, $B_{g}$, $C_{g\, a}$ and $G_{g\, a}$ are not separately resummation scheme independent. Through this paper we always use the \textit{hard scheme}~\cite{Catani:2013tia} to report explicit expressions for the perturbative expansion of these individual coefficients. The \textit{hard scheme} states that all the contributions proportional to $\delta(1-z)$ are considered to belong to the hard--virtual functions $H_c^{F}$. This directly implies that $H_c^{F}$ is process dependent whereas the collinear $C_{ab}$ functions and the resummation coefficients $B_{c}$ are independent of the final state system $F$. In addition, the resummation coefficients $A_{c}$ and the helicity-flip functions $G_{ab}$ are also independent of the final state process.
+%The physical origin of the  resummation scheme invariance of Eq.~\eqref{reslean} is discussed in  Ref.~\cite{Catani:2000vq}. 
 
 The truncation of Eq.~\eqref{reslean} at a given fixed order requires the explicit knowledge of resummation coefficients and hard collinear coefficient functions.
 For $F=H$ at NLO, the knowledge of the coefficients $A^{(1)}_{g}$, $B^{(1)}_{g}$, $C^{(1)}_{ga}$ ($a=q,{\bar q},g$) and $H^{H;(1)}_{g}$ are sufficient to compute the inclusive total cross section and differential distributions. Assuming that the Higgs boson couples to a single heavy quark of mass $m_Q$, the first-order coefficient $H_g^{H;(1)}$ in the hard resummation scheme is~\cite{Catani:2013tia}
@@ -300,7 +262,7 @@ where $\gamma_{g}^{(1)}$ is the coefficient of the $\delta(1-z)$ term in the NLO
 +4\,C_F N_f\;,
 \label{ga1g}
 \end{equation}
-and $\zeta_n$ is the Riemann zeta-function for integer values $n$ ($\zeta_2=\pi^2/6$, $\zeta_3=1.202\dots$, $\zeta_4=\pi^4/90$). The coefficient $A^{(2)}_{g}$ does not depend on the resummation scheme whereas $B^{(2)}_{g}$  in Eq.~\eqref{A2andB2} is valid in the hard resummation scheme and both coefficients are process independent. The collinear functions $C^{(2)}_{ga}$ ($a=q,{\bar q},g$) in the hard resummation scheme can be extracted from Refs.~\cite{Catani:2013tia,Catani:2011kr} and are also independent of the final state system $F$. 
+and $\zeta_n$ is the Riemann zeta-function for integer values $n$ ($\zeta_2=\pi^2/6$, $\zeta_3=1.202\dots$, $\zeta_4=\pi^4/90$). The coefficient $A^{(2)}_{g}$ does not depend on the resummation scheme whereas $B^{(2)}_{g}$  in Eq.~\eqref{A2andB2} is valid in the hard resummation scheme and both coefficients are process independent. The collinear functions $C^{(2)}_{ab}$ in the hard resummation scheme can be extracted from Refs.~\cite{Catani:2013tia,Catani:2011kr,Catani:2012qa} and are also independent of the final state system $F$. These collinear coefficients $C^{(2)}_{ab}$ have been independently computed in Refs. \cite{Gehrmann:2012ze,Gehrmann:2014yya}.
 
 The general structure of the hard--virtual coefficients $H^{F}_{c}$ has been established in Ref.~\cite{Catani:2013tia}. Although $H^{F}_{c}$ is in principle process dependent, Ref.~\cite{Catani:2013tia} showed it can be directly related in a universal way to the IR finite part of the all-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. The relationship between $H^{F}_{c}$ and the all-order virtual correction to the  partonic subprocess $c{\bar c}\to F$ has been made explicit up to NNLO and is based on the definition of universal subtraction operators that cancel the IR divergences of the two-loop (NNLO) virtual corrections to the Born cross section~\cite{Catani:1998bh}. These universal second-order operators contain an IR finite term of soft origin ($\delta^{(1)}_{\qt}$) that only depends on the initial-state partons~\cite{Catani:2013tia}.
 
@@ -550,9 +512,9 @@ In order to quantify the quality of the approximation proposed in Eq.~\eqref{CN3
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 To extract the value of $C_{N3}$, we first introduce the numerical tools and the calculational setup in this section. We use the same setup for the inclusive and differential predictions presented in Sections~\ref{sec:numCN3}, \ref{sec:NNLOrap}, \ref{sec:N3LOrap} and \ref{sec:results}.
 
-We consider Higgs boson production in proton--proton collisions at the centre-of-mass energy $\sqrt{s}=13$~TeV. In our computation we use the Higgs boson mass  $M_H= 125$~GeV and the vacuum expectation value  $v=246.2$~GeV. The Born subprocess is initiated with gluon--gluon fusion mediated through a top quark loop. For Higgs boson production, which has a typical energy scale of $M_H$, it is possible to integrate out the top quark loop by taking the large-$m_t$ limit ($m_{t}\rightarrow \infty$) and therefore, the Higgs boson is produced from the gluon-gluon-Higgs boson effective vertex~\cite{Heft}. The mass of the top quark is taken as $m_t = 173.2$~GeV in those contributions which do not vanish in the large-$m_t$ limit (e.g.\  Eqs.~\eqref{H2g} and \eqref{H3approx} and Wilson coefficient corrections at N$^3$LO). With the top quark loop replaced by an effective vertex, we consider a five-flavour scheme QCD with all light quarks being massless. We use the central set of the \texttt{PDF4LHC15} parton distribution functions (PDFs)~\cite{nnpdf} as implemented in the \texttt{LHAPDF} framework~\cite{Buckley:2014ana} and the associated strong coupling constant $\as(M_Z)=0.118$. Notice that we systematically employ the same order of the PDFs (in particular the set \texttt{PDF4LHC15\char`_nnlo\char`_mc}) for the LO, NLO, NNLO and N$^{3}$LO results presented in this paper. The default factorization and renormalization scales are chosen accordingly as $\mu \equiv \mu_R = \mu_F =  M_H / 2$. The theoretical uncertainty is estimated by varying the default scale choice independently for $\mu_R$ and $\mu_F$ by a factor of $\{1/2,2\}$ while omitting combinations of $\mu_R/\mu_F = 4$ or $1/4$ leading to seven-point scale variation choices. 
+We consider Higgs boson production in proton--proton collisions at the centre-of-mass energy $\sqrt{s}=13$~TeV. In our computation we use the Higgs boson mass  $M_H= 125$~GeV and the vacuum expectation value  $v=246.2$~GeV. The Born subprocess is initiated with gluon--gluon fusion mediated through a top quark loop. For Higgs boson production, which has a typical energy scale of $M_H$, it is possible to integrate out the top quark loop by taking the large-$m_t$ limit ($m_{t}\rightarrow \infty$) and therefore, the Higgs boson is produced from the gluon-gluon-Higgs boson effective vertex~\cite{Heft}. The mass of the top quark is taken as $m_t = 173.2$~GeV in those contributions which do not vanish in the large-$m_t$ limit (e.g.\  Eqs.~\eqref{H2g} and \eqref{H3approx} and effective vertex coefficient corrections at N$^3$LO). With the top quark loop replaced by an effective vertex, we consider a five-flavour scheme QCD with all light quarks being massless. We use the central set of the \texttt{PDF4LHC15} parton distribution functions (PDFs)~\cite{nnpdf} as implemented in the \texttt{LHAPDF} framework~\cite{Buckley:2014ana} and the associated strong coupling constant $\as(M_Z)=0.118$. Notice that we systematically employ the same order of the PDFs (in particular the set \texttt{PDF4LHC15\char`_nnlo\char`_mc}) for the LO, NLO, NNLO and N$^{3}$LO results presented in this paper. The default factorization and renormalization scales are chosen accordingly as $\mu \equiv \mu_R = \mu_F =  M_H / 2$. The theoretical uncertainty is estimated by varying the default scale choice independently for $\mu_R$ and $\mu_F$ by a factor of $\{1/2,2\}$ while omitting combinations of $\mu_R/\mu_F = 4$ or $1/4$ leading to seven-point scale variation choices. 
 
-As stated in Sec.~\ref{sec:numforCN3} and in Refs.~\cite{Catani:2007vq,Bozzi:2005wk}, the computation of the total cross section or differential distributions with the  $\qt$ subtraction formalism can be separated into two main parts by inserting Eq.~\eqref{sigfin} into Eq.~\eqref{sigtotrel}:
+As stated in Sec.~\ref{sec:numforCN3} and in Refs.~\cite{Catani:2007vq}, the computation of the total cross section or differential distributions with the  $\qt$ subtraction formalism can be separated into two main parts by inserting Eq.~\eqref{sigfin} into Eq.~\eqref{sigtotrel}:
 \beeq
 \label{sigtotnumerical} 
 {\hat \sigma}_{F \,ab}^{{\rm {tot}}}
@@ -1014,8 +976,8 @@ between the two calculations appear, with $\qt$ subtraction generally yielding c
 \label{Sec:conclu}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this paper we have performed a detailed study of Higgs boson production at the LHC using the $\qt$ subtraction formalism at N$^3$LO. We systematically describe the $\qt$ subtraction formalism using the hard resummation scheme for a generic colourless and massive system $F(\{q_i\})$ produced at hadron colliders. Fully differential cross sections for this type of final state system are separated into $\delta(\qt)$ and $\qt\ne 0$ contributions. The contribution for $\qt\ne 0$ is calculated, 
-using a phase space cut-off $\qtcut$, as the difference between $F(\{q_i\})\rm{+jets}$ production and $\qt$ counter-terms. Specifically, we use the \texttt{NNLOJET} package to compute NNLO Higgs-plus-jet production and expand the Sudakov from factor in the hard resummation scheme to the matching order for the corresponding $\qt$ counter-terms. The contribution at $\delta(\qt^{2})$ is further factorized into convolutions of the Sudakov form factor, the hard--virtual function, the helicity-flip coefficient function, the hard--collinear coefficient function as well as the parton distribution functions (Sec.~\ref{sec:forma}). The factorization under the hard resummation scheme guarantees that all the process-dependent contributions proportional to a form factor are included in the hard--virtual function which depends on both initial- and final-state particles. All other factorized contributions only depend on the initial states. Some of the factorized ingredients contributing at $\delta(\qt^{2})$ are not known analytically at N$^3$LO for the moment. We collect all analytically available contributions and approximate the unknown pieces by a constant coefficient $C_{N3}$ which is scale- and process-independent (Sec.~\ref{sec:numforCN3}). Using the available inclusive total cross section for N$^3$LO Higgs production and the known pieces from  the $\qt$ subtraction formalism, we numerically extract the value of $C_{N3}$. By comparing the numerical values for $C_{N3}$ using different scales and $\qtcut$ setups in the extraction, we conclude from mutually consistent results that $C_{N3}$ is independent of the scale choice with a corresponding value of $C_{N3}=-943\pm 222$ (Sec.~\ref{sec:numCN3}).
+In this paper we have performed a detailed study of Higgs boson production at the LHC using the $\qt$ subtraction formalism at N$^3$LO. We systematically describe the $\qt$ subtraction formalism for a generic colourless and massive system $F(\{q_i\})$ produced at hadron colliders. Fully differential cross sections for this type of final state system are separated into $\delta(\qt)$ and $\qt\ne 0$ contributions. The contribution for $\qt\ne 0$ is calculated, 
+using a phase space cut-off $\qtcut$, as the difference between $F(\{q_i\})\rm{+jets}$ production and $\qt$ counter-terms. Specifically, we use the \texttt{NNLOJET} package to compute NNLO Higgs-plus-jet production and expand the Sudakov from factor in the hard resummation scheme to the matching order for the corresponding $\qt$ counter-terms. The contribution at $\delta(\qt^{2})$ is further factorized into convolutions of the Sudakov form factor, the hard--virtual function, the helicity-flip coefficient function, the hard--collinear coefficient function as well as the parton distribution functions (Sec.~\ref{sec:forma}). The factorization guarantees that all the process-dependent contributions proportional to a form factor are included in the hard--virtual function which depends on both initial- and final-state particles. All other factorized contributions only depend on the initial states. Some of the factorized ingredients contributing at $\delta(\qt^{2})$ are not known analytically at N$^3$LO for the moment. We collect all analytically available contributions and approximate the unknown pieces by a constant coefficient $C_{N3}$ which is scale- and process-independent (Sec.~\ref{sec:numforCN3}). Using the available inclusive total cross section for N$^3$LO Higgs production and the known pieces from  the $\qt$ subtraction formalism, we numerically extract the value of $C_{N3}$. By comparing the numerical values for $C_{N3}$ using different scales and $\qtcut$ setups in the extraction, we conclude from mutually consistent results that $C_{N3}$ is independent of the scale choice with a corresponding value of $C_{N3}=-943\pm 222$ (Sec.~\ref{sec:numCN3}).
 
 As a proof-of-concept implementation of the $\qt$ subtraction method at N$^3$LO,  we calculate the total cross section and rapidity distributions for Higgs boson production at LHC using a new Monte Carlo generator \texttt{HN3LO}. Using the same calculated value of $C_{N3}$, we produce the inclusive total cross section in three different scale choices and find excellent agreement with the exact results (from \texttt{ihixs 2}~\cite{Dulat:2018rbf})  at $0.02\%$ level of accuracy for all three scales. For the differential rapidity distribution of the Higgs boson, we first study the systematic error from the $C_{N3}$ approximation by considering the NNLO calculation and introducing an approximate $C_{N2}$. The NNLO $y_H$ distribution exhibit per mille level agreement between the $C_{N2}$ approximation and the exact result, supporting the reliability of the procedure. 
 We calculate the $y_H$ distribution at N$^3$LO employing a seven-point scale variation and carefully assess systematic errors arising form different $\qtcut$ and $C_{N3}$ values. Compared to the NNLO $y_H$ distributions, we observe a large reduction of theory uncertainties by more than $50\%$ at N$^3$LO. The scale variation band at N$^3$LO stays within the NNLO band with a flat $K$-factor of about $1.035$ in the central rapidity region ($|y_H|\leq3.6$). Both the systematic error analysis and the phenomenological predictions confirm that our calculations at N$^3$LO using $\qt$ subtraction formalism are well under control. The approximation related to the $C_{N3}$ coefficient in our approach can be easily replaced by the full analytical results once available. 
@@ -1261,15 +1223,16 @@ An example of a third order convolution is the following integral
   %%CITATION = doi:10.1016/j.nuclphysb.2005.12.022;%%
   %374 citations counted in INSPIRE as of 20 Mar 2018
 %
-\bibitem{Bozzi:2003jy}
-%\cite{Bozzi:2003jy}
-%\bibitem{Bozzi:2003jy}
-G.~Bozzi, S.~Catani, D.~de Florian and M.~Grazzini,
-%``The q(T) spectrum of the Higgs boson at the LHC in QCD perturbation
-%theory,''
-Phys.\ Lett.\ B {\bf 564} (2003) 65.
-[hep-ph/0302104].
-%%CITATION = HEP-PH 0302104;%%
+%\cite{Bonciani:2015sha}
+\bibitem{Bonciani:2015sha}
+  R.~Bonciani, S.~Catani, M.~Grazzini, H.~Sargsyan and A.~Torre,
+  %``The $q_T$ subtraction method for top quark production at hadron colliders,''
+  Eur.\ Phys.\ J.\ C {\bf 75} (2015) no.12,  581
+  doi:10.1140/epjc/s10052-015-3793-y
+  [arXiv:1508.03585 [hep-ph]].
+  %%CITATION = doi:10.1140/epjc/s10052-015-3793-y;%%
+  %22 citations counted in INSPIRE as of 19 Jul 2018
+
 
 
 
@@ -1638,7 +1601,25 @@ Phys.\ Lett.\ B {\bf 211} (1988) 335;
   Eur.\ Phys.\ J.\ C {\bf 72} (2012) 2195
   [arXiv:1209.0158].
   %%CITATION = ARXIV:1209.0158;%%
- 
+
+%\cite{Gehrmann:2012ze}
+\bibitem{Gehrmann:2012ze}
+   T.~Gehrmann, T.~Lubbert and L.~L.~Yang,
+   %``Transverse parton distribution functions at next-to-next-to-leading 
+order: the quark-to-quark case,''
+   Phys.\ Rev.\ Lett.\  {\bf 109} (2012) 242003
+   doi:10.1103/PhysRevLett.109.242003
+   [arXiv:1209.0682 [hep-ph]].
+   %%CITATION = doi:10.1103/PhysRevLett.109.242003;%%
+%\cite{Gehrmann:2014yya}
+\bibitem{Gehrmann:2014yya}
+   T.~Gehrmann, T.~Luebbert and L.~L.~Yang,
+   %``Calculation of the transverse parton distribution functions at 
+next-to-next-to-leading order,''
+   JHEP {\bf 1406} (2014) 155
+   doi:10.1007/JHEP06(2014)155
+   [arXiv:1403.6451 [hep-ph]].
+   %%CITATION = doi:10.1007/JHEP06(2014)155;%% 
   
 %%%% TWO LOOP ANOMALOUS DIMENSIONS
 
@@ -1966,4 +1947,41 @@ X.~Chen, T.~Gehrmann, E.W.N.~Glover, A.~Huss, Y.~Li, D.~Neill, M.~Schulze, I.W.~
 \end{thebibliography}
 \end{document}
 
+The precise identification of the Sudakov form factor $S_c$, the hard--virtual function 
+$H_g^{F=H}$ and the hard--collinear coefficient functions, $C_{g\, a}$ and $G_{g\, a}$ is not unique, and the resummation formula~\eqref{reslean} is invariant under ``resummation scheme''  transformations~\cite{Catani:2000vq}:\footnote{This invariance can easily be proven by using the following renormalization-group identity:
+\begin{equation}
+\label{rgidenlean}
+h(\as(b_0^2/b^2)) = h(\as(M^2)) \; \exp \left\{ 
+-\int_{b_0^2/b^2}^{M^2} \frac{\rd q^2}{q^2} 
+\;\beta(\as(q^2)) \;\frac{\rd \ln h(\as(q^2))}{\rd \ln \as(q^2)} 
+\right\} \;\;,
+\end{equation}
+which is valid for any perturbative function $h(\as)$. Notice that Eq.~\eqref{rgidenlean} establishes the evolution of the perturbative functions from the scale $q^{2}=b_0^2/b^2$ to $q^{2}=M^2$. The QCD $\beta$-function and its corresponding $n$-order $\beta_n$ coefficient are defined as
+\begin{equation}
+\label{rge}
+\f{\rd \ln \as(\mu^2)}{\rd \ln \mu^2} = \beta(\as(\mu^2)) = 
+- \sum_{n=0}^{+\infty} \beta_n \left( \f{\as}{\pi} \right)^{n+1}\;\;.
+\end{equation}
+The explicit expression of the first three coefficients~\cite{Tarasov:1980au,Larin:1993tp}, $\beta_0$, $\beta_1$ and
+$\beta_2$ are
+\begin{align}
+\beta_0 &= \frac{1}{12} \left( 11 C_A - 2 N_f \right) \;\;,
+\quad\quad \beta_1=  \frac{1}{24} 
+\left( 17 C_A^2 - 5 C_A N_f - 3 C_F N_f \right) \;\;,\nn\\
+\beta_2 &= \frac{1}{64} \left( \f{2857}{54} C_A^3
+- \f{1415}{54} C_A^2 N_f - \f{205}{18} C_A C_F N_f + C_F^2 N_f
++ \f{79}{54} C_A N_f^2 + \f{11}{9} C_F N_f^2 \right) \;\;,
+\end{align}
+where $N_f$ is the number of massless QCD flavours and the $SU(N_c)$ colour factors are $C_A=N_c$  and $C_F=(N_c^2-1)/(2N_c)$.}
+\beeq
+H_c^{F}(\as) & \to & H_c^{F}(\as) \; \left[ \, h(\as) \, \right]^{-1}
+\;, \nn \\
+\label{restranf}
+B_c(\as) & \to & B_c(\as) - \beta(\as) \;\frac{d\ln h(\as)}{d\ln \as} 
+\;,\\
+C_{ab}(\as,z) & \to & C_{ab}(\as,z) \;
+\left[ \, h(\as) \, \right]^{1/2} \;,\nn\\
+G_{ab}(\as,z) & \to & G_{ab}(\as,z) \;
+\left[ \, h(\as) \, \right]^{1/2} \;. \nn
+\eeeq
 
