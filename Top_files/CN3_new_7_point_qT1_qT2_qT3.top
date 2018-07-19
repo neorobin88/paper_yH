@@ -1,0 +1,193 @@
+set device postscript
+set size ORIENTATION 3
+set window x  1.2 to 9.5
+set window y  3.5 to 9.5
+
+ SET FONT DUPLEX
+ SET LIMITS X 0 8.0
+ SET LIMITS y -400.0 -1550.0
+ SET SCALE X LINEAR
+ SET SCALE Y LINEAR 
+
+set intensity 4
+
+plot axes
+
+
+set ticks size 0.05
+set title size 2.3
+
+title left "C0N31  (unit)"
+case       " X  X   "
+
+title bottom "M[n Scale]"
+case         "G         "
+
+
+10000 10000
+plot
+
+
+data set name="l1"
+set order x y
+2 -525
+1  -525
+1  -495
+2 -495
+2 -525
+
+data set name="l1h"
+set order x y
+1  -505
+2 -505
+
+
+data set name="l2"
+set order x y 
+0.5 -1270 
+
+data set name="l2b"
+set order x y dy ndy
+0.5 -1270 15 15
+
+data set name="lqT2"
+set order x y 
+0.5 -1350 
+
+data set name="lqT2b"
+set order x y dy ndy
+0.5 -1350 15 15
+
+data set name="lqT3"
+set order x y 
+0.5 -1430 
+
+data set name="lqT3b"
+set order x y dy ndy
+0.5 -1430 15 15
+
+title data 6 -1380 "2s=13 TeV"
+case                "M        "
+
+
+(Band : CN3 fixed to mu=MH/2 value
+data set name="stdband"
+set order x  dummy=1 y 1.0 dummy=1
+0  	-943	-1165	-721
+5   -943	-1165	-721
+10	-943	-1165	-721
+15  -943	-1165	-721
+20 	-943	-1165	-721
+
+set order x  dummy=1 y 1.0
+20 	-943	-721	-1165
+15  -943	-721	-1165
+10	-943	-721	-1165
+5   -943	-721	-1165
+0  	-943	-721	-1165
+
+(n  central      DY   NDY qT1GeV
+data set name="smooth"
+set order x y DY NDY
+0.75	-943.07	221.589    221.589
+1.75	-971.42 	207.071    207.071
+2.75	-882.922    242.502    242.502
+3.75	-986.094    221.626    221.626
+4.75  -990.037   205.715    205.715
+5.75  -984.547    220.564    220.564
+6.75  -977.123    242.567    242.567
+
+(n  central      DY   NDY qT2GeV
+data set name="smoothqT2"
+set order x y DY NDY
+1 	-967.167	179.382    179.382
+2 	-964.917 	168.35     168.35
+3 	-866.025     197.83     197.83
+4	-1020.74   178.731    178.731
+5    -975.89    166.957    166.957
+6   -978.057    180.886    180.886
+7    -858.542    198.674    198.674
+
+(n  central      DY   NDY qT3GeV
+data set name="smoothqT3"
+set order x y DY NDY
+1.25 	-988.365	164.432    164.432
+2.25 	-988.681 	151.057     151.057
+3.25 	-824.949    162.213     162.213
+4.25	-1033.06    179.038    179.038
+5.25    -967.801    158.278    158.278
+6.25    -922.967    151.515    151.515
+7.25    -883.443    178.685    178.685
+
+data set name="STDcent"
+set order x y  1.0 dummy=2
+0  	-943	-1165	-721
+5   -943	-1165	-721
+10	-943	-1165	-721
+15  -943	-1165	-721
+20 	-943	-1165	-721
+
+data set name="STDcent2”
+set order x y  1.0 dummy=2
+0  	-943	-1165	-721
+5   -943	-1165	-721
+10	-943	-1165	-721
+15  -943	-1165	-721
+20 	-943	-1165	-721
+
+data set name="STDcent3”
+set order x y  1.0 dummy=2
+0  	-943	-1165	-721
+5   -943	-1165	-721
+10	-943	-1165	-721
+15  -943	-1165	-721
+20 	-943	-1165	-721
+
+set color red
+join solid fill select="l1"
+join solid select="l1h"
+set color
+title data 2.5 -500.0 "C0N31(M=M0H1/2)  q0T12cut3=1GeV     "
+case                  " X  X G  X X      X XX   X          "
+set color red
+join solid fill select="stdband"
+
+set color red
+join solid select="STDcent"
+
+set color red
+join solid select="STDcent2”
+
+set color red
+join solid select="STDcent3”
+
+set color
+set symbol 30 size 2
+set fill entry full size 0.01 solid width 5
+plot fill select="l2"
+plot  fill select="l2b"
+set color
+title data 1.0 -1270.0 "C0N31(M) ; q0T12cut3=1GeV"
+case                   " X  X G     X XX   X     "
+plot fill select="smooth"
+
+set color
+set symbol 90 size 1.5 
+set fill entry full size 0.01 solid width 5
+plot  fill  select="lqT2"
+plot  fill select="lqT2b"
+title data 1.0 -1350.0 "C0N31(M) ; q0T12cut3=2GeV"
+case                   " X  X G     X XX   X     "
+plot fill select="smoothqT2"
+
+set color
+set symbol 20 size 1
+set fill entry full size 0.01 solid width 5
+plot  fill  select="lqT3"
+plot  fill select="lqT3b"
+title data 1.0 -1430.0 "C0N31(M) ; q0T12cut3=3GeV"
+case                   " X  X G     X XX   X     "
+plot fill select="smoothqT3"
+
+set color
+plot axis

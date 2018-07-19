@@ -1,0 +1,133 @@
+set device postscript
+set size ORIENTATION 3
+set window x  1.2 to 9.5
+set window y  3.5 to 9.5
+
+ SET FONT DUPLEX
+ SET LIMITS X 25.0 140.0
+ SET LIMITS y -400.0 -1400.0
+ SET SCALE X LINEAR
+ SET SCALE Y LINEAR 
+
+set intensity 4
+
+plot axes
+
+
+set ticks size 0.05
+set title size 2.3
+
+title left "C0N31  (unit)"
+case       " X  X   "
+
+title bottom "M[M0R1=M0F1]   (GeV)"
+case         "G GX X GX X        "
+
+
+10000 10000
+plot
+
+
+data set name="l1"
+set order x y
+82 -575
+76 -575
+76 -595
+82 -595
+82 -575
+
+data set name="l1h"
+set order x y
+76 -585
+82 -585
+
+
+data set name="l2"
+set order x y 
+80 -650.7 
+
+data set name="l2b"
+set order x y dy ndy
+80 -650.7 15 15
+
+
+title data 80 -1230 "2s=13 TeV"
+case                "M        "
+
+
+(Scale	Gavin-value	GVmin	GVmax
+data set name="stdband"
+set order x  dummy=1 y 1.0 dummy=1
+20  	-943	-1165	-721
+35   -943	-1165	-721
+60	-943	-1165	-721
+85  -943	-1165	-721
+150 	-943	-1165	-721
+
+set order x  dummy=1 y 1.0
+150 	-943	-721	-1165
+85  -943	-721	-1165
+60	-943	-721	-1165
+35   -943	-721	-1165
+20  	-943	-721	-1165
+
+(n  central      DY   NDY 
+data set name="smooth"
+set order x y DY NDY
+(Scale	finite-f.o	err-finite
+31.25	-882.922	243    243
+62.5	-943.07 	222    222
+125 	-971.42    207    207
+
+data set name="STDcent"
+set order x y  1.0 dummy=1
+20  	-943	-1165	-721
+35   -943	-1165	-721
+60	-943	-1165	-721
+85  -943	-1165	-721
+150 	-943	-1165	-721
+
+data set name="STDcent2”
+set order x y  1.0 dummy=2
+20  	-943	-1165	-721
+35   -943	-1165	-721
+60	-943	-1165	-721
+85  -943	-1165	-721
+150 	-943	-1165	-721
+
+data set name="STDcent3”
+set order x y  1.0 dummy=2
+20  	-943	-1165	-721
+35   -943	-1165	-721
+60	-943	-1165	-721
+85  -943	-1165	-721
+150 	-943	-1165	-721
+
+set color red
+join solid fill select="l1"
+join solid select="l1h"
+title data 85.0 -580.0 "C0N31(M=M0H1/2)"
+case                   " X  X G  X X   "
+join solid fill select="stdband"
+
+set color red
+join solid select="STDcent"
+
+set color red
+join solid select="STDcent2”
+
+set color red
+join solid select="STDcent3”
+
+set color
+set symbol 90 size 1.5 
+set fill entry full size 0.01 solid width 5
+plot fill  select="l2"
+plot  select="l2b"
+title data 85.0 -650.0 "C0N31(M)"
+case                   " X  X G "
+plot fill select="smooth"
+set color
+plot axis
+
+
