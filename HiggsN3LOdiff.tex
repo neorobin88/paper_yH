@@ -163,44 +163,46 @@ We consider the inclusive hard scattering reaction
   h_1(p_1)+h_2(p_2)\to F(\{q_i\})+X\, ,
   \label{class}
 \end{equation}
-where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the identified colourless final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons have centre-of-mass energy $\sqrt s$, and are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1\cdot p_2)$. The observed final state $F$ consists of a generic system of non-QCD partons composed of \emph{one} or \emph{more} colour singlet particles (such as vector bosons, photons, Higgs bosons, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ ($M^2=q^2$), the transverse momentum $\bqt$ with respect to the direction of the colliding hadrons, and the rapidity $Y$ ($Y = \ln (p_2\cdot q/p_1\cdot q)/2$) in the centre-of-mass system of the collision. 
+where $h_1$ and $h_2$ are the two hadrons which collide with momenta $p_1$ and $p_2$ producing the identified colourless final-state system $F$, accompanied by an arbitrary and undetected final state $X$. The colliding hadrons have centre-of-mass energy $\sqrt s$, and are treated as massless particles $(s= (p_1+p_2)^2 = 2p_1\cdot p_2)$. The observed final state $F$ consists of a generic system of non-QCD partons composed of \emph{one} or \emph{more} colour singlet particles (such as vector bosons, photons, Higgs bosons, Drell--Yan (DY) lepton pairs and so forth) with momenta $q_i^{\mu}$ $(i=3,4,5,\dots)$. The total momentum of the system $F$ is denoted by $q^{\mu}$ ($q=\sum_i q_i$) and it can be expressed in terms of the total invariant mass $M$ ($M^2=q^2$), the transverse momentum $\qt$ with respect to the direction of the colliding hadrons (omitting the azimuthal dependence), and the rapidity $Y$ ($Y = \ln (p_2\cdot q/p_1\cdot q)/2$) in the centre-of-mass system of the collision. 
 The fully differential hadronic cross section can therefore be written as 
 \begin{align}
-  \frac{\rd\sigma^{F}(p_1,p_2)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega}
+  \frac{\rd\sigma^{F}(p_1,p_2)}{\rd\qt^2\rd M^2\rd Y}
   &=
   \int_0^1\rd x_1 \int_0^1\rd x_2 \; 
-  \frac{\rd\hat{\sigma}^{F}_{ab}(x_1 p_1, x_2 p_2)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} \;
+  \frac{\rd\hat{\sigma}^{F}_{ab}(x_1 p_1, x_2 p_2)}{\rd\qt^2\rd M^2\rd Y} \;
   f_{a/h_1}(x_1,\muf) \; f_{b/h_2}(x_2,\muf) \;,
   \label{eq:hadXS_diff}
 \end{align}
-where $\rd\hat{\sigma}_{ab}$ is the differential partonic cross section, $f_{c/h}$ corresponds to the distribution of a parton $c$ in a hadron $h$, and $\bOmega$ encodes the degrees of freedom associated with the decay products of $F$.
+where $\rd\hat{\sigma}_{ab}$ is the differential partonic cross section and $f_{c/h}$ corresponds to the distribution of a parton $c$ in a hadron $h$.
+% and $\bOmega$ encodes the degrees of freedom associated with the decay products of $F$.
 Since $F$ is colourless, the LO partonic cross section can be either initiated by $q\bar{q}^{\prime}$ annihilation, as in the case of the Drell--Yan process, or by gluon--gluon fusion, as in the case of Higgs boson production.
-The kinematics of the Born cross section are further strongly contrained such that
+In the case of the Born cross section, the kinematics of the colour-neutral system $F$ is fully constrained such that
 \begin{align}
-  \frac{\rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega}
+  \frac{\rd\hat{\sigma}^{F}_{\LO;ab}(x_1 p_1, x_2 p_2)}{\rd\qt^2\rd M^2\rd Y}
   &=
-  \delta(\qt^2) \;
-  \delta\bigl(M^2-x_1 x_2 s\bigr)
-  \delta\bigl(Y-\ln(x_1/x_2)/2\bigr)
-  \frac{\rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)}{\rd\bOmega\rvert_{\qt=0}} \; 
+  \delta_{c\,a} \, \delta_{\bar{c}\,b} \, 
+  \delta(\qt^2) \,
+  \delta\bigl(M^2-x_1 x_2 s\bigr) \,
+  \delta\bigl(Y-\ln(x_1/x_2)/2\bigr) \,
+  \rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)
   \nn\\
   &=
-  \delta(\qt^2) \;
-  \delta\Bigl(x_1-\frac{M}{\sqrt{s}}\;\re^{+Y}\Bigr)
-  \delta\Bigl(x_2-\frac{M}{\sqrt{s}}\;\re^{-Y}\Bigr)
+  \delta_{c\,a} \, \delta_{\bar{c}\,b} \, 
+  \delta(\qt^2) \,
+  \delta\Bigl(x_1-\frac{M}{\sqrt{s}}\;\re^{+Y}\Bigr) \,
+  \delta\Bigl(x_2-\frac{M}{\sqrt{s}}\;\re^{-Y}\Bigr) \,
   \frac{1}{s} \;
-  \frac{\rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)}{\rd\bOmega\rvert_{\qt=0}} \; 
+  \rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)
   \label{eq:LOpartXS_diff}
 \end{align}
 
-In order to explain the basic idea  of the subtraction formalism, we first notice that at LO, the transverse momentum $\mathbf{q}_{T}=\sum_i \mathbf{q}_{T\;i}$ of the final state system $F$ is identically zero. Therefore, as long as $\qt \neq 0$, the \N{n}\LO QCD contributions (with $n=1,2,3$) are given by the \N{n-1}\LO QCD contributions to the $F$+jet(s) final state. Consequently, if $\qt \neq 0$ we have:
+In order to explain the basic idea  of the subtraction formalism, we first notice that at LO, the transverse momentum $\qt$ of the final state system $F$ is identically zero. Therefore, as long as $\qt \neq 0$, the \N{n}\LO QCD contributions (with $n=1,2,3$) are given by the \N{n-1}\LO QCD contributions to the $F$+jet(s) final state. Consequently, if $\qt \neq 0$ we have:
 \begin{equation}
-  \left. \frac{\rd\sigma^{F}_{\N{n}\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} \right\rvert_{\qt>0}
+  \left. \frac{\rd\sigma^{F}_{\N{n}\LO}}{\rd\qt^2\rd M^2\rd Y} \right\rvert_{\qt>0}
   \equiv 
-  \frac{\rd\sigma^{F+\jets}_{\N{n-1}\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} \;,
+  \frac{\rd\sigma^{F+\jets}_{\N{n-1}\LO}}{\rd\qt^2\rd M^2\rd Y} \;,
   \label{Eq:first}
 \end{equation}
-\AH{define \obs}
 where the notation \N{n}\LO stands for: \N{0}\LO=\LO, \N{1}\LO=\NLO, \N{2}\LO=\NNLO and so forth. Equation~\eqref{Eq:first} implies that if $\qt \neq 0$ the infrared (IR) divergences that appear in the computation of $\rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ are those already present in $\rd\sigma^{F+\jets}_{\N{n-1}\LO}$.
 Therefore, provided that the IR singularities involved in $\rd\sigma^{F}_{\rm N^{n}LO}(\qt \neq0)$ can be handled and cancelled with the available subtraction methods at N$^{n-1}$LO, the only remaining singularities at  N$^{n}$LO are associated with the limit $\qt \rightarrow 0$ and we treat them with the transverse momentum subtraction method. Since the small-$\qt$ behaviour of the transverse momentum distribution is well known through the resummation program~\cite{qTRes:program} of logarithmically-enhanced contributions to transverse-momentum distributions, we exploit this knowledge to construct the necessary N$^{n}$LO counterterms (CT) to subtract the remaining singularity at $\qt=0$, thereby promoting the $\qt$ subtraction method proposed in Refs.~\cite{Catani:2007vq} to \N3\LO. 
 
@@ -209,13 +211,13 @@ The generic form of the $\qt$ subtraction method~\cite{Catani:2007vq} for the N$
  \rd\sigma^{F}_{\rm N^{n}LO} = \mathcal{H}^{F}_{\rm N^{n}LO} \otimes \rd\sigma^{F}_{\rm LO} + \big[ \rd\sigma^{F+{\rm jets}}_{\rm N^{n-1}LO} -  \rd\sigma^{F\;{\rm CT}}_{\rm N^{n}LO} \big]\;\;\;\;{\rm with}\;\;\; n=1,2,3\;,
 \end{equation}
 \begin{align}
-  \frac{\rd\sigma^{F}_{\N{n}\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega}
+  \frac{\rd\sigma^{F}_{\N{n}\LO}}{\rd\qt^2\rd M^2\rd Y}
   &=
   \cH^F_{\N{n}\LO} \otimes
-  \frac{\rd\sigma^{F}_{\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} +
+  \frac{\rd\sigma^{F}_{\LO}}{\rd\qt^2\rd M^2\rd Y} +
   \left[ 
-    \frac{\rd\sigma^{F+\jets}_{\N{n-1}\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} -
-    \frac{\rd\sigma^{F\;\text{CT}}_{\N{n}\LO}(\qt)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega}
+    \frac{\rd\sigma^{F+\jets}_{\N{n-1}\LO}}{\rd\qt^2\rd M^2\rd Y} -
+    \frac{\rd\sigma^{F\;\text{CT}}_{\N{n}\LO}(\qt)}{\rd\qt^2\rd M^2\rd Y}
   \right]
   \label{eq:master}
 \end{align}
@@ -225,26 +227,40 @@ The $n$-th order counterterm can be written as
   \rd\sigma^{F\;{\rm CT}}_{\rm N^{n}LO} =   \Sigma^{F}_{\rm N^{n}LO}(\qt^{2}/M^{2})\;\rd^{2}\mathbf{q}_{T}   \otimes \rd\sigma^{F}_{\rm LO}\;,
 \end{equation}
 \begin{align}
-  \frac{\rd\sigma^{F\;\text{CT}}_{\N{n}\LO}(\qt)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega}
+  \frac{\rd\sigma^{F\;\text{CT}}_{\N{n}\LO}(\qt)}{\rd\qt^2\rd M^2\rd Y}
   &=
   \Sigma^F_{\N{n}\LO}(\qt) \otimes
-  \frac{\rd\sigma^{F}_{\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} \;,
+  \frac{\rd\sigma^{F}_{\LO}}{\rd\qt^2\rd M^2\rd Y} \;,
   \label{eq:CT}
 \end{align}
-where we note that the dependence of the function $\sigma^{F\;\text{CT}}_{\N{n}\LO}(\qt)$ on the transverse momentum $\qt$ is \emph{not} kinematical but constitutes a dynamical parameter in this context.
+where we note that the dependence of the function $\Sigma^{F\;\text{CT}}_{\N{n}\LO}(\qt)$ on the transverse momentum $\qt$ is \emph{not} kinematical but constitutes a dynamical parameter in this context.
+As such, the kinematic constraint $\delta(\qt^2)$ appearing inside the LO cross section~\eqref{eq:LOpartXS_diff} must not act on $\qt$ within the function $\Sigma^{F\;\text{CT}}$.
 
 The symbol ``$\otimes$'' appearing in Eqs.~\eqref{eq:master} and \eqref{eq:CT} denotes convolutions over the momentum fractions and the flavour indices of the incoming partons and is explicitly defined as
 \begin{align}
-  \cG \otimes \frac{\rd\sigma^{F}(p_1, p_2)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} 
+  \cG(\dots) \otimes \frac{\rd\sigma^{F}(p_1, p_2)}{\rd\qt^2\rd M^2\rd Y} 
   &\equiv
   \int_0^1\rd x_1 \int_0^1\rd x_2 \;
-  \frac{\rd\hat{\sigma}^{F}_{ab}(x_1 p_1, x_2 p_2)}{\rd\qt^2\rd M^2\rd Y\rd\bOmega}
+  \frac{\rd\hat{\sigma}^{F}_{ab}(x_1 p_1, x_2 p_2)}{\rd\qt^2\rd M^2\rd Y}
   \nonumber\\&\quad
   \times 
   \int_{x_1}^1 \frac{\rd z_1}{z_1} \int_{x_2}^1 \frac{\rd z_2}{z_2} \; 
-  \cG_{ab \gets cd}(z_1, z_2) \;
+  \cG_{ab \gets cd}(\ldots; z_1, z_2) \;
   f_{c/h_1}\left(\frac{x_1}{z_1},\muf\right) \; f_{d/h_2}\left(\frac{x_2}{z_2},\muf\right) \;.
 \end{align}
+\AH{We can also directly write it for the LO cross section (and thus use $c\bar{c}$) by inserting Eq.~\eqref{eq:LOpartXS_diff}:}
+\begin{align}
+  \cG(\dots) \otimes \frac{\rd\sigma^{F}_{\LO}(p_1, p_2)}{\rd\qt^2\rd M^2\rd Y} 
+  &\equiv
+  \delta(\qt^2)\;\frac{1}{s}\;
+  \rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)
+  \nonumber\\&\quad
+  \times 
+  \int_{x_1}^1 \frac{\rd z_1}{z_1} \int_{x_2}^1 \frac{\rd z_2}{z_2} \; 
+  \cG_{c\bar{c} \gets ab}(\ldots; z_1, z_2) \;
+  f_{a/h_1}\left(\frac{x_1}{z_1},\muf\right) \; f_{b/h_2}\left(\frac{x_2}{z_2},\muf\right) 
+\end{align}
+\AH{there is no $\delta(M^2/\hat{s}-z_1 z_2)\sim\delta(M^2-x_1 x_2 z_1 z_2 s)$ here because the correct constraint is $\delta(M^2-x_1 x_2 s)$ without the $z_i$'s that was used to kill one of the $x_i$ integrations. The splitting is $p_i \to \frac{x_i}{z_i} p_i \to z_i \frac{x_i}{z_i} p_i = x_i p_i$ which I tried to make a bit clearer with the arguments of $\hat{\sigma}(x_i p_i)$. In the NNLOJET language: This convolution is written in the \texttt{imethod=2} convention where the partonic kinematics is kept fixed and instead the arguments of the PDFs are modified. So for any $z_i$ value $M^2=x_1 x_2 s$ and $Y=\ln(x_1/x_2)/2$. This is why Eq.~\eqref{reslean} is now actually correct \emph{differentially} because both l.h.s.\ \& r.h.s.\ correspond to the same kinematics ($M$, $Y$). This was not true in the previous case where we used $\cG(z)$ instead of $\cG(z_1,z_2)$, where the equation only was valid after rapidity integration.}
 
 The functions $\cH^{F}_{\N{n}\LO}$ and $\Sigma^{F}_{\N{n}\LO}(\qt)$ correspond to the $n$-th order truncation of the perturbative series in $\as$ of the functions
 {\color{black!30}
@@ -271,17 +287,17 @@ The functions $\cH^{F}_{\N{n}\LO}$ and $\Sigma^{F}_{\N{n}\LO}(\qt)$ correspond t
 % \end{align}
 % where $z=M^{2}/\hat{s}$.  
 \begin{align}
-  \Sigma^F_{c\bar{c} \gets ab}(\qt; z_1,z_2; \as, \mur,\muf)
+  \Sigma^F_{c\bar{c} \gets ab}(\qt; z_1,z_2) %; \as, \mur,\muf)
   &=
   \sum_{n=1}^\infty \asOpi^n \; 
-  \Sigma^{F;(n)}_{c\bar{c} \gets ab}(\qt; z_1,z_2; \mur,\muf)
+  \Sigma^{F;(n)}_{c\bar{c} \gets ab}(\qt; z_1,z_2) %; \mur,\muf)
   \label{eq:sigexpansion}
   \\
-  \cH^F_{c\bar{c} \gets ab}(z_1,z_2; \as, \mur,\muf)
+  \cH^F_{c\bar{c} \gets ab}(z_1,z_2) %; \as, \mur,\muf)
   &=
   \delta_{c\,a}\delta_{\bar{c}\,b} \, \delta(1-z_1) \, \delta(1-z_2) +
   \sum_{n=1}^\infty \asOpi^n \; 
-  \cH^{F;(n)}_{c\bar{c} \gets ab}(z_1,z_2; \mur,\muf)
+  \cH^{F;(n)}_{c\bar{c} \gets ab}(z_1,z_2) %; \mur,\muf)
   \label{Hstexpand}
 \end{align}
 where the labels $a$ and $b$ stands for the partonic channels of the N$^{n}$LO correction to the Born cross section. 
@@ -300,13 +316,14 @@ According to the transverse momentum resummation formula~\cite{Bozzi:2005wk} and
 \eeeq
 }
 \begin{align}
-  &
   \Bigl( \Sigma^F_{\N{n}\LO}(\qt)  + \cH^F_{\N{n}\LO} \Bigr) \otimes 
-  \frac{\rd\sigma^{F}_{\LO}}{\rd\qt^2\rd M^2\rd Y\rd\bOmega} 
-  \nn\\&=
-  \frac{M^2}{s}\int\rd b\;\frac{b}{2}\;J_0(b\qt)
-  \frac{\rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2)}{M^2\,\rd\bOmega\rvert_{\qt=0}} \; 
-  S_c(M,b) \; \left[ H^{F} C_1 C_2 \right]_{c\bar{c};ab} \;
+  \frac{\rd\sigma^{F}_{\LO}}{\rd\qt^2\rd M^2\rd Y} 
+  &=
+  \frac{1}{s}\int_0^\infty\rd b\;\frac{b}{2}\;J_0(b\qt)\;
+  \rd\hat{\sigma}^{F}_{\LO;c\bar{c}}(x_1 p_1, x_2 p_2) \; 
+  S_c(M,b) \; 
+  \nn\\&\quad\times
+  \left[ H^{F} C_1 C_2 \right]_{c\bar{c};ab} \;
   f_{a/h_1}\left(\frac{x_1}{z_1},\frac{b_0^2}{b^2}\right) \; f_{b/h_2}\left(\frac{x_2}{z_2},\frac{b_0^2}{b^2}\right) \;.
   \label{reslean}
 \end{align}
@@ -317,8 +334,10 @@ where  $b_0=2 \mathrm{e}^{-\gamma_E}$ ($\gamma_E=0.5772...$  is the Euler--Masch
 % x_1= \f{M}{\sqrt s} \;e^{+y} \;\;, \quad \quad
 % x_2=\f{M}{\sqrt s} \;e^{-y} \;\;.
 % \end{equation}
-The right-hand side of Eq.~(\ref{reslean}) involves the Fourier transformation with respect to the \emph{impact parameter} $b$ and two convolutions over the 
-longitudinal-momentum fractions $z_1$ and $z_2$. In the left-hand side of Eq.~\eqref{reslean}, we omit the full scale dependence of these coefficients, which is however, fully specified in Eqs.~\eqref{eq:sigexpansion} and \eqref{Hstexpand}\AH{maybe drop it above?}. 
+The right-hand side of Eq.~(\ref{reslean}) involves the Fourier transformation with respect to the \emph{impact parameter} $b$ and two convolutions over the longitudinal-momentum fractions $z_1$ and $z_2$. 
+{\color{black!30}
+In the left-hand side of Eq.~\eqref{reslean}, we omit the full scale dependence of these coefficients, which is however, fully specified in Eqs.~\eqref{eq:sigexpansion} and \eqref{Hstexpand}\AH{dropped above}.
+} 
 {\color{black!30}While the coefficient functions $\Sigma^{F}$ and $\cH^{F}$ in the left-hand side of Eq.~\eqref{reslean} depend on the longitudinal-momentum fractions $z_1$ and $z_2$, the corresponding rapidity integrated coefficient functions (which depend only on $z$) are defined in Eqs.~\eqref{eq:sigexpansion} and \eqref{Hstexpand}.
 The symbolic factor $\rd\hat{\sigma}^{F;(0)}_{c\bar{c}}$ for the partonic Born cross section $\hat{\sigma}^{F;(0)}_{c\bar{c}}$ denotes
 \beeq
@@ -361,7 +380,10 @@ where
 $H_{g}^{F=H}$ is the hard--virtual function, and $C_{g \,a}$ and $G_{g \,a}$ are 
 gluonic helicity-preserving and helicity-flipping hard--collinear coefficient functions respectively.
 
+{\color{black!30}
 Note that the right-hand side of Eq.~\eqref{whathlean} does not depend on the direction of $\bf b$ and this implies that the $\bqt$ distribution has no azimuthal correlations in the small-$\qt$ region for Higgs boson production~\cite{Catani:2010pd}. 
+\AH{we completely removed the azimuthal dependence from the start, maybe put this in a footnote?}
+}
 Note also that the term with two $G_{g \,a}(z;\as)$ functions in Eq.~\eqref{whathlean} is the double helicity-flip contribution: helicity conservation in the hard-process factor for Higgs boson production forbids contributions with a single helicity flip. 
 The helicity-flip $G_{g \,a}(z;\as)$ functions are absent in processes initiated at the Born level by quark annihilation~\cite{Catani:2010pd}. 
 
@@ -386,48 +408,10 @@ H_g^{F=H \,;(n)}
 \;\;.
 \end{equation} 
 
-Explicit expressions for the fixed-order coefficients are reported in Appendix~\ref{app:fixed-order}.
+Explicit expressions for the fixed-order coefficients are collected in Appendix~\ref{app:fixed-order}, in particular, we also give the $B_3^H$ coefficient in the hard scheme as needed for the $\qt$ subtraction formalism described in this section.
+An obstacle in applying the $\qt$ subtraction formalism at \N3\LO are the missing ingredients within $\cH^{F=H;(3)}$ and one of the main objectives in this work is the numerical extraction of these parts that are not yet known analytically.
+To this end, we first quote the fixed-order coefficient functions $\cH^{F=H;(n)}$ up to $n=3$, where we restrict ourselves to the case $\muf=\mur=M$ in order to keep the size of the expressions compact and not to obfuscate from the main goal, which is the identification of the unknown parts at \N3\LO.
 
-One of the main objectives in this work is the numerical extraction of the unknown ingredients that enter the hard coefficient function at the third order, $\cH^{F=H;(3)}$, which will be discussed in detail in the following section.
-The hard coefficient function is explicitly given by 
-...
-where we have set $\mur=\muf=M$ to reduce the size of the expressions...
-\AH{This is where Eqs.(26)--(29) will be moved.}
-
-
-
-
-
-\setcounter{footnote}{0}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Higgs boson total cross section at \texorpdfstring{N${}^\text{3}$LO}{N3LO}}
-\label{sec:numforCN3}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We start this section with some observations related to the hard-scattering function ${\cal H}_{c{\bar c} \gets ab}^{F}$. This function is resummation-scheme independent, but it depends on the specific hard-scattering subprocess $c + {\bar c} \to F$. The coefficients ${\cal H}_{c{\bar c} \gets ab}^{F \,;(n)}$ of the perturbative expansion in Eq.~\eqref{Hstexpand} can be determined by performing a perturbative calculation of the $\qt$ distribution in the limit $\qt \to 0$. In the right-hand side of Eq.~\eqref{reslean},  the function ${\cal H}^{F}$ controls the strict perturbative normalization of the corresponding total cross section (i.e.\ the integral of the total $\qt$ distribution). This unitarity-related property can be exploited to determine the coefficients ${\cal H}_{c{\bar c} \gets ab}^{F \,;(n)}$ from the perturbative calculation of the total cross section.  At the partonic level, the integral of the total $\qt$ distribution in Eq.~\eqref{eq:master} must be equal to the total cross section ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$,
-\begin{equation}
-\label{restotp}
-{\hat \sigma}_{F \,ab}^{{\rm {tot}}}(M,{\hat s};
-\as(\mu_R^2),\mu_R^2,\mu_F^2)
- = \int_0^{\infty} \rd\qt^2 \;
-\f{\rd{\hat \sigma}_{F \,ab}}{\rd \qt^2}(\qt,M,{\hat s};
-\as(\mu_R^2),\mu_R^2,\mu_F^2) 
- \;.
-\end{equation}
-Since the the hard-scattering function ${\cal H}_{c{\bar c} \gets ab}^{F}$ is simply proportional to $\delta(\qt^{2})$, we evaluate the $\qt$ spectrum on right-hand side of Eq.~\eqref{eq:master} according to the following decomposition
-\beeq
-\label{sigtotrel} 
-{\hat \sigma}_{F \,ab}^{{\rm {tot}}}
- = \f{M^2}{\hat s} \;{\cal H}_{ab}^F 
-+ \int_0^{\infty} \rd\qt^2 \;
-\f{\rd{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{\rd \qt^2}  \;\;,
-\eeeq
-where $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}$ is directly related to the quantity in square bracket in the right-hand side of Eq.~\eqref{eq:master}
-\beeq
-\label{sigfin}
-\f{\rd{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{\rd \qt^2} \equiv \left[ \f{\rd{\hat \sigma}_{ab}^{F+{\rm jets}}}{\rd \qt^2} - \f{\rd{\hat \sigma}_{ab}^{F\;{\rm CT}}}{\rd \qt^2}\right]\;.
-\eeeq
 Using Eqs.~\eqref{reslean} and \eqref{whathlean}, it is possible to write ${\cal H}_{gg}^H$ in terms of the functions $C_{g \,a}(z_1;\as)$ and $G_{g \,a}(z_1;\as)$ (in the particular case $F=H$). Omitting the scale-dependent terms that are all known analytically (i.e.\ considering $\mu_{F}=\mu_{R}=M$), we have 
 \begin{equation}
 \label{HCCGG}
@@ -484,7 +468,82 @@ The new third-order contribution is given by
 + H^{H;(1)}_g  \left(C^{(1)}_{g\,a}\otimes C^{(1)}_{g\,b}\right)(z) 
  +    H^{H;(1)}_g  \left(G^{(1)}_{g\,a}\otimes G^{(1)}_{g\,b}\right)(z) \;.         
 \end{align}
-As stated in Sec.~\ref{sec:forma}, the second-order helicity-flip functions $G^{(2)}_{g\,a}(z)$ and the third-order collinear functions $C^{(3)}_{g\,a}(z)$ are not known. In addition, the third-order hard--virtual coefficient $H^{H;(3)}_g$ is not fully determined. In the following, we describe a procedure to obtain an approximation to these missing contributions. 
+The second-order helicity-flip functions $G^{(2)}_{g\,a}(z)$ and the third-order collinear functions $C^{(3)}_{g\,a}(z)$ are not known. In addition, the third-order hard--virtual coefficient $H^{H;(3)}_g$ is not fully determined. In the following, we describe a procedure to obtain an approximation to these missing contributions. 
+
+The following paragraphs will focus on the details of the approximation that we intend to use. Instead of computing the entire third order function ${\cal H}_{ab}^{H\,;(3)}$ numerically, we first report all its ingredients with the aim of reducing the numerical extraction to only a few components (perturbative functions). 
+
+
+At \N3\LO, the universal relation between $H^{F;(3)}_{c}$ and the third-order virtual correction to the partonic subprocess $c{\bar c}\to F$ presents one missing ingredient: a \emph{single} coefficient (of \emph{soft} origin) belonging to the finite part of the structure of the IR singularities contained in the
+third-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. Although a general prescription to compute the hard--virtual coefficient $H^{H;(3)}_{g}$ analytically is not fully known, using the corresponding hard--virtual factor $C^{{\rm th}(3)}_{gg\to H}$~\cite{Catani:2014uta} from threshold resummation (in the large-$m_t$ limit) and the exponential equation that relates hard--virtual coefficients in threshold- and $\qt$-resummation (Eq.~(81) of Ref.~\cite{Catani:2013tia}), we compute the following approximated expression
+\beeq
+\label{H3approx}
+\widetilde{H}^{H;(3)}_{g}&&\!\!\!\!\!\!\!\!=C_{A}^{3}\left(-\frac{15649 \zeta_{3}}{432}-\frac{121 \pi ^2 \zeta_{3}}{432}+\frac{3
+   \zeta_{3}^2}{2}+\frac{869 \zeta_{ 5}}{144}+\frac{215131}{5184}+\frac{16151 \pi ^2}{7776}-\frac{961
+   \pi ^4}{15552}+\frac{\pi ^6}{810}\right.\nn\\
+   &&\left.+\f{105}{32} \zeta_{6}\right)
+  +  C_{A}^{2}\left(\frac{605 \zeta_{ 3}}{72}+\frac{55 \pi ^2 \zeta_{ 3}}{36}+\frac{737 \pi ^2}{432}+\frac{167 \pi ^4}{432}+\frac{\pi
+   ^6}{72}   \right) \nn\\
+   &&+ C_{A}\left( \frac{19 \pi ^2  L_{t}}{48}-\frac{55 \pi ^2 \zeta _{3}}{8}-\frac{\pi ^6}{480}+\frac{133 \pi ^4}{72}+\frac{11399
+   \pi ^2}{864}  + \f{63}{32} \zeta_{6}    \right)\nn\\
+   && + N_{f}^{2} \left( \frac{43 C_{A} \zeta_{ 3}}{108}-\frac{19 \pi ^4 C_{A}}{3240}-\frac{133 \pi ^2 C_{A}}{1944}+\frac{2515
+   C_{A}}{1728}-\frac{7 C_{F} \zeta_{ 3}}{6}\right. \nn\\
+   &&+\left. \frac{4481 C_{F}}{2592}-\frac{\pi ^4
+   C_{F}}{3240}-\frac{23 \pi ^2 C_{F}}{432} \right)\nn\\
+   && + N_{f} \left(
+    \frac{101 C_{A}^2 \zeta_{5}}{72}-\frac{97}{216} \pi ^2 C_{A}^2 \zeta_{3}+\frac{29 C_{A}^2 \zeta_{3}}{8}+\frac{1849 \pi ^4 C_{A}^2}{38880}-\frac{35 \pi ^2 C_{A}^2}{243}-\frac{98059
+  C_{A}^2}{5184}\right.\nn\\
+   &&+\frac{5 C_{A} C_{F} \zeta _{5}}{2}+\frac{13 C_{A} C_{F} \zeta
+   _{3}}{2}+\frac{1}{2} \pi ^2 C_{A} C_{F} \zeta _{3}-\frac{63991 C_{A} C_{F}}{5184}+\frac{11 \pi ^4
+   C_{A} C_{F}}{6480}-\frac{71}{216} \pi ^2 C_{A} C_{F}\nn\\
+   &&+\frac{1}{9} \pi ^2 C_{A}
+   L_{t}-\frac{5}{36} \pi ^2 C_{A} \zeta _{3}-\frac{55 C_{A} \zeta_{ 3}}{36}-\frac{5 \pi ^4
+   C_{A}}{54}-\frac{1409 \pi ^2 C_{A}}{864}\nn\\
+   && \left. -5 C_{F}^2 \zeta_{ 5}+\frac{37 C_{F}^2 \zeta
+   _{3}}{12}+\frac{19 C_{F}^2}{18}\right)\;.
+\eeeq
+Notice that we neglect all the third-order terms in the exponent of Eq.~(81) in Ref.~\cite{Catani:2013tia}, considering the entire $\mathcal{O}(\as^{3})$ correction (in the exponent) as unknown. However, the full top-mass dependence of $H^{H;(3)}_g$ is already fully embodied in $\widetilde{H}^{H;(3)}_{g}$.
+The $\widetilde{H}^{H;(3)}_{g}$ coefficient in Eq.~\eqref{H3approx} will be used in the numerical computations below.
+
+The missing terms in Eq.~\eqref{H3approx}, concerning the final and full expression of $H^{H;(3)}_g$, have a \emph{soft} origin. Following the notation of Ref.~\cite{Catani:2013tia}, all the third-order terms in the right-hand side of Eq.~(81) of Ref.~\cite{Catani:2013tia} are denoted by $\delta^{\qt}_{(2)}$. This allows to perform a subsequent decomposition for the third-order hard--virtual coefficient defined in Eq.~\eqref{H3approx}
+\beeq
+\label{H3deltaqT2}
+H^{H;(3)}_g  \equiv  \widetilde{H}^{H;(3)}_{g} + \big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})} \;.
+\eeeq
+As a consequence, the only missing ingredients to ${\cal H}^{F \,;(3)}$ are the functions $G^{(2)}_{g\,a}(z)$, $C^{(3)}_{g\,a}(z)$ and $ \big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$. 
+
+
+\setcounter{footnote}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Higgs boson total cross section at \texorpdfstring{N${}^\text{3}$LO}{N3LO}}
+\label{sec:numforCN3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We start this section with some observations related to the hard-scattering function ${\cal H}_{c{\bar c} \gets ab}^{F}$. This function is resummation-scheme independent, but it depends on the specific hard-scattering subprocess $c + {\bar c} \to F$. The coefficients ${\cal H}_{c{\bar c} \gets ab}^{F \,;(n)}$ of the perturbative expansion in Eq.~\eqref{Hstexpand} can be determined by performing a perturbative calculation of the $\qt$ distribution in the limit $\qt \to 0$. In the right-hand side of Eq.~\eqref{reslean},  the function ${\cal H}^{F}$ controls the strict perturbative normalization of the corresponding total cross section (i.e.\ the integral of the total $\qt$ distribution). This unitarity-related property can be exploited to determine the coefficients ${\cal H}_{c{\bar c} \gets ab}^{F \,;(n)}$ from the perturbative calculation of the total cross section.  At the partonic level, the integral of the total $\qt$ distribution in Eq.~\eqref{eq:master} must be equal to the total cross section ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$,
+\begin{equation}
+\label{restotp}
+{\hat \sigma}_{F \,ab}^{{\rm {tot}}}(M,{\hat s};
+\as(\mu_R^2),\mu_R^2,\mu_F^2)
+ = \int_0^{\infty} \rd\qt^2 \;
+\f{\rd{\hat \sigma}_{F \,ab}}{\rd \qt^2}(\qt,M,{\hat s};
+\as(\mu_R^2),\mu_R^2,\mu_F^2) 
+ \;.
+\end{equation}
+Since the the hard-scattering function ${\cal H}_{c{\bar c} \gets ab}^{F}$ is simply proportional to $\delta(\qt^{2})$, we evaluate the $\qt$ spectrum on right-hand side of Eq.~\eqref{eq:master} according to the following decomposition
+\beeq
+\label{sigtotrel} 
+{\hat \sigma}_{F \,ab}^{{\rm {tot}}}
+ = \f{M^2}{\hat s} \;{\cal H}_{ab}^F 
++ \int_0^{\infty} \rd\qt^2 \;
+\f{\rd{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{\rd \qt^2}  \;\;,
+\eeeq
+where $d{\hat \sigma}_{F \,ab}^{(\rm fin.)}$ is directly related to the quantity in square bracket in the right-hand side of Eq.~\eqref{eq:master}
+\beeq
+\label{sigfin}
+\f{\rd{\hat \sigma}_{F \,ab}^{(\rm fin.)}}{\rd \qt^2} \equiv \left[ \f{\rd{\hat \sigma}_{ab}^{F+{\rm jets}}}{\rd \qt^2} - \f{\rd{\hat \sigma}_{ab}^{F\;{\rm CT}}}{\rd \qt^2}\right]\;.
+\eeeq
+
+
 
 
 The relation in Eq.~\eqref{sigtotrel} is valid order-by-order in QCD perturbation theory. If the perturbative coefficients of the fixed order expansion of ${\hat \sigma}_{F \,ab}^{{\rm {tot}}}$, ${\cal H}_{ab}^F$ and  $\rd{\hat \sigma}_{F \,ab}^{(\rm fin.)}/\rd \qt^2$ are all known, the relation~\eqref{sigtotrel} has to be regarded as an identity, which can be explicitly checked. Since the fixed-order truncation of $ \rd{\hat \sigma}_{F \,ab}^{(\rm fin.)}/{\rd \qt^2}$ is free of any contribution proportional to $\delta(\qt^2)$, its NLO contribution  does not contain the coefficient ${\cal H}_{ab}^{F \,;(1)}$, and so forth. 
@@ -541,49 +600,9 @@ At LO, where only the Born subprocess is available, $\Bigl[ \f{\rd{\hat \sigma}_
 
 If all the components on the right-hand side of Eq.~\eqref{hn} are known analytically (as it was the case at NNLO in Refs.~\cite{Catani:2011kr,Catani:2012qa}) the function ${\cal H}_{ab}^{F}$ can be extracted exactly in analytical form. At NLO the extraction of the function  ${\cal H}_{ab}^{F \,;(1)}$ is straightforward for Drell--Yan and Higgs boson production. The function ${\cal H}_{ab}^{F \,;(2)}$ at NNLO (for Higgs ($F=H$) boson production~\cite{Catani:2011kr} and Drell--Yan ($F=DY$)~\cite{Catani:2012qa}) can be obtained with a dedicated analytical computation using Eq.~\eqref{hn} for $n=2$. Since for Higgs boson production, the transverse momentum cross section $H$+jet at NNLO is not known analytically, Eq.~\eqref{h3nnlo} can be used only numerically to compute ${\cal H}_{ab}^{F\,;(3)}$. 
 
-The following paragraphs will focus on the details of the approximation that we intend to use. Instead of computing the entire third order function ${\cal H}_{ab}^{H\,;(3)}$ numerically, we first report all its ingredients with the aim of reducing the numerical extraction to only a few components (perturbative functions). 
-
 The general structure of the coefficient ${\cal H}^{F \,;(3)}$ (which is proportional to $\delta(\qt^{2})$) is not known in analytic form for any hard-scattering process. Nonetheless, within the $\qt$ subtraction  formalism, ${\cal H}^{F \,;(3)}$ can be reliably approximated for any hard-scattering process whose corresponding total cross section is known at \N3\LO. 
 
-At \N3\LO, the universal relation between $H^{F;(3)}_{c}$ and the third-order virtual correction to the partonic subprocess $c{\bar c}\to F$ presents one missing ingredient: a \emph{single} coefficient (of \emph{soft} origin) belonging to the finite part of the structure of the IR singularities contained in the
-third-order virtual amplitude of the corresponding partonic subprocess $c{\bar c}\to F$. Although a general prescription to compute the hard--virtual coefficient $H^{H;(3)}_{g}$ analytically is not fully known, using the corresponding hard--virtual factor $C^{{\rm th}(3)}_{gg\to H}$~\cite{Catani:2014uta} from threshold resummation (in the large-$m_t$ limit) and the exponential equation that relates hard--virtual coefficients in threshold- and $\qt$-resummation (Eq.~(81) of Ref.~\cite{Catani:2013tia}), we compute the following approximated expression
-\beeq
-\label{H3approx}
-\widetilde{H}^{H;(3)}_{g}&&\!\!\!\!\!\!\!\!=C_{A}^{3}\left(-\frac{15649 \zeta_{3}}{432}-\frac{121 \pi ^2 \zeta_{3}}{432}+\frac{3
-   \zeta_{3}^2}{2}+\frac{869 \zeta_{ 5}}{144}+\frac{215131}{5184}+\frac{16151 \pi ^2}{7776}-\frac{961
-   \pi ^4}{15552}+\frac{\pi ^6}{810}\right.\nn\\
-   &&\left.+\f{105}{32} \zeta_{6}\right)
-  +  C_{A}^{2}\left(\frac{605 \zeta_{ 3}}{72}+\frac{55 \pi ^2 \zeta_{ 3}}{36}+\frac{737 \pi ^2}{432}+\frac{167 \pi ^4}{432}+\frac{\pi
-   ^6}{72}   \right) \nn\\
-   &&+ C_{A}\left( \frac{19 \pi ^2  L_{t}}{48}-\frac{55 \pi ^2 \zeta _{3}}{8}-\frac{\pi ^6}{480}+\frac{133 \pi ^4}{72}+\frac{11399
-   \pi ^2}{864}  + \f{63}{32} \zeta_{6}    \right)\nn\\
-   && + N_{f}^{2} \left( \frac{43 C_{A} \zeta_{ 3}}{108}-\frac{19 \pi ^4 C_{A}}{3240}-\frac{133 \pi ^2 C_{A}}{1944}+\frac{2515
-   C_{A}}{1728}-\frac{7 C_{F} \zeta_{ 3}}{6}\right. \nn\\
-   &&+\left. \frac{4481 C_{F}}{2592}-\frac{\pi ^4
-   C_{F}}{3240}-\frac{23 \pi ^2 C_{F}}{432} \right)\nn\\
-   && + N_{f} \left(
-    \frac{101 C_{A}^2 \zeta_{5}}{72}-\frac{97}{216} \pi ^2 C_{A}^2 \zeta_{3}+\frac{29 C_{A}^2 \zeta_{3}}{8}+\frac{1849 \pi ^4 C_{A}^2}{38880}-\frac{35 \pi ^2 C_{A}^2}{243}-\frac{98059
-  C_{A}^2}{5184}\right.\nn\\
-   &&+\frac{5 C_{A} C_{F} \zeta _{5}}{2}+\frac{13 C_{A} C_{F} \zeta
-   _{3}}{2}+\frac{1}{2} \pi ^2 C_{A} C_{F} \zeta _{3}-\frac{63991 C_{A} C_{F}}{5184}+\frac{11 \pi ^4
-   C_{A} C_{F}}{6480}-\frac{71}{216} \pi ^2 C_{A} C_{F}\nn\\
-   &&+\frac{1}{9} \pi ^2 C_{A}
-   L_{t}-\frac{5}{36} \pi ^2 C_{A} \zeta _{3}-\frac{55 C_{A} \zeta_{ 3}}{36}-\frac{5 \pi ^4
-   C_{A}}{54}-\frac{1409 \pi ^2 C_{A}}{864}\nn\\
-   && \left. -5 C_{F}^2 \zeta_{ 5}+\frac{37 C_{F}^2 \zeta
-   _{3}}{12}+\frac{19 C_{F}^2}{18}\right)\;.
-\eeeq
-Notice that we neglect all the third-order terms in the exponent of Eq.~(81) in Ref.~\cite{Catani:2013tia}, considering the entire $\mathcal{O}(\as^{3})$ correction (in the exponent) as unknown. However, the full top-mass dependence of $H^{H;(3)}_g$ is already fully embodied in $\widetilde{H}^{H;(3)}_{g}$.
-The $\widetilde{H}^{H;(3)}_{g}$ coefficient in Eq.~\eqref{H3approx} will be used in the numerical computations below.
-
-The missing terms in Eq.~\eqref{H3approx}, concerning the final and full expression of $H^{H;(3)}_g$, have a \emph{soft} origin. Following the notation of Ref.~\cite{Catani:2013tia}, all the third-order terms in the right-hand side of Eq.~(81) of Ref.~\cite{Catani:2013tia} are denoted by $\delta^{\qt}_{(2)}$. This allows to perform a subsequent decomposition for the third-order hard--virtual coefficient defined in Eq.~\eqref{H3approx}
-\beeq
-\label{H3deltaqT2}
-\widetilde{H}^{H;(3)}_{g}  \equiv H^{H;(3)}_g  -  \big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})} \;.
-\eeeq
-As a consequence, the only missing ingredients to ${\cal H}^{F \,;(3)}$  are 
- the functions $G^{(2)}_{g\,a}(z)$, $C^{(3)}_{g\,a}(z)$ and $ \big[H^{H;(3)}_{g}\big]_{(\delta^{\qt}_{(2)})}$. 
- Their contribution to  Eq.~\eqref{h3nnlo} can be approximated as follows:
+Their contribution to  Eq.~\eqref{h3nnlo} can be approximated as follows:
 \beeq
 \label{CN3eq}
 C_{N3}\;\;\delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z) && \!\!\!\!\!\! \leftarrow\;\; \delta_{g\,a} \,\delta_{g\,b} \,\delta(1-z)
