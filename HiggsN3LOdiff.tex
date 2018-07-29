@@ -297,7 +297,7 @@ where the functions $A$ and $B$ permit a perturbative expansion in $\as$:
   \label{eq:abexp}
 \end{align}
 Explicit expressions for the coefficients $A_g^{(n)}$ and $B_g^{(n)}$ that are relevant for Higgs production are collected in Appendix~\ref{app:fixed-order} up to $n=3$.
-In particular, we also give the $B_g^{(3)}$ coefficient in the hard scheme as needed to evaluate Eq.~\eqref{reslean} for $F=H$ at \N3\LO.
+In particular, we also give the $B_g^{(3)}$ coefficient in the hard resummation scheme as needed to evaluate Eq.~\eqref{reslean} for $F=H$ at \N3\LO.
 
 The analytical form of the function $\Sigma^{F;(3)}$ in Eq.~\eqref{eq:sigexpansion} can be obtained by expanding Eq.~\eqref{reslean} to the corresponding matching order. The full analytical formula for $\Sigma^{F}$ is resummation scheme independent order by order in the strong coupling constant. Therefore, the logarithmic singular behaviour for $\Sigma^{F}$ at $\qt\rightarrow 0$ at 
 each given order in $\as$ does not depend on the 
@@ -342,7 +342,7 @@ The IR finite contribution of the $n$-loop correction terms to the Born subproce
   \label{hexp}
 \end{align} 
 
-Using Eqs.~\eqref{reslean} and \eqref{whathlean}, then, after integration over $b$ and dropping the renormalisation group predictable terms that are produced by evolving $\as$ to a common scale (i.e. setting $\muF=\muR=M$), we obtain 
+Using Eqs.~\eqref{reslean} and \eqref{whathlean}, then, after integration over $b$ and dropping the renormalisation group predictable terms that are produced by evolving $\as$ to a common scale (i.e. setting $\muF=\muR=M$), we obtain the resummation scheme independent
 \begin{align}
   \cH^H_{gg\gets ab}(z_1,z_2; \muf=\mur=M)
   &\equiv 
@@ -352,10 +352,10 @@ Using Eqs.~\eqref{reslean} and \eqref{whathlean}, then, after integration over $
   \Big] \; .
   \label{HCCGG}
 \end{align}
-Note that in the literature, it is often the rapidity-integrated variant $\cH^H_{gg\gets ab}(z)$ that is quoted and which is related to $\cH^H_{gg\gets ab}(z_1,z_2)$ via the convolution
+Note that in the literature, it is often the rapidity-integrated variant $\cH^H_{gg\gets ab}(z)$ that is quoted which is related to $\cH^H_{gg\gets ab}(z_1,z_2)$ via the convolution
 \begin{align}
   \cH^H_{gg\gets ab}(z)
-  &=
+  &\equiv
   \int_0^1\rd z_1 \; \int_0^1\rd z_2 \; \delta(z-z_1 z_2) \; \cH^H_{gg\gets ab}(z_1,z_2) \;.
 \end{align}
 
@@ -611,7 +611,7 @@ other parton species ($a=q,\bar q$). The latter are not explicitly distinguished
 The method outlined in Eq.~\eqref{CN3eq} to approximate the unknown terms in the hard--virtual function $\cH^H_{gg\gets ab}$ numerically is not new. It was first used in Ref.~\cite{Bozzi:2005wk} in order to compute the second order function $\cH^{H;(2)}_{gg\gets ab}$ numerically at NNLO, providing a reasonable estimate of the exact result to better than $1\%$ accuracy. Notice that Eq.~\eqref{CN3eq} ensures that one recovers the total cross section (at \N3\LO in this case) with no approximation. After integration over the transverse momentum $\qt$, Eq.~\eqref{restotp} provides the same total integral (numerically in this case)  as in the fully analytical case. Even more, for IR-safe observables (at fixed order) where the \textit{back-to-back} kinematical configuration ($\qt=0$) is located at a single phase space point (e.g.\ the $\qt$ distribution, the angular separation $\Delta \varphi _{\gamma\gamma}$ between the two photons for a Higgs boson decaying into diphotons, etc.), the fixed order result is also exact, i.e.\ the integral of the analytical unknown terms in Eq.~\eqref{CN3eq} (which all have $\qt=0$) is located in one single point of the exclusive differential distributions. 
 
 The previous considerations about the approximation underpinning Eq.~\eqref{CN3eq} were regarding the total cross section or differential distributions in which the Born-like configurations belong to one single phase space point.
-In order to quantify the quality of the approximation proposed in Eq.~\eqref{CN3eq} at the differential level when the Born differential cross section populates the entire differential range, we perform a detailed numerical study of the Higgs boson rapidity $y_{H}$ distribution in Sec.~\ref{sec:NNLOrap} at NNLO. Anticipating these results,  we find that in the rapidity range $0\leq y_{H}\leq 4$ the approximated NNLO result differs by less than $0.2\%$ from the exact NNLO Higgs boson rapidity distribution.
+In order to quantify the quality of the approximation proposed in Eq.~\eqref{CN3eq} at the differential level when the Born differential cross section populates the entire differential range, we perform a detailed numerical study of the Higgs boson rapidity $Y \equiv y_{H}$ distribution in Sec.~\ref{sec:NNLOrap} at NNLO. Anticipating these results,  we find that in the rapidity range $0\leq y_{H}\leq 4$ the approximated NNLO result differs by less than $0.2\%$ from the exact NNLO Higgs boson rapidity distribution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Implementation and setup of the numerical calculations}
@@ -620,7 +620,7 @@ In order to quantify the quality of the approximation proposed in Eq.~\eqref{CN3
 
 To extract the value of $C_{N3}$, we first introduce the numerical tools and the calculational setup in this section. We use the same setup for the inclusive and differential predictions presented in Sections~\ref{sec:numCN3}, \ref{sec:NNLOrap}, \ref{sec:N3LOrap} and \ref{sec:results}.
 
-We consider Higgs boson production in proton--proton collisions at a centre-of-mass energy of $\sqrt{s}=13$~TeV. In our computation, we set the Higgs boson mass to $M_H= 125$~GeV and the vacuum expectation value to $v=246.2$~GeV. 
+We consider Higgs boson production in proton--proton collisions at a centre-of-mass energy of $\sqrt{s}=13$~TeV. In our computation, we set the Higgs boson mass to $M\equiv M_H= 125$~GeV and the vacuum expectation value to $v=246.2$~GeV. 
 The Born process is initiated via gluon--gluon fusion mediated through a top-quark loop, which can be integrated out in the large-$m_t$ limit ($m_{t}\rightarrow \infty$).
 In this limit, the production of the Higgs boson is described through an effective gluon-gluon-Higgs boson vertex~\cite{Heft}.
 The mass of the top quark is taken as $m_t = 173.2$~GeV, which enters in the contributions that have a residual $m_t$ dependence (e.g.\ Eqs.~\eqref{H2g} and \eqref{H3approx} and effective vertex coefficient corrections at \N3\LO). 
