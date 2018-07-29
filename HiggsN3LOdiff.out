@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{The qT subtraction formalism at N3LO}{}% 2
+\BOOKMARK [1][-]{section.3}{The Higgs boson total cross section at N3LO}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Implementation and setup of the numerical calculations}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{The numerical extraction of CN3}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{The rapidity distribution of the Higgs boson}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{The NNLO rapidity distribution}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Numerical stability of the N3LO rapidity distribution}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{The rapidity distribution of the Higgs boson at N3LO}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Conclusions and outlook}{}% 10
+\BOOKMARK [1][-]{appendix.A}{Fixed-order expressions}{}% 11
+\BOOKMARK [1][-]{appendix.B}{Convolutions at N3LO}{}% 12
